@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, HeartHandshake } from 'lucide-react';
 import Button from '../Common/Button';
+import Logo from '../Common/Logo';
 
 interface NavItem {
   label: string;
@@ -53,14 +54,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             <div>
               {/* Top Header */}
               <div className="flex items-center justify-between pb-6 border-b border-gray-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-9 h-9 rounded-xl bg-pink-500 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-pink-500/20">
-                    R
-                  </div>
-                  <span className="font-heading font-extrabold text-xl text-gray-900 tracking-tight">
-                    RISY <span className="text-pink-500">Team</span>
-                  </span>
-                </div>
+                <Logo
+                  className="gap-2"
+                  imageClassName="h-9 rounded-xl"
+                  titleClassName="text-gray-900"
+                  subtitleClassName="text-gray-500"
+                />
                 <button
                   onClick={onClose}
                   className="p-2 rounded-xl text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors"
@@ -73,7 +72,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               {/* Nav Links */}
               <nav className="mt-8 flex flex-col gap-2">
                 {navItems.map((item) => {
-                  const isActive = activeSection === item.href.replace('#', '');
+                  const sectionId = item.href.replace('#', '').trim() || 'home';
+                  const isActive = activeSection === sectionId;
                   return (
                     <a
                       key={item.label}

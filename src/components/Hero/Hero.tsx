@@ -70,20 +70,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="md:col-span-7 text-white space-y-2"
+            className="md:col-span-5 text-white space-y-2"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 backdrop-blur-md border border-pink-500/30 text-pink-300 text-xs font-semibold tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-              <span>Research & Youth Organization</span>
-            </div>
+            
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-white leading-tight">
-              Empowering Youth Through Research & Development
-            </h1>
-
-            <p className="text-gray-300 text-xs sm:text-sm max-w-lg font-sans leading-relaxed line-clamp-2">
-              {slides[currentSlide].tagline}
-            </p>
           </motion.div>
 
           {/* Right Side Stacked (Sketch: "Youth" -> "Become V" -> Social Icons [f][insta][yt][in]) */}
@@ -91,11 +81,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-5 md:ml-auto w-full max-w-sm bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl text-white space-y-3 shadow-xl"
+            className="md:col-span-7 md:ml-auto w-full max-w-sm bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl text-white space-y-3 shadow-xl"
           >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 backdrop-blur-md border border-pink-500/30 text-pink-300 text-xs font-semibold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-pink-400" />
+              <span>Research & Youth Organization</span>
+            </div>
             <div className="flex items-center justify-between border-b border-white/15 pb-2">
-              <h2 className="text-3xl sm:text-4xl font-black font-heading tracking-wider text-white">
-                Youth
+              <h2 className="text-3xl sm:text-2xl font-black font-heading tracking-wider text-white">
+                Research & Innovation Society for Youth
               </h2>
 
             </div>

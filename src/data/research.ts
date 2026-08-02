@@ -4,8 +4,8 @@ export const researchAreasData: ResearchArea[] = [
   {
     id: 'res-1',
     unitName: 'Unit 01',
-    title: 'Youth Leadership & Social Innovation',
-    description: 'Investigating empirical models for youth-led community action, civic participation, and sustainable social enterprise development.',
+    title: 'Engineering & Lab Practice',
+    description: 'Env. chemistry, Water & Air analysis, Waste to bio-produce',
     imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Dr. Arisya Rahman',
     publicationsCount: 14,
@@ -15,8 +15,8 @@ export const researchAreasData: ResearchArea[] = [
   {
     id: 'res-2',
     unitName: 'Unit 02',
-    title: 'STEM Education & Digital Literacy',
-    description: 'Democratizing access to high-impact STEM toolkits, artificial intelligence awareness, and digital equity in underserved regions.',
+    title: 'Youth Outdoor Activity',
+    description: 'Tree Plantation, Group activity, Green Training',
     imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Prof. Marcus Vance',
     publicationsCount: 22,
@@ -26,19 +26,20 @@ export const researchAreasData: ResearchArea[] = [
   {
     id: 'res-3',
     unitName: 'Unit 03',
-    title: 'Mental Health & Adolescent Well-being',
-    description: 'Pioneering peer-to-peer mental resilience frameworks and psycho-social research tailored to modern digital youth culture.',
+    title: 'Simulation & Ai Modeling',
+    description: 'ASPEN, MATLAB, GIS, Machine learning, Carbon Credit calculation',
     imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Dr. Sarah Lin',
     publicationsCount: 18,
     tags: ['Mental Health', 'Youth Resilience', 'Psychology'],
     focusAreas: ['Digital Mindfulness', 'Crisis Intervention', 'Youth Advocacy']
   },
+
   {
     id: 'res-4',
     unitName: 'Unit 04',
-    title: 'Climate Action & Ecological Resilience',
-    description: 'Empowering young environmental scientists to monitor localized biodiversity, community recycling loops, and renewable adoption.',
+    title: 'Robotics Practice',
+    description: 'Rdno, IOT, Automation',
     imageUrl: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Eng. David O’Connor',
     publicationsCount: 11,
@@ -48,8 +49,8 @@ export const researchAreasData: ResearchArea[] = [
   {
     id: 'res-5',
     unitName: 'Unit 05',
-    title: 'Future of Work & Youth Entrepreneurship',
-    description: 'Analyzing shifting labor economics, gig industry protections, micro-credentials, and startup readiness for NextGen creators.',
+    title: 'Education & Public health',
+    description: 'Child green education, Climate disease, Waste to bio-produce',
     imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Nadia Thorne, M.Sc.',
     publicationsCount: 16,

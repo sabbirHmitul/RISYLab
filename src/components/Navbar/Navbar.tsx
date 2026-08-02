@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, HeartHandshake, Sparkles } from 'lucide-react';
 import Container from '../Common/Container';
 import Button from '../Common/Button';
+import Logo from '../Common/Logo';
 import MobileMenu from './MobileMenu';
 
 interface NavbarProps {
@@ -15,10 +16,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
 
   const navItems = [
     { label: 'Home', href: '#home' },
-    { label: 'About', href: '#mission' },
-    { label: 'Research', href: '#research' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Collaboration', href: '#collaboration' },
+    { label: 'Team', href: '#mission' },
+    { label: 'Publication', href: '#research' },
     { label: 'Contact', href: '#footer' },
   ];
 
@@ -48,8 +47,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
   }, []);
 
   const handleNavigate = (href: string) => {
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
+    const targetId = href.replace('#', '').trim();
+    const sectionId = targetId || 'home';
+    const element = document.getElementById(sectionId);
+
     if (element) {
       const navOffset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
@@ -57,8 +58,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
         top: elementPosition - navOffset,
         behavior: 'smooth',
       });
-      setActiveSection(targetId);
+      setActiveSection(sectionId);
+      return;
     }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setActiveSection('home');
   };
 
   return (
@@ -79,24 +84,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
             }}
             className="flex items-center gap-3 group focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-extrabold text-xl shadow-md shadow-pink-500/30 group-hover:scale-105 transition-transform duration-300">
-              R
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-xl text-gray-900 tracking-tight flex items-center gap-1">
-                RISY <span className="text-pink-500">Team</span>
-                <Sparkles className="w-3.5 h-3.5 text-pink-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </span>
-              <span className="text-[10px] uppercase font-semibold text-gray-500 tracking-widest -mt-1">
-                Research & Youth
-              </span>
-            </div>
+            <Logo
+              className="group-hover:scale-[1.02] transition-transform duration-300"
+              imageClassName="group-hover:scale-105 transition-transform duration-300"
+              titleClassName="text-gray-900"
+              subtitleClassName="text-gray-500"
+            />
           </a>
 
           {/* Desktop Nav Items */}
           <nav className="hidden lg:flex items-center gap-1 bg-gray-50/80 p-1.5 rounded-full border border-gray-100">
             {navItems.map((item) => {
-              const isActive = activeSection === item.href.replace('#', '');
+              const sectionId = item.href.replace('#', '').trim() || 'home';
+              const isActive = activeSection === sectionId;
               return (
                 <a
                   key={item.label}
@@ -116,16 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
             })}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={onOpenVolunteerModal}
-            >
-              Become Volunteer
-            </Button>
-          </div>
+
 
           {/* Mobile Menu Toggle Button */}
           <button
