@@ -20,7 +20,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     >
       <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,0.5fr)_minmax(0,0.5fr)] gap-8 items-start">
         <div className={`space-y-4 ${isImageOnRight ? 'order-2 xl:order-2' : 'order-2 xl:order-1'}`}>
-          <h3 className="text-2xl sm:text-3xl font-bold font-heading text-[#595959] leading-tight">
+          <h3 className="text-2xl font-bold font-heading text-[#595959] leading-tight">
             {project.title}
           </h3>
 
@@ -45,12 +45,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             {project.imageUrls.map((image, imageIndex) => (
               <div
                 key={`${project.id}-${imageIndex}`}
-                className={`overflow-hidden rounded-[20px] border border-white/70  shadow-sm ${imageIndex === 1 ? 'mt-8' : ''}`}
+                className={`h-full overflow-hidden rounded-[20px] border border-white/70  ${imageIndex === 1 ? 'mt-8' : ''}`}
               >
                 <img
                   src={image}
                   alt={`${project.title} ${imageIndex + 1}`}
-                  className="h-40 sm:h-52 w-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
             ))}

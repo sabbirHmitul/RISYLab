@@ -1,38 +1,34 @@
-import React from 'react';
-import { Mail, Phone, MapPin, ArrowUp, Sparkles, HeartHandshake } from 'lucide-react';
-import Container from '../Common/Container';
-import Logo from '../Common/Logo';
-import SocialIcons from '../Hero/SocialIcons';
+import React from "react";
+import { ArrowUp, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import Container from "../Common/Container";
+import Logo from "../Common/Logo";
+import SocialIcons from "../Hero/SocialIcons";
+import founderImage from "../../../assets/img/mitul.png";
 
 interface FooterProps {
-  onOpenVolunteerModal: () => void;
+  onOpenVolunteerModal?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenVolunteerModal }) => {
+export const Footer: React.FC<FooterProps> = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
-  const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#mission' },
-    { label: 'Research Units', href: '#research' },
-    { label: 'Current Projects', href: '#projects' },
-    { label: 'Collaboration', href: '#collaboration' },
-  ];
-
   return (
-    <footer id="footer" className="bg-gray-950 text-white pt-16 pb-12 relative overflow-hidden">
-      {/* Background Subtle Accent Glow */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
+    <footer
+      id="footer"
+      className="bg-[#080811] text-white py-4 relative overflow-hidden font-sans"
+    >
+      {/* Subtle Background Accent Glow */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-800">
-          {/* Col 1: Logo & About */}
-          <div className="lg:col-span-5 space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 pb-2 border-b border-gray-800/80 items-start">
+          {/* Left Column: Brand & Info */}
+          <div className="lg:col-span-6 space-y-6">
             <Logo
               className="gap-3"
               imageClassName="h-10 rounded-2xl"
@@ -40,30 +36,136 @@ export const Footer: React.FC<FooterProps> = ({ onOpenVolunteerModal }) => {
               subtitleClassName="text-gray-400"
             />
 
-            <p className="text-gray-400 text-sm font-sans leading-relaxed max-w-md">
-              RISY Team is an interdisciplinary Research & Youth Development Organization dedicated to empowering young researchers, advancing technological literacy, and building sustainable community frameworks.
-            </p>
+            {/* Direct Text Contact Info */}
+            <div className="space-y-1 text-sm font-medium">
+              <p className="text-gray-200">
+                Mail:{" "}
+                <a
+                  href="mailto:risylab.info@gmail.com"
+                  className="hover:text-pink-400 transition-colors"
+                >
+                  risylab.info@gmail.com
+                </a>
+              </p>
+              <p className="text-gray-200">
+                What's app:{" "}
+                <a
+                  href="https://wa.me/8801742299472"
+                  className="hover:text-pink-400 transition-colors"
+                >
+                  +8801742299472
+                </a>
+              </p>
+            </div>
 
+            {/* Main Social Links */}
             <div className="pt-2">
-              <span className="text-xs font-bold uppercase text-gray-500 tracking-wider block mb-3">
+              <span className="text-xs font-bold uppercase text-gray-400 tracking-wider block mb-3">
                 Follow Our Publications & Media
               </span>
               <SocialIcons variant="light" />
             </div>
           </div>
 
+          {/* Right Column: Founder's Talk Section */}
+          <div className="lg:col-span-6 flex flex-col items-start lg:items-end">
+            <div className="max-w-md w-full">
+              <h3 className="text-2xl font-bold text-white mb-6 text-left lg:text-right">
+                Founder’s Talk
+              </h3>
+
+              <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
+                {/* Tagline / Message */}
+                <div className="text-lg font-medium text-gray-200 max-w-[200px] leading-snug text-left">
+                  Empowering youth to make a Green World
+                </div>
+
+                {/* Founder Card Container */}
+                <div className="flex flex-col items-center">
+                  {/* Parent wrapper needs 'relative' so the pink banner positions correctly */}
+                  <div className="relative flex flex-col items-center pb-4">
+                    {/* Founder Image Box */}
+                    <div className="w-48 h-48 bg-white rounded-[2rem] overflow-hidden shadow-2xl">
+                      <img
+                        src={founderImage}
+                        alt="Sabbir H mitul"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Pink Overlay Badge at the Bottom Corner / Overlap */}
+                    <div className="absolute -bottom-1 w-[90%] bg-[#e6007e] text-white p-3 rounded-2xl shadow-lg z-10 text-left">
+                      <p className="font-bold text-base leading-tight">
+                        Sabbir H mitul
+                      </p>
+                      <p className="text-xs text-pink-100 font-light mt-0.5">
+                        Follow:
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Founder Social Media Bar */}
+                  <div className="flex items-center gap-2 bg-[#0d0f1d] p-2 rounded-2xl mt-4 border border-gray-800/60 shadow-lg">
+                    <a
+                      href="https://www.facebook.com/sabbirhmitul"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-9 h-9 flex items-center justify-center bg-[#181a29] text-gray-300 hover:text-white hover:bg-[#e6007e] rounded-xl transition-all"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/sabbirhmitul/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-9 h-9 flex items-center justify-center bg-[#181a29] text-gray-300 hover:text-white hover:bg-[#e6007e] rounded-xl transition-all"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@sabbirhmitul"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-9 h-9 flex items-center justify-center bg-[#181a29] text-gray-300 hover:text-white hover:bg-[#e6007e] rounded-xl transition-all"
+                      aria-label="YouTube"
+                    >
+                      <Youtube className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/sabbirhmitul/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-9 h-9 flex items-center justify-center bg-[#181a29] text-gray-300 hover:text-white hover:bg-[#e6007e] rounded-xl transition-all"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom Copyright & Back to top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-sans">
-          <p>© {new Date().getFullYear()} RISY Team Organization. All Rights Reserved.</p>
+        {/* Bottom Copyright & Back to Top */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+          <p>
+            © {new Date().getFullYear()} RISY Team Organization. All Rights
+            Reserved.
+          </p>
 
           <div className="flex items-center gap-6">
-            <span className="hover:text-gray-300 transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-gray-300 transition-colors cursor-pointer">Terms of Service</span>
+            <span className="hover:text-white transition-colors cursor-pointer">
+              Privacy Policy
+            </span>
+            <span className="hover:text-white transition-colors cursor-pointer">
+              Terms of Service
+            </span>
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-2xl bg-gray-900 hover:bg-pink-500 hover:text-white text-gray-400 transition-all flex items-center gap-1 border border-gray-800"
+              className="p-2.5 rounded-full bg-gray-900 hover:bg-pink-600 hover:text-white text-gray-400 transition-all border border-gray-800"
               aria-label="Back to top"
             >
               <ArrowUp className="w-4 h-4" />

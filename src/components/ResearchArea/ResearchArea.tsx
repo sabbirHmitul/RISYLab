@@ -12,7 +12,7 @@ export const ResearchArea: React.FC<ResearchAreaProps> = () => {
   return (
     <section id="research" className="py-5 bg-gray-50/70 border-y border-gray-100 relative">
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight">
             Activity Area
           </h2>

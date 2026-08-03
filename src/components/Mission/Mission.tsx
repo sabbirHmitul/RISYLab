@@ -12,12 +12,12 @@ export const Mission: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-100/50 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+        <div className="grid gap-60 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight">
               Mission
             </h2>
-            <p className="mt-4 text-gray-600 text-sm sm:text-base font-sans leading-relaxed">
+            <p className="mt-4 text-gray-600 text-sm sm:text-base font-sans leading-relaxed text-justify ">
               RISY Lab works at the intersection of research and youth
               development. We believe environmental problems can be solved through
               knowledge, and youth are the ones best equipped to find those
@@ -26,13 +26,13 @@ export const Mission: React.FC = () => {
             </p>
           </div>
 
-          <div className="rounded-[28px] border border-pink-200 bg-gradient-to-br from-white via-pink-50 to-sky-50 p-5 sm:p-6 shadow-sm">
-            <div className="inline-flex items-center rounded-full bg-sky-300 px-4 py-1.5 text-sm font-semibold text-sky-950">
+          <div className="rounded-lg border border-pink-200 bg-gradient-to-br from-white via-pink-50 to-sky-50 p-4  shadow-sm">
+            <div className=" rounded-lg bg-sky-300 px-4 py-1.5 text-sm font-semibold text-sky-950">
               Free
             </div>
 
-            <div className="mt-4 flex flex-wrap gap-2">
-              {['IELTS, TOEFL, GRW, GMAT', 'RISY Skills'].map((item) => (
+            <div className="mt-4 flex flex-wrap gap-5">
+              {[ 'RISY Skills', 'IELTS, TOEFL, GRW, GMAT'].map((item) => (
                 <span
                   key={item}
                   className="rounded-full bg-pink-500 px-3 py-1.5 text-sm font-semibold text-white"
@@ -42,10 +42,10 @@ export const Mission: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-5 rounded-2xl border border-dashed border-gray-300 p-4 sm:p-5">
+            <div className="mt-2 rounded-2xl border border-dashed border-gray-300 ">
 
-              <div className=" space-y-2 text-sm text-gray-600">
-                <p className="">Join our Weekly Podcast</p>
+              <div className=" space-y-2 text-sm text-gray-600 bg-amber-100 p-4">
+                <p className="font-bold">Join our Weekly Podcast</p>
                 <p>Follow page to get link update Fb</p>
               </div>
             </div>

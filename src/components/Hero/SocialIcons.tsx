@@ -14,22 +14,13 @@ export const SocialIcons: React.FC<SocialIconsProps> = ({
     {
       name: 'Facebook',
       icon: <Facebook className="w-5 h-5" />,
-      href: 'https://facebook.com',
+      href: 'https://www.facebook.com/risy.youth',
     },
-    {
-      name: 'Instagram',
-      icon: <Instagram className="w-5 h-5" />,
-      href: 'https://instagram.com',
-    },
-    {
-      name: 'YouTube',
-      icon: <Youtube className="w-5 h-5" />,
-      href: 'https://youtube.com',
-    },
+
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-5 h-5" />,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/company/risy-youth/',
     },
   ];
 

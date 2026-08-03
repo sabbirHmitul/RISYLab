@@ -1,5 +1,5 @@
-import React from 'react';
-import logoImage from '../../../assets/img/5.png';
+import React from "react";
+import logoImage from "../../../assets/img/5.png";
 
 interface LogoProps {
   className?: string;
@@ -10,10 +10,10 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({
-  className = '',
-  imageClassName = '',
-  titleClassName = 'text-gray-900',
-  subtitleClassName = 'text-gray-500',
+  className = "",
+  imageClassName = "",
+  titleClassName = "text-gray-900",
+  subtitleClassName = "text-gray-500",
   showText = true,
 }) => {
   return (
@@ -23,8 +23,6 @@ export const Logo: React.FC<LogoProps> = ({
         alt="RISY Team logo"
         className={` h-10 rounded-lg object-cover shadow-md border border-pink-100 ${imageClassName}`.trim()}
       />
-
-
     </div>
   );
 };

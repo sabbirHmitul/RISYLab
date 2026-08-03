@@ -27,7 +27,7 @@ export const researchAreasData: ResearchArea[] = [
     id: 'res-3',
     unitName: 'Unit 03',
     title: 'Simulation & Ai Modeling',
-    description: 'ASPEN, MATLAB, GIS, Machine learning, Carbon Credit calculation',
+    description: 'ASPEN, MATLAB, Machine learning, GIS, Carbon Credit calculation',
     imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
     leadResearcher: 'Dr. Sarah Lin',
     publicationsCount: 18,

@@ -39,7 +39,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({ research, index, onS
           {keywords.map((keyword) => (
             <span
               key={keyword}
-              className="rounded-full border border-pink-300 bg-pink-50 px-2 py-0.5 text-[11px] font-medium text-pink-600"
+              className="rounded-xl border border-gray-300 px-2 py-0.5 text-[8px] font-medium text-gray-400"
             >
               {keyword}
             </span>

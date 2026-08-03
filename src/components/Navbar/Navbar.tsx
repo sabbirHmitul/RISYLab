@@ -16,8 +16,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
 
   const navItems = [
     { label: 'Home', href: '#home' },
-    { label: 'Team', href: '#mission' },
-    { label: 'Publication', href: '#research' },
+    { label: 'Team', href: '/' },
+    { label: 'Publication', href: '/' },
+    { label: 'News', href: '/' },
     { label: 'Contact', href: '#footer' },
   ];
 
