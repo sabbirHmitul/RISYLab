@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
 
             </div>
 
-            <div className="flex items-center justify-between gap-3 pt-1">
+            <div className="flex items-center  gap-3 pt-1">
               <Button
                 variant="primary"
                 size="sm"
@@ -102,6 +102,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
                 className="whitespace-nowrap"
               >
                 Become Volunteer
+              </Button>
+              <Button
+                variant="primary"
+                size="sm"
+                className="whitespace-nowrap"
+              >
+                Collaboration
               </Button>
 
 

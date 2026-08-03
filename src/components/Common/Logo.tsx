@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../../../assets/img/4.png';
+import logoImage from '../../../assets/img/5.png';
 
 interface LogoProps {
   className?: string;
@@ -21,7 +21,7 @@ export const Logo: React.FC<LogoProps> = ({
       <img
         src={logoImage}
         alt="RISY Team logo"
-        className={` h-10 rounded-2xl object-cover shadow-md border border-pink-100 ${imageClassName}`.trim()}
+        className={` h-10 rounded-lg object-cover shadow-md border border-pink-100 ${imageClassName}`.trim()}
       />
 
 
