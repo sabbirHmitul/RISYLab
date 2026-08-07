@@ -13,7 +13,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   navItems: NavItem[];
-  activeSection: string;
+  isItemActive: (item: NavItem) => boolean;
   onNavigate: (href: string) => void;
   onOpenVolunteerModal: () => void;
 }
@@ -22,7 +22,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
   navItems,
-  activeSection,
+  isItemActive,
   onNavigate,
   onOpenVolunteerModal,
 }) => {
@@ -72,8 +72,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               {/* Nav Links */}
               <nav className="mt-8 flex flex-col gap-2">
                 {navItems.map((item) => {
-                  const sectionId = item.href.replace('#', '').trim() || 'home';
-                  const isActive = activeSection === sectionId;
+                  const isActive = isItemActive(item);
                   return (
                     <a
                       key={item.label}

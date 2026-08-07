@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, HeartHandshake, Sparkles } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Container from '../Common/Container';
-import Button from '../Common/Button';
 import Logo from '../Common/Logo';
 import MobileMenu from './MobileMenu';
+import type { Page } from '../../App';
 
 interface NavbarProps {
   onOpenVolunteerModal: () => void;
+  currentPage: Page;
+  onNavigate: (href: string) => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
+const navItems: { label: string; href: string; page?: Page }[] = [
+  { label: 'Home', href: '/', page: 'home' },
+  { label: 'Team', href: '/team', page: 'team' },
+  { label: 'Publication', href: '/publication', page: 'publication' },
+  { label: 'News', href: '/news', page: 'news' },
+  { label: 'Contact', href: '/#footer' },
+];
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal, currentPage, onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
-  const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Team', href: '/' },
-    { label: 'Publication', href: '/' },
-    { label: 'News', href: '/' },
-    { label: 'Contact', href: '#footer' },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Section spy
+      // Section spy (only meaningful while on the home page)
+      if (currentPage !== 'home') return;
+
       const sections = ['home', 'mission', 'research', 'projects', 'collaboration', 'footer'];
       const scrollPosition = window.scrollY + 200;
 
@@ -44,27 +48,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [currentPage]);
+
+  const isItemActive = (item: (typeof navItems)[number]) => {
+    if (item.label === 'Contact') return currentPage === 'home' && activeSection === 'footer';
+    if (item.label === 'Home') return currentPage === 'home' && activeSection !== 'footer';
+    return currentPage === item.page;
+  };
 
   const handleNavigate = (href: string) => {
-    const targetId = href.replace('#', '').trim();
-    const sectionId = targetId || 'home';
-    const element = document.getElementById(sectionId);
-
-    if (element) {
-      const navOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition - navOffset,
-        behavior: 'smooth',
-      });
-      setActiveSection(sectionId);
-      return;
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setActiveSection('home');
+    onNavigate(href);
   };
 
   return (
@@ -78,10 +73,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#home"
+            href="/"
             onClick={(e) => {
               e.preventDefault();
-              handleNavigate('#home');
+              handleNavigate('/');
             }}
             className="flex items-center gap-3 group focus:outline-none"
           >
@@ -96,8 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
           {/* Desktop Nav Items */}
           <nav className="hidden lg:flex items-center gap-1 bg-gray-50/80 p-1.5 rounded-full border border-gray-100">
             {navItems.map((item) => {
-              const sectionId = item.href.replace('#', '').trim() || 'home';
-              const isActive = activeSection === sectionId;
+              const isActive = isItemActive(item);
               return (
                 <a
                   key={item.label}
@@ -135,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenVolunteerModal }) => {
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
         navItems={navItems}
-        activeSection={activeSection}
+        isItemActive={isItemActive}
         onNavigate={handleNavigate}
         onOpenVolunteerModal={onOpenVolunteerModal}
       />
