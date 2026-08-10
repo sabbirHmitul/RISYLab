@@ -31,7 +31,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({ research, index, onS
       </div>
 
       <div className="px-3 py-2 flex flex-col items-start justify-start gap-1">
-        <h3 className="text-base font-bold font-heading text-gray-900 transition-colors group-hover:text-pink-600 leading-snug text-left">
+        <h3 className="text-lg font-bold font-heading text-gray-900 transition-colors group-hover:text-pink-600 leading-snug text-left">
           {research.title}
         </h3>
 
@@ -39,7 +39,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({ research, index, onS
           {keywords.map((keyword) => (
             <span
               key={keyword}
-              className="rounded-xl border border-gray-300 px-2 py-0.5 text-[8px] font-medium text-gray-400"
+              className="rounded-xl border border-gray-300 px-2 py-0.5 text-[12px] font-medium text-gray-400"
             >
               {keyword}
             </span>

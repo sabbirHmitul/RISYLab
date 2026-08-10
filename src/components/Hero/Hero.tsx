@@ -95,14 +95,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             </div>
 
             <div className="flex items-center  gap-3 pt-1">
-              <Button
+              {/* <Button
                 variant="primary"
                 size="sm"
                 onClick={onOpenVolunteerModal}
                 className="whitespace-nowrap"
               >
                 Become Volunteer
-              </Button>
+              </Button> */}
               <Button
                 variant="primary"
                 size="sm"

@@ -3,9 +3,9 @@ import { Partner } from '../types/partner';
 export const partnersData: Partner[] = [
   {
     id: 'part-1',
-    name: 'BUET',
+    name: 'BUTEX',
     category: 'University Partner',
-    logoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/057/101/845/small_2x/buet-logo-bangladesh-university-of-engineering-and-technology-emblem-free-vector.jpg',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Bangladesh_University_of_Textiles_logo.svg/960px-Bangladesh_University_of_Textiles_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail',
     partnershipType: 'Academic Collaboration',
     description: 'Engineering and innovation collaboration with RISYLab.'
   },
@@ -19,9 +19,9 @@ export const partnersData: Partner[] = [
   },
   {
     id: 'part-3',
-    name: 'CUET',
+    name: 'FILTER Bangladesh',
     category: 'University Partner',
-    logoUrl: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/d9287b90500101.5e18b59f4c93c.png',
+    logoUrl: 'https://filterbangladesh.com/images/filter-logo.png',
     partnershipType: 'Academic Collaboration',
     description: 'Technology and engineering outreach partnership.'
   },
@@ -43,9 +43,9 @@ export const partnersData: Partner[] = [
   },
   {
     id: 'part-6',
-    name: 'RU',
+    name: 'BPGMEA',
     category: 'University Partner',
-    logoUrl: 'https://www.ru.ac.bd/wp-content/uploads/2025/04/RU_Official_Logo.png',
+    logoUrl: 'https://bpgmea.org.bd/wp-content/uploads/2024/04/logo-1.png',
     partnershipType: 'Academic Collaboration',
     description: 'Academic networking and knowledge-sharing partnership.'
   }

@@ -12,8 +12,8 @@ export const Mission: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-100/50 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <Container>
-        <div className="grid gap-60 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
+        <div className="grid gap-30 lg:grid-cols-[1.3fr_0.7fr] lg:items-start">
+          <div className="text-center lg:text-left max-w-6xl mx-auto lg:mx-0">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight">
               Mission
             </h2>
@@ -35,7 +35,7 @@ export const Mission: React.FC = () => {
               {[ 'RISY Skills', 'IELTS, TOEFL, GRW, GMAT'].map((item) => (
                 <span
                   key={item}
-                  className="rounded-full bg-pink-500 px-3 py-1.5 text-sm font-semibold text-white"
+                  className="rounded-full bg-pink-500 px-4 py-1.5 text-sm font-semibold text-white"
                 >
                   {item}
                 </span>
@@ -45,8 +45,10 @@ export const Mission: React.FC = () => {
             <div className="mt-2 rounded-2xl border border-dashed border-gray-300 ">
 
               <div className=" space-y-2 text-sm text-gray-600 bg-amber-100 p-4">
-                <p className="font-bold">Join our Weekly Podcast</p>
-                <p>Follow page to get link update Fb</p>
+                <p className="font-bold text-lg">Join our Weekly Podcast</p>
+                <button className="bg-blue-500 text-white px-3 py-1.5 rounded-lg hover:bg-blue-600 transition-colors w-full">
+                  Get Update Link At Facebook
+                </button>
               </div>
             </div>
           </div>

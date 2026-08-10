@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = () => {
             />
 
             {/* Direct Text Contact Info */}
-            <div className="space-y-1 text-sm font-medium">
+            <div className="space-y-1 text-base font-medium">
               <p className="text-gray-200">
                 Mail:{" "}
                 <a
@@ -70,39 +70,19 @@ export const Footer: React.FC<FooterProps> = () => {
           {/* Right Column: Founder's Talk Section */}
           <div className="lg:col-span-6 flex flex-col items-start lg:items-end">
             <div className="max-w-md w-full">
-              <h3 className="text-2xl font-bold text-white mb-6 text-left lg:text-right">
-                Founder’s Talk
-              </h3>
-
               <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
-                {/* Tagline / Message */}
-                <div className="text-lg font-medium text-gray-200 max-w-[200px] leading-snug text-left">
-                  Empowering youth to make a Green World
-                </div>
+                <div className="flex flex-col items-start text-left">
+                  {/* Tagline / Message */}
 
-                {/* Founder Card Container */}
-                <div className="flex flex-col items-center">
-                  {/* Parent wrapper needs 'relative' so the pink banner positions correctly */}
-                  <div className="relative flex flex-col items-center pb-4">
-                    {/* Founder Image Box */}
-                    <div className="w-48 h-48 bg-white rounded-[2rem] overflow-hidden shadow-2xl">
-                      <img
-                        src={founderImage}
-                        alt="Sabbir H mitul"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                  <h3 className="text-2xl font-bold text-white mb-6">
+                    Founder’s Talk
+                  </h3>
 
-                    {/* Pink Overlay Badge at the Bottom Corner / Overlap */}
-                    <div className="absolute -bottom-1 w-[90%] bg-[#e6007e] text-white p-3 rounded-2xl shadow-lg z-10 text-left">
-                      <p className="font-bold text-base leading-tight">
-                        Sabbir H mitul
-                      </p>
-                      <p className="text-xs text-pink-100 font-light mt-0.5">
-                        Follow:
-                      </p>
-                    </div>
+                  <div className="text-lg font-medium text-gray-200 max-w-[200px] leading-snug">
+                    Empowering youth to make a Green World
                   </div>
+
+                  <p className="text-xs text-pink-100 font-light mt-2">Follow:</p>
 
                   {/* Founder Social Media Bar */}
                   <div className="flex items-center gap-2 bg-[#0d0f1d] p-2 rounded-2xl mt-4 border border-gray-800/60 shadow-lg">
@@ -142,6 +122,27 @@ export const Footer: React.FC<FooterProps> = () => {
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
+                  </div>
+                </div>
+                {/* Founder Card Container */}
+                <div className="flex flex-col items-center">
+                  {/* Parent wrapper needs 'relative' so the pink banner positions correctly */}
+                  <div className="relative flex flex-col items-center pb-4">
+                    {/* Founder Image Box */}
+                    <div className="w-44 h-44 bg-white rounded-[2rem] overflow-hidden shadow-2xl">
+                      <img
+                        src={founderImage}
+                        alt="Sabbir H mitul"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Pink Overlay Badge at the Bottom Corner / Overlap */}
+                    <div className="absolute -bottom-1 w-[90%] bg-[#e6007e] text-white p-3 rounded-2xl shadow-lg z-10 text-left">
+                      <p className="font-bold text-base text-center leading-tight">
+                        Sabbir H mitul
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

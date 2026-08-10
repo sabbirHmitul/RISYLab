@@ -28,32 +28,46 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             {project.description}
           </p>
 
-          <div className="pt-4 border-t border-gray-200 space-y-2 text-sm">
-            <div className="text-gray-800 font-medium">
-              <span className="font-bold text-gray-900">Team Lead:</span> {project.teamLead}
-            </div>
+          <div className="pt-4 border-t border-gray-200 space-y-2 text-sm sm:text-base">
+
 
             <div className="text-gray-700 font-medium">
-              <span className="font-bold text-gray-900">Team Members:</span>{' '}
+              <span className="font-bold text-gray-900">Keynotes:</span>{' '}
               {project.teamMembers.join(', ')}
+            </div>
+
+                        <div className="text-gray-800 font-medium">
+              <span className="font-bold text-gray-900">Team Lead:</span> {project.teamLead}
             </div>
           </div>
         </div>
 
         <div className={`order-1 ${isImageOnRight ? 'xl:order-1' : 'xl:order-2'}`}>
-          <div className="grid grid-cols-3 gap-3">
-            {project.imageUrls.map((image, imageIndex) => (
-              <div
-                key={`${project.id}-${imageIndex}`}
-                className={`h-full overflow-hidden rounded-[20px] border border-white/70  ${imageIndex === 1 ? 'mt-8' : ''}`}
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} ${imageIndex + 1}`}
-                  className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-2 gap-3">
+            {project.imageUrls.slice(0, 2).map((image, imageIndex) => {
+              const imageName = image
+                .split('/')
+                .pop()
+                ?.split('?')[0]
+                .replace(/[-_]/g, ' ')
+                .replace(/\.(jpg|jpeg|png|webp|gif)$/i, '') || `Image ${imageIndex + 1}`;
+
+              return (
+                <div
+                  key={`${project.id}-${imageIndex}`}
+                  className="relative h-full overflow-hidden rounded-[20px] border border-white/70"
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} ${imageIndex + 1}`}
+                    className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 right-0 rounded-full bg-pink-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
+                    {project.title}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
