@@ -1,4 +1,10 @@
 import { ResearchArea } from '../types/research';
+import activityImg1 from '../../assets/img/activity/a1.png';
+import activityImg2 from '../../assets/img/activity/a2.jpeg';
+import activityImg3 from '../../assets/img/activity/a3.png';
+import activityImg4 from '../../assets/img/activity/a4.jpeg';
+// a5.heif may not be supported by the bundler; fall back to a1.png
+import activityImg5 from '../../assets/img/activity/a1.png';
 
 export const researchAreasData: ResearchArea[] = [
   {
@@ -6,7 +12,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 01',
     title: 'Engineering & Lab Practice',
     description: 'Env. chemistry, Water & Air analysis, Waste to bio-produce',
-    imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
+    imageUrl: activityImg1,
     leadResearcher: 'Dr. Arisya Rahman',
     publicationsCount: 14,
     tags: ['Civic Tech', 'Social Enterprise', 'Leadership Development'],
@@ -17,7 +23,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 02',
     title: 'Youth Outdoor Activity',
     description: 'Tree Plantation, Group activity, Green Training',
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    imageUrl: activityImg2,
     leadResearcher: 'Prof. Marcus Vance',
     publicationsCount: 22,
     tags: ['AI Literacy', 'EDTech', 'Digital Inclusion'],
@@ -28,7 +34,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 03',
     title: 'Simulation & Ai Modeling',
     description: 'ASPEN, MATLAB, Machine learning, GIS, Carbon Credit calculation',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    imageUrl: activityImg3,
     leadResearcher: 'Dr. Sarah Lin',
     publicationsCount: 18,
     tags: ['Mental Health', 'Youth Resilience', 'Psychology'],
@@ -40,7 +46,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 04',
     title: 'Robotics Practice',
     description: 'Rdno, IOT, Automation',
-    imageUrl: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
+    imageUrl: activityImg4,
     leadResearcher: 'Eng. David O’Connor',
     publicationsCount: 11,
     tags: ['Climate Resilience', 'Circular Economy', 'Ecology'],
@@ -51,7 +57,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 05',
     title: 'Education & Public health',
     description: 'Child green education, Climate disease, Waste to bio-produce',
-    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
+    imageUrl: activityImg5,
     leadResearcher: 'Nadia Thorne, M.Sc.',
     publicationsCount: 16,
     tags: ['Gig Economy', 'Entrepreneurship', 'Micro-credentials'],

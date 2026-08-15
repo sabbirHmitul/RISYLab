@@ -4,6 +4,7 @@ import { HeartHandshake, ChevronLeft, ChevronRight, ArrowUpRight, Sparkles } fro
 import Container from '../Common/Container';
 import Button from '../Common/Button';
 import SocialIcons from './SocialIcons';
+import heroImg from '../../../assets/img/Home- Banner-2.png';
 
 interface HeroProps {
   onOpenVolunteerModal: () => void;
@@ -11,20 +12,11 @@ interface HeroProps {
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80',
+    image: heroImg,
     title: 'empowering youth research & action',
     tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
   },
-  {
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1920&q=80',
-    title: 'pioneering sustainable innovations',
-    tagline: 'Incubating next-generation research fellows, STEM mentors, and ecological pioneers.',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=1920&q=80',
-    title: 'global youth collaboration network',
-    tagline: 'Fostering cross-border policy studies and social equity programs built for young visionaries.',
-  },
+
 ];
 
 export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
@@ -58,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             className="w-full h-full object-cover object-center"
           />
           {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/75 to-gray-900/80 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/25 to-gray-900/20 backdrop-blur-[1px]" />
         </motion.div>
       </AnimatePresence>
 
@@ -81,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 md:ml-auto w-full max-w-sm bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl text-white space-y-3 shadow-xl"
+            className="md:col-span-7 md:ml-auto w-full max-w-sm bg-gray-900/50 backdrop-blur-md border border-white/20 p-5 rounded-2xl text-white space-y-3 shadow-xl"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 backdrop-blur-md border border-pink-500/30 text-pink-300 text-xs font-semibold tracking-wider uppercase">
               <Sparkles className="w-3.5 h-3.5 text-pink-400" />

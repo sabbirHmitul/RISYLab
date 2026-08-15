@@ -5,24 +5,25 @@ import { NewsItem } from '../../types/news';
 
 interface FeaturedNewsProps {
   item: NewsItem;
+  reverse?: boolean;
 }
 
-export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item }) => {
+export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className="grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden border border-gray-100 shadow-xl bg-white"
+      className={`grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden border border-gray-100 shadow-xl bg-white`}
     >
       {/* 50% Image */}
-      <div className="h-72 lg:h-full min-h-[320px] overflow-hidden bg-gray-100">
+      <div className={`h-72 lg:h-full min-h-[320px] overflow-hidden bg-gray-100 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
         <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover" />
       </div>
 
       {/* 50% Content */}
-      <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center gap-4">
+      <div className={`p-8 sm:p-10 lg:p-12 flex flex-col justify-center gap-4 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
         <div className="flex items-center gap-3">
           <span className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
             {item.category}

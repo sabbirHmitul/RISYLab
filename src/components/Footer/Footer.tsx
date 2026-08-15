@@ -140,7 +140,7 @@ export const Footer: React.FC<FooterProps> = () => {
                     {/* Pink Overlay Badge at the Bottom Corner / Overlap */}
                     <div className="absolute -bottom-1 w-[90%] bg-[#e6007e] text-white p-3 rounded-2xl shadow-lg z-10 text-left">
                       <p className="font-bold text-base text-center leading-tight">
-                        Sabbir H mitul
+                        Sabbir H Mitul
                       </p>
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GraduationCap, Building2 } from 'lucide-react';
 import { TeamMember } from '../../types/team';
@@ -10,10 +10,32 @@ interface TeamSpotlightProps {
 }
 
 export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({ badge, title, members }) => {
-  const [selectedId, setSelectedId] = useState(members[0]?.id);
-  const selected = members.find((m) => m.id === selectedId) ?? members[0];
+  // No details shown on initial load; modal-only details
+  const [viewedId, setViewedId] = useState<string | null>(null); // last clicked member id
+  const [modalOpen, setModalOpen] = useState(false);
+  const [page, setPage] = useState(0);
+  const pageSize = 5;
 
-  if (!selected) return null;
+  const start = page * pageSize;
+  const end = start + pageSize;
+  const paginatedMembers = members.slice(start, end);
+
+  const selected = null;
+
+  const bodyOverflowRef = useRef<string>('');
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (modalOpen) {
+      bodyOverflowRef.current = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = bodyOverflowRef.current || '';
+    }
+    return () => {
+      document.body.style.overflow = bodyOverflowRef.current || '';
+    };
+  }, [modalOpen]);
 
   return (
     <div>
@@ -28,16 +50,19 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({ badge, title, memb
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 items-start">
         {/* Avatar selector grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
-          {members.map((member) => {
-            const isActive = member.id === selected.id;
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {paginatedMembers.map((member) => {
+            const isActive = false;
             return (
               <button
                 key={member.id}
                 type="button"
-                onClick={() => setSelectedId(member.id)}
+                onClick={() => {
+                  setViewedId(member.id);
+                  setModalOpen(true);
+                }}
                 className={`group relative rounded-3xl overflow-hidden aspect-[4/5] border-2 text-left transition-all duration-300 focus:outline-none ${
                   isActive
                     ? 'border-pink-500 shadow-lg shadow-pink-500/20 scale-[1.02]'
@@ -67,55 +92,119 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({ badge, title, memb
         </div>
 
         {/* Detail spotlight card */}
-        <div className="lg:sticky lg:top-28">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selected.id}
-              initial={{ opacity: 0, x: 16 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -16 }}
-              transition={{ duration: 0.3 }}
-              className="rounded-[28px] bg-white border border-gray-100 shadow-xl overflow-hidden"
-            >
-              <div className="h-52 w-full overflow-hidden bg-gray-100">
-                <img src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
-              </div>
-              <div className="p-6 space-y-3">
-                <h4 className="text-lg font-bold font-heading text-gray-900">{selected.name}</h4>
-                <p className="text-sm font-semibold text-pink-600">{selected.role}</p>
-                <p className="flex items-center gap-1.5 text-sm text-gray-500">
-                  <Building2 className="w-3.5 h-3.5 shrink-0" />
-                  {selected.affiliation}
-                </p>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-gray-600">
+              Showing {start + 1} - {Math.min(end, members.length)} of {members.length}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+                disabled={page === 0}
+                className="px-3 py-1 rounded-md bg-white border text-gray-700 disabled:opacity-40"
+              >
+                Prev
+              </button>
+              <button
+                onClick={() => setPage((p) => (end < members.length ? p + 1 : p))}
+                disabled={end >= members.length}
+                className="px-3 py-1 rounded-md bg-white border text-gray-700 disabled:opacity-40"
+              >
+                Next
+              </button>
+            </div>
+          </div>
 
-                <div className="pt-1">
-                  <p className="text-[11px] font-semibold tracking-wider text-gray-400 uppercase mb-2">
-                    Specialization
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {selected.specialization.map((s) => (
-                      <span
-                        key={s}
-                        className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-medium border border-pink-100"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+          <div className="lg:sticky lg:top-28">
+            {/* Modal for selected member */}
+            <AnimatePresence>
+              {modalOpen && viewedId && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-[999999] flex items-center justify-center p-4"
+                    role="dialog"
+                    aria-modal="true"
+                  >
+                    <div
+                      className="absolute inset-0 bg-black/60 pointer-events-auto"
+                      onClick={() => { setModalOpen(false); setViewedId(null); }}
+                    />
+                  <motion.div
+                    initial={{ scale: 0.98, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.98, opacity: 0 }}
+                    transition={{ duration: 0.18 }}
+                    className="relative max-w-3xl w-full rounded-2xl bg-white overflow-hidden shadow-2xl border border-gray-100 z-20"
+                  >
+                    {(() => {
+                      const mem = members.find((m) => m.id === viewedId);
+                      if (!mem) return null;
+                      return (
+                        <div className="flex flex-col md:flex-row">
+                          <div className="md:w-1/2 h-64 md:h-auto bg-gray-100 overflow-hidden">
+                            <img src={mem.imageUrl} alt={`${mem.name} portrait`} className="w-full h-full object-cover" />
+                          </div>
+                          <div className="p-6 md:w-1/2 flex flex-col justify-between">
+                            <div>
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <h4 className="text-2xl font-bold">{mem.name}</h4>
+                                  <p className="text-sm text-pink-600 font-semibold mt-1">{mem.role}</p>
+                                  <p className="mt-2 text-sm text-gray-600">{mem.affiliation}</p>
+                                </div>
+                                <button
+                                  onClick={() => { setModalOpen(false); setViewedId(null); }}
+                                  className="text-gray-500 hover:text-gray-800 ml-4"
+                                  aria-label="Close details"
+                                >
+                                  <span className="sr-only">Close</span>
+                                  ✕
+                                </button>
+                              </div>
 
-                <a
-                  href={selected.scholarUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 mt-3 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300"
-                >
-                  <GraduationCap className="w-4 h-4" />
-                  Scholar
-                </a>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                              <div className="mt-4 flex flex-wrap gap-2">
+                                {mem.specialization.map((s) => (
+                                  <span key={s} className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-medium border border-pink-100">
+                                    {s}
+                                  </span>
+                                ))}
+                              </div>
+
+                              <div className="mt-6">
+                                <p className="text-sm text-gray-700">{mem.bio || mem.description || ''}</p>
+                              </div>
+                            </div>
+
+                            <div className="mt-6 flex items-center gap-3">
+                              <a
+                                href={mem.scholarUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300"
+                              >
+                                <GraduationCap className="w-4 h-4" />
+                                Scholar
+                              </a>
+                              <a
+                                href={mem.profileUrl || '#'}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-sm text-gray-600 underline"
+                              >
+                                Full profile
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })()}
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>

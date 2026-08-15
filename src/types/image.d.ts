@@ -22,3 +22,8 @@ declare module '*.webp' {
   const src: string;
   export default src;
 }
+
+declare module '*.heif' {
+  const src: string;
+  export default src;
+}
