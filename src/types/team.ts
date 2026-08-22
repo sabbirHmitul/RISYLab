@@ -6,5 +6,6 @@ export interface TeamMember {
   specialization: string[];
   imageUrl: string;
   scholarUrl: string;
-  category: 'senior' | 'lead';
+  linkedinUrl?: string;
+  category: 'senior' | 'lead' | 'practitioner';
 }

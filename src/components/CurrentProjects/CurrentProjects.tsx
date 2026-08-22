@@ -9,6 +9,8 @@ interface CurrentProjectsProps {
 }
 
 export const CurrentProjects: React.FC<CurrentProjectsProps> = () => {
+  const sections = Array.from(new Set(projectsData.map((project) => project.section)));
+
   return (
     <section id="projects" className="py-5  bg-white relative">
       <Container>
@@ -19,18 +21,24 @@ export const CurrentProjects: React.FC<CurrentProjectsProps> = () => {
         </div>
 
         <div className="space-y-10">
-          {projectsData.map((project, idx) => (
-            <div key={project.id} className="space-y-4">
-              <div className="flex items-center pb-2 border-b border-pink-100">
-                <img src={sectionIcon} alt="Section icon" className="h-10 object-contain" />
-                <h3 className="text-2xl font-bold font-heading text-pink-600">
-                  {project.section}
-                </h3>
-              </div>
+          {sections.map((section) => {
+            const sectionProjects = projectsData.filter((project) => project.section === section);
 
-              <ProjectCard project={project} index={idx} />
-            </div>
-          ))}
+            return (
+              <div key={section} className="space-y-4">
+                <div className="flex items-center pb-2 border-b border-pink-100">
+                  <img src={sectionIcon} alt="Section icon" className="h-10 object-contain" />
+                  <h3 className="text-2xl font-bold font-heading text-pink-600">{section}</h3>
+                </div>
+
+                <div className="space-y-6">
+                  {sectionProjects.map((project, idx) => (
+                    <ProjectCard key={project.id} project={project} index={idx} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Container>
     </section>

@@ -26,6 +26,23 @@ export const Collaboration: React.FC<CollaborationProps> = ({ onOpenVolunteerMod
           ))}
         </div>
 
+        <div className="flex justify-center mt-10">
+          <Button
+            variant="primary"
+            size="md"
+            icon={<Handshake className="w-5 h-5" />}
+            iconPosition="left"
+            onClick={() =>
+              window.open(
+                'https://docs.google.com/forms/d/e/1FAIpQLSfcdaC-Eknm0eMO61_WwyOcX99y5sXQYiD4_Y3GOfbxSEksVQ/viewform?usp=sharing&ouid=10279378077306022104',
+                '_blank',
+                'noopener,noreferrer'
+              )
+            }
+          >
+            Collaborate With Us
+          </Button>
+        </div>
 
       </Container>
     </section>

@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   imageUrls: string[];
   teamLead: string;
-  teamMembers: string[];
+  teamMembers?: string[];
+  keyNotes?: string[];
   section: string;
 }

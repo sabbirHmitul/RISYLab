@@ -68,10 +68,10 @@ export const Footer: React.FC<FooterProps> = () => {
           </div>
 
           {/* Right Column: Founder's Talk Section */}
-          <div className="lg:col-span-6 flex flex-col items-start lg:items-end">
-            <div className="max-w-md w-full">
-              <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
-                <div className="flex flex-col items-start text-left">
+          <div className="lg:col-span-6 flex justify-start lg:justify-end">
+            <div className="max-w-md">
+              <div className="flex flex-row items-center gap-2 sm:gap-3">
+                <div className="flex flex-col items-start text-left shrink-0">
                   {/* Tagline / Message */}
 
                   <h3 className="text-2xl font-bold text-white mb-6">
