@@ -33,7 +33,12 @@ export const CurrentProjects: React.FC<CurrentProjectsProps> = () => {
 
                 <div className="space-y-6">
                   {sectionProjects.map((project, idx) => (
-                    <ProjectCard key={project.id} project={project} index={idx} />
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      index={idx}
+                      imageOnLeft={projectsData.indexOf(project) % 2 === 0}
+                    />
                   ))}
                 </div>
               </div>

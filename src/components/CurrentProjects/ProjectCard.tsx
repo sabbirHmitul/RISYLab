@@ -5,10 +5,11 @@ import { Project } from '../../types/project';
 interface ProjectCardProps {
   project: Project;
   index: number;
+  /** Alternates across all cards so consecutive projects swap image/text sides. */
+  imageOnLeft: boolean;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
-  const isImageOnRight = index % 2 === 0;
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, imageOnLeft }) => {
 
   return (
     <motion.div
@@ -19,7 +20,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       className="rounded-[28px] border border-gray-100 bg-gradient-to-br from-white via-pink-50/40 to-sky-50/50 p-4 sm:p-6 shadow-sm"
     >
       <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,0.5fr)_minmax(0,0.5fr)] gap-8 items-start">
-        <div className={`space-y-4 ${isImageOnRight ? 'order-2 xl:order-2' : 'order-2 xl:order-1'}`}>
+        <div className={`space-y-4 ${imageOnLeft ? 'order-2 xl:order-2' : 'order-2 xl:order-1'}`}>
           <h3 className="text-2xl font-bold font-heading text-[#595959] leading-tight">
             {project.title}
           </h3>
@@ -49,18 +50,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           </div>
         </div>
 
-        <div className={`order-1 ${isImageOnRight ? 'xl:order-1' : 'xl:order-2'}`}>
-          <div className="grid grid-cols-3 gap-3">
-            {project.imageUrls.map((image, imageIndex) => (
+        <div className={`order-1 ${imageOnLeft ? 'xl:order-1' : 'xl:order-2'}`}>
+          <div className="grid grid-cols-2 gap-3">
+            {project.imageUrls.slice(0, 2).map((image, imageIndex) => (
               <div
                 key={`${project.id}-${imageIndex}`}
-                className={`h-full overflow-hidden rounded-[20px] border border-white/70  ${imageIndex === 1 ? 'mt-8' : ''}`}
+                className="relative h-full overflow-hidden rounded-[20px] border border-white/70"
               >
                 <img
                   src={image}
                   alt={`${project.title} ${imageIndex + 1}`}
                   className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"
                 />
+                <div className="absolute bottom-0 right-0 rounded-full bg-pink-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
+                  {project.title}
+                </div>
               </div>
             ))}
           </div>
