@@ -85,8 +85,8 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               <div className="absolute bottom-0 left-0 right-0 p-3.5 pt-6">
                 <p className="text-white text-sm font-semibold leading-tight truncate">{member.name}</p>
                 <p className="text-white/70 text-[11px] truncate">{member.role}</p>
-                {member.affiliation && (
-                  <p className="text-white/60 text-[10px] truncate">{member.affiliation}</p>
+                {member.institution && (
+                  <p className="text-white/60 text-[10px] truncate">{member.institution}</p>
                 )}
               </div>
             </button>
@@ -132,6 +132,9 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               <div className="p-6 space-y-3">
                 <h4 className="text-lg font-bold font-heading text-gray-900">{selected.name}</h4>
                 <p className="text-sm font-semibold text-pink-600">{selected.role}</p>
+                {selected.institution && (
+                  <p className="text-sm font-medium text-gray-700">{selected.institution}</p>
+                )}
                 {selected.affiliation && (
                   <p className="flex items-center gap-1.5 text-sm text-gray-500">
                     <Building2 className="w-3.5 h-3.5 shrink-0" />

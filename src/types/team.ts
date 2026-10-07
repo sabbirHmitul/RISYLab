@@ -3,6 +3,7 @@ export interface TeamMember {
   name: string;
   role: string;
   affiliation: string;
+  institution?: string;
   specialization: string[];
   imageUrl: string;
   scholarUrl: string;

@@ -8,6 +8,7 @@ export const teamData: TeamMember[] = [
     name: 'Suman Dewanjee',
     role: 'PhD Student',
     affiliation: 'Mechanical Engineering (USA)',
+    institution: 'Virginia Tech University',
     specialization: ['Mechanical Engineering'],
     imageUrl:
       'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
