@@ -6,7 +6,7 @@ export const teamData: TeamMember[] = [
   {
     id: 'senior-1',
     name: 'Suman Dewanjee',
-    role: 'PhD Student',
+    role: 'PhD Student (USA)',
     affiliation: 'Mechanical Engineering (USA)',
     institution: 'Virginia Tech University',
     specialization: ['Mechanical Engineering'],
