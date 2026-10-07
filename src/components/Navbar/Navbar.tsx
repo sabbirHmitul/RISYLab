@@ -13,6 +13,7 @@ interface NavbarProps {
 
 const navItems: { label: string; href: string; page?: Page }[] = [
   { label: 'Home', href: '/', page: 'home' },
+  { label: 'Research', href: '/research', page: 'research' },
   { label: 'Team', href: '/team', page: 'team' },
   { label: 'Publication', href: '/publication', page: 'publication' },
   { label: 'News', href: '/news', page: 'news' },

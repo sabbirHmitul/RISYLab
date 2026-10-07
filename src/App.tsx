@@ -10,10 +10,12 @@ import VolunteerModal from './components/VolunteerModal/VolunteerModal';
 import TeamPage from './components/Team/TeamPage';
 import PublicationPage from './components/Publication/PublicationPage';
 import NewsPage from './components/News/NewsPage';
+import ResearchPage from './components/Research/ResearchPage';
 
-export type Page = 'home' | 'team' | 'publication' | 'news';
+export type Page = 'home' | 'research' | 'team' | 'publication' | 'news';
 
 const getPageFromPath = (pathname: string): Page => {
+  if (pathname.startsWith('/research')) return 'research';
   if (pathname.startsWith('/team')) return 'team';
   if (pathname.startsWith('/publication')) return 'publication';
   if (pathname.startsWith('/news')) return 'news';
@@ -84,6 +86,7 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main>
+        {currentPage === 'research' && <ResearchPage />}
         {currentPage === 'team' && <TeamPage />}
         {currentPage === 'publication' && <PublicationPage />}
         {currentPage === 'news' && <NewsPage />}
