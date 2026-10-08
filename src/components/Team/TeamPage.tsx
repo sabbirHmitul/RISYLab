@@ -35,7 +35,7 @@ export const TeamPage: React.FC = () => {
             badge="Our People"
             title="Team Lead"
             members={teamLeads}
-            columns={4}
+            columns={5}
             specializationLabel="Skills"
           />
         </Container>
@@ -47,7 +47,7 @@ export const TeamPage: React.FC = () => {
             badge="Our People"
             title="Research Practitioner"
             members={researchPractitioners}
-            columns={4}
+            columns={5}
             specializationLabel="Skills"
           />
         </Container>
