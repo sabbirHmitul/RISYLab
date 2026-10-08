@@ -81,7 +81,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                 alt={member.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5 pt-6">
                 <p className="text-white text-base font-semibold leading-tight truncate">{member.name}</p>
                 <p className="text-white/70 text-xs truncate">{member.role}</p>
