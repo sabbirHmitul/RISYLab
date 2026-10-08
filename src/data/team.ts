@@ -62,7 +62,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-6',
     name: 'Santa',
     role: 'PhD Candidate',
-    affiliation: 'Environment & Social Science, (USA)',
+    affiliation: 'Env. & Social Science, (USA)',
     specialization: ['Environment & Social Science'],
     imageUrl:
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
