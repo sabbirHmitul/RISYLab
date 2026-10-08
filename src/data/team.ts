@@ -6,9 +6,8 @@ export const teamData: TeamMember[] = [
   {
     id: 'senior-1',
     name: 'Suman Dewanjee',
-    role: 'PhD Student (USA)',
+    role: 'PhD Student',
     affiliation: 'Mechanical Engineering (USA)',
-    institution: 'Virginia Tech University',
     specialization: ['Mechanical Engineering'],
     imageUrl:
       'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
@@ -30,7 +29,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-3',
     name: 'Mehedi Hasan',
     role: 'PhD Student',
-    affiliation: 'Civil & Env. Engineering (Canada)',
+    affiliation: 'Civil & Env. Engineering, (Canada)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
     imageUrl:
       'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
@@ -41,7 +40,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-4',
     name: 'Refat Hossain',
     role: 'PhD Student',
-    affiliation: 'Civil & Env. Engineering (Canada)',
+    affiliation: 'Civil & Env. Engineering, (Canada)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
     imageUrl:
       'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=600&q=80',
@@ -52,7 +51,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-5',
     name: 'Sadib Bin Kabir',
     role: 'PhD Student',
-    affiliation: 'Civil & Env. Engineering (Australia)',
+    affiliation: 'Civil & Env. Engineering, (Australia)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
     imageUrl:
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80',
@@ -63,7 +62,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-6',
     name: 'Santa',
     role: 'PhD Candidate',
-    affiliation: 'Environment & Social Science (USA)',
+    affiliation: 'Environment & Social Science, (USA)',
     specialization: ['Environment & Social Science'],
     imageUrl:
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
