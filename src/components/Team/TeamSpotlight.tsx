@@ -86,7 +86,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                 <p className="text-white text-base font-semibold leading-tight truncate">{member.name}</p>
                 <p className="text-white/70 text-xs truncate">{member.role}</p>
                 {member.institution && (
-                  <p className="text-white/60 text-[11px] truncate">{member.institution}</p>
+                  <p className="text-white/60 text-xs truncate">{member.institution}</p>
                 )}
               </div>
             </button>
