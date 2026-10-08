@@ -83,10 +83,10 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5 pt-6">
-                <p className="text-white text-sm font-semibold leading-tight truncate">{member.name}</p>
-                <p className="text-white/70 text-[11px] truncate">{member.role}</p>
+                <p className="text-white text-base font-semibold leading-tight truncate">{member.name}</p>
+                <p className="text-white/70 text-xs truncate">{member.role}</p>
                 {member.institution && (
-                  <p className="text-white/60 text-[10px] truncate">{member.institution}</p>
+                  <p className="text-white/60 text-[11px] truncate">{member.institution}</p>
                 )}
               </div>
             </button>
