@@ -47,7 +47,7 @@ export const TeamPage: React.FC = () => {
             badge="Our People"
             title="Research Practitioner"
             members={researchPractitioners}
-            columns={5}
+            columns={4}
             specializationLabel="Skills"
           />
         </Container>
