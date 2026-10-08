@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, HeartHandshake } from 'lucide-react';
 import Button from '../Common/Button';
@@ -26,7 +27,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   onNavigate,
   onOpenVolunteerModal,
 }) => {
-  return (
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -117,7 +120,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
