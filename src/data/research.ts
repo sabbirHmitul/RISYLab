@@ -1,8 +1,8 @@
 import { ResearchArea } from '../types/research';
-import activityImg1 from '../../assets/img/activity/a1.png';
-import activityImg2 from '../../assets/img/activity/a2-centered.jpeg';
-import activityImg3 from '../../assets/img/activity/a3.png';
-import educationImg from '../../assets/img/activity/a4-centered.jpeg';
+import activityImg1 from '../../assets/img/activity/a1.webp';
+import activityImg2 from '../../assets/img/activity/a2-centered.webp';
+import activityImg3 from '../../assets/img/activity/a3.webp';
+import educationImg from '../../assets/img/activity/a4-centered.webp';
 
 export const researchAreasData: ResearchArea[] = [
   {

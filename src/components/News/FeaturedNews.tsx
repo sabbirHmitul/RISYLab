@@ -19,7 +19,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
     >
       {/* 50% Image */}
       <div className={`h-72 lg:h-full min-h-[320px] overflow-hidden bg-gray-100 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
-        <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover" />
+        <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
 
       {/* 50% Content */}
@@ -40,13 +40,17 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
 
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.excerpt}</p>
 
+        {item.link && item.link !== '#' && (
         <a
           href={item.link}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex items-center gap-2 mt-2 w-fit px-5 py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold shadow-[0_4px_14px_rgba(236,72,153,0.35)] transition-all duration-300"
         >
           Read Full Story
           <ArrowUpRight className="w-4 h-4" />
         </a>
+        )}
       </div>
     </motion.div>
   );

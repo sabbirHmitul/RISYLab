@@ -27,6 +27,8 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({ research, index, onS
           <img
             src={research.imageUrl}
             alt={research.title}
+            loading="lazy"
+            decoding="async"
             style={research.imagePosition ? { objectPosition: research.imagePosition } : undefined}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

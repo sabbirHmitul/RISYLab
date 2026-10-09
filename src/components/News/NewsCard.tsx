@@ -18,7 +18,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ item, index }) => {
       className="group flex flex-col h-full bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 overflow-hidden"
     >
       <div className="relative h-48 w-full overflow-hidden bg-gray-100">
-        <img
+        <img loading="lazy" decoding="async"
           src={item.imageUrl}
           alt={item.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

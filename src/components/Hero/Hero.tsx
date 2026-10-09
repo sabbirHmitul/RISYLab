@@ -4,8 +4,8 @@ import { HeartHandshake, ChevronLeft, ChevronRight, ArrowUpRight, Sparkles } fro
 import Container from '../Common/Container';
 import Button from '../Common/Button';
 import SocialIcons from './SocialIcons';
-import heroImg from '../../../assets/img/Home- Banner-2.png';
-import teamLabImg from '../../../assets/img/home-banner-team-lab.jpg';
+import heroImg from '../../../assets/img/Home--Banner-2.webp';
+import teamLabImg from '../../../assets/img/home-banner-team-lab.webp';
 
 interface HeroProps {
   onOpenVolunteerModal: () => void;
@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section id="home" className="relative w-full min-h-[500px] h-[520px] bg-gray-950 overflow-hidden pt-20">
+    <section id="home" className="relative w-full min-h-[520px] md:h-[520px] bg-gray-950 overflow-hidden pt-24 pb-12 md:pt-20 md:pb-0">
       {/* Background Slider */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -57,6 +57,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
           <img
             src={slides[currentSlide].image}
             alt="RISY Team Banner"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-center"
             style={{
               ...(slides[currentSlide].position ? { objectPosition: slides[currentSlide].position } : {}),
@@ -78,7 +80,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="md:col-span-5 text-white space-y-2"
+            className="hidden md:block md:col-span-5 text-white space-y-2"
           >
             
 
@@ -115,6 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
                 variant="primary"
                 size="sm"
                 className="whitespace-nowrap"
+                onClick={() => document.getElementById('collaboration')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Collaboration
               </Button>

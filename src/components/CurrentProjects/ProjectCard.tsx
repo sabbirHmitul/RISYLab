@@ -57,7 +57,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, imageO
                 key={`${project.id}-${imageIndex}`}
                 className="relative h-full overflow-hidden rounded-[20px] border border-white/70"
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={image}
                   alt={`${project.title} ${imageIndex + 1}`}
                   className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"

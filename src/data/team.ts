@@ -1,8 +1,8 @@
 import { TeamMember } from '../types/team';
-import mitulImage from '../../assets/img/team/mitul.jpg';
-import sumanImage from '../../assets/img/team/suman.jpg';
-import mahjabinImage from '../../assets/img/team/mahjabin.jpg';
-import biazidImage from '../../assets/img/team/biazid.jpg';
+import mitulImage from '../../assets/img/team/mitul.webp';
+import sumanImage from '../../assets/img/team/suman.webp';
+import mahjabinImage from '../../assets/img/team/mahjabin.webp';
+import biazidImage from '../../assets/img/team/biazid.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members

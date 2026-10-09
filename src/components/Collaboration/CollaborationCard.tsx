@@ -21,6 +21,9 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({ partner, i
         <img
           src={partner.logoUrl}
           alt={partner.name}
+          loading="lazy"
+          decoding="async"
+          onError={(e) => { e.currentTarget.style.display = 'none'; }}
           className="w-full h-full object-contain "
         />
       </div>

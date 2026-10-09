@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../Common/Container';
 import ProjectCard from './ProjectCard';
 import { projectsData } from '../../data/projects';
-import sectionIcon from '../../../assets/img/2.png';
+import sectionIcon from '../../../assets/img/2.webp';
 
 interface CurrentProjectsProps {
   onOpenVolunteerModal?: () => void;

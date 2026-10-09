@@ -3,7 +3,7 @@ import { ArrowUp, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import Container from "../Common/Container";
 import Logo from "../Common/Logo";
 import SocialIcons from "../Hero/SocialIcons";
-import founderImage from "../../../assets/img/mitul.png";
+import founderImage from "../../../assets/img/mitul.webp";
 
 interface FooterProps {
   onOpenVolunteerModal?: () => void;
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = () => {
           <div className="lg:col-span-6 flex justify-start lg:justify-end">
             <div className="max-w-md">
               <div className="flex flex-row items-center gap-2 sm:gap-3">
-                <div className="flex flex-col items-start text-left shrink-0">
+                <div className="flex flex-col items-start text-left min-w-0">
                   {/* Tagline / Message */}
 
                   <h3 className="text-2xl font-bold text-white mb-6">
@@ -129,10 +129,12 @@ export const Footer: React.FC<FooterProps> = () => {
                   {/* Parent wrapper needs 'relative' so the pink banner positions correctly */}
                   <div className="relative flex flex-col items-center pb-4">
                     {/* Founder Image Box */}
-                    <div className="w-44 h-44 bg-white rounded-[2rem] overflow-hidden shadow-2xl">
+                    <div className="w-32 h-32 sm:w-44 sm:h-44 bg-white rounded-[2rem] overflow-hidden shadow-2xl">
                       <img
                         src={founderImage}
                         alt="Sabbir H mitul"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                       />
                     </div>

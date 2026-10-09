@@ -77,7 +77,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               }`}
             >
               {member.imageUrl ? (
-                <img
+                <img loading="lazy" decoding="async"
                   src={member.imageUrl}
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -134,7 +134,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
 
               <div className="h-64 w-full overflow-hidden bg-gray-100">
                 {selected.imageUrl ? (
-                  <img src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-300 flex items-center justify-center">
                     <UserRound className="w-24 h-24 text-gray-400" strokeWidth={1.25} />
