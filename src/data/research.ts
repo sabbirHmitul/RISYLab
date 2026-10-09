@@ -47,7 +47,7 @@ export const researchAreasData: ResearchArea[] = [
     id: 'res-4',
     unitName: 'Unit 04',
     title: 'Robotics Practice',
-    description: 'Rdno, IOT, Automation',
+    description: 'Arduino, IoT, Automation',
     imageUrl: roboticsImg,
     // phone cards show the robot car, laptop, multimeter and robot arm
     imagePosition: 'center 35%',
