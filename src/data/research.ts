@@ -1,6 +1,6 @@
 import { ResearchArea } from '../types/research';
 import activityImg1 from '../../assets/img/activity/a1.png';
-import activityImg2 from '../../assets/img/activity/a2.jpeg';
+import activityImg2 from '../../assets/img/activity/a2-centered.jpeg';
 import activityImg3 from '../../assets/img/activity/a3.png';
 import activityImg4 from '../../assets/img/activity/a4.jpeg';
 // a5.heif may not be supported by the bundler; fall back to a1.png
@@ -24,6 +24,7 @@ export const researchAreasData: ResearchArea[] = [
     title: 'Youth Outdoor Activity',
     description: 'Tree Plantation, Group activity, Green Training',
     imageUrl: activityImg2,
+    imagePosition: 'center bottom',
     leadResearcher: 'Prof. Marcus Vance',
     publicationsCount: 22,
     tags: ['AI Literacy', 'EDTech', 'Digital Inclusion'],
