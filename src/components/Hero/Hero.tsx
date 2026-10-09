@@ -13,18 +13,18 @@ interface HeroProps {
 
 const slides: { image: string; title: string; tagline: string; position?: string; shiftUp?: number }[] = [
   {
-    image: heroImg,
-    // pixels to lift the photo upward inside the banner
-    shiftUp: 40,
-    title: 'empowering youth research & action',
-    tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
-  },
-  {
     image: teamLabImg,
     title: 'empowering youth research & action',
     tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
     // show from the top so faces sit below the navbar
     position: 'center top',
+  },
+  {
+    image: heroImg,
+    // pixels to lift the photo upward inside the banner
+    shiftUp: 40,
+    title: 'empowering youth research & action',
+    tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
   },
 
 ];
