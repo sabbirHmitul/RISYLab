@@ -52,10 +52,10 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
   return (
     <div>
       {/* Section label, mirrors the checked "☒" marker from the sketch */}
-      <div className="flex items-center gap-3 mb-8">
-        <img src={sectionIcon} alt="" aria-hidden="true" className="h-10 w-10 object-contain shrink-0" />
-        <div>
-          <span className="text-xs font-semibold tracking-wider text-rose-300/90 uppercase">{badge}</span>
+      <div className="mb-8">
+        <span className="block pl-10 text-xs font-semibold tracking-wider text-rose-300/90 uppercase">{badge}</span>
+        <div className="flex items-center">
+          <img src={sectionIcon} alt="" aria-hidden="true" className="h-10 w-10 object-contain shrink-0" />
           <h3 className="text-xl sm:text-2xl font-bold font-heading text-gray-900 leading-tight">{title}</h3>
         </div>
       </div>
