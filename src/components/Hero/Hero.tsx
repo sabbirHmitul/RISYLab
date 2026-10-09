@@ -5,12 +5,20 @@ import Container from '../Common/Container';
 import Button from '../Common/Button';
 import SocialIcons from './SocialIcons';
 import heroImg from '../../../assets/img/Home- Banner-2.png';
+import teamLabImg from '../../../assets/img/home-banner-team-lab.jpg';
 
 interface HeroProps {
   onOpenVolunteerModal: () => void;
 }
 
-const slides = [
+const slides: { image: string; title: string; tagline: string; position?: string }[] = [
+  {
+    image: teamLabImg,
+    title: 'empowering youth research & action',
+    tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
+    // keep faces in view on wide screens
+    position: 'center 40%',
+  },
   {
     image: heroImg,
     title: 'empowering youth research & action',
@@ -48,6 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             src={slides[currentSlide].image}
             alt="RISY Team Banner"
             className="w-full h-full object-cover object-center"
+            style={slides[currentSlide].position ? { objectPosition: slides[currentSlide].position } : undefined}
           />
           {/* Dark Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/25 to-gray-900/20 backdrop-blur-[1px]" />
