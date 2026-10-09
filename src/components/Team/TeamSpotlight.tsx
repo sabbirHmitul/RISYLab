@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GraduationCap, Building2, Linkedin, X, UserRound } from 'lucide-react';
 import { TeamMember } from '../../types/team';
+import sectionIcon from '../../../assets/img/risy-icon.png';
 
 interface TeamSpotlightProps {
   badge: string;
@@ -52,9 +53,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
     <div>
       {/* Section label, mirrors the checked "☒" marker from the sketch */}
       <div className="flex items-center gap-3 mb-8">
-        <span className="flex items-center justify-center w-6 h-6 rounded-md bg-rose-300/80 text-white text-xs font-bold shrink-0">
-          ✓
-        </span>
+        <img src={sectionIcon} alt="" aria-hidden="true" className="h-10 w-10 object-contain shrink-0" />
         <div>
           <span className="text-xs font-semibold tracking-wider text-rose-300/90 uppercase">{badge}</span>
           <h3 className="text-xl sm:text-2xl font-bold font-heading text-gray-900 leading-tight">{title}</h3>
