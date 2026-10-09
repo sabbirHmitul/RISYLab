@@ -11,7 +11,7 @@ export const HomeNews: React.FC = () => {
   return (
     <section id="news" className="py-10 bg-gray-50/70 border-t border-gray-100">
       <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight text-center mb-8">
-        News
+        Achievements
       </h2>
       <Container>
         <div className="flex flex-col gap-8">
