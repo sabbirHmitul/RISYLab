@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Mission from './components/Mission/Mission';
 import ResearchArea from './components/ResearchArea/ResearchArea';
+import HomeNews from './components/News/HomeNews';
 import Collaboration from './components/Collaboration/Collaboration';
 import Footer from './components/Footer/Footer';
 import VolunteerModal from './components/VolunteerModal/VolunteerModal';
@@ -100,7 +101,10 @@ export default function App() {
             {/* 3. Research & Human Development Area */}
             <ResearchArea onOpenVolunteerModal={handleOpenVolunteerModal} />
 
-            {/* 4. Collaboration & Strategic Partners */}
+            {/* 4. Latest News (2 cards) */}
+            <HomeNews />
+
+            {/* 5. Collaboration & Strategic Partners */}
             <Collaboration onOpenVolunteerModal={handleOpenVolunteerModal} />
           </>
         )}
