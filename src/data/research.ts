@@ -12,7 +12,7 @@ export const researchAreasData: ResearchArea[] = [
     description: 'Env. chemistry, Water & Air analysis, Waste to bio-produce',
     imageUrl: activityImg1,
     // keep the full head in view on wide phone cards
-    imagePosition: 'center 20%',
+    imagePosition: 'center 36%',
     leadResearcher: 'Dr. Arisya Rahman',
     publicationsCount: 14,
     tags: ['Civic Tech', 'Social Enterprise', 'Leadership Development'],
