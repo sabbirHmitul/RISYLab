@@ -3,6 +3,7 @@ import mitulImage from '../../assets/img/team/mitul.webp';
 import sumanImage from '../../assets/img/team/suman.webp';
 import mahjabinImage from '../../assets/img/team/mahjabin.webp';
 import biazidImage from '../../assets/img/team/biazid.webp';
+import chowneeImage from '../../assets/img/team/chownee.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members
