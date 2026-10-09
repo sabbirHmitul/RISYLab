@@ -1,5 +1,6 @@
 import { TeamMember } from '../types/team';
 import mitulImage from '../../assets/img/mitul.png';
+import sumanImage from '../../assets/img/team/suman.jpg';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -9,8 +10,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Student',
     affiliation: 'Mechanical Engineering (USA)',
     specialization: ['Mechanical Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
+    imageUrl: sumanImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
