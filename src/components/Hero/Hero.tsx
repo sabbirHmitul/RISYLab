@@ -16,8 +16,8 @@ const slides: { image: string; title: string; tagline: string; position?: string
     image: teamLabImg,
     title: 'empowering youth research & action',
     tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
-    // show from the top so faces sit below the navbar
-    position: 'center top',
+    // near the top, nudged up a little; faces stay below the navbar
+    position: 'center 15%',
   },
   {
     image: heroImg,
