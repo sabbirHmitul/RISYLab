@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { GraduationCap, Building2, Linkedin, X } from 'lucide-react';
+import { GraduationCap, Building2, Linkedin, X, UserRound } from 'lucide-react';
 import { TeamMember } from '../../types/team';
 
 interface TeamSpotlightProps {
@@ -76,11 +76,17 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                   : 'border-transparent hover:border-pink-200'
               }`}
             >
-              <img
-                src={member.imageUrl}
-                alt={member.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {member.imageUrl ? (
+                <img
+                  src={member.imageUrl}
+                  alt={member.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-300 flex items-start justify-center pt-[18%]">
+                  <UserRound className="w-1/2 h-1/2 text-gray-400" strokeWidth={1.25} />
+                </div>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5 pt-6">
                 <p className="text-white text-base font-semibold leading-tight truncate">{member.name}</p>
@@ -127,7 +133,13 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               </button>
 
               <div className="h-64 w-full overflow-hidden bg-gray-100">
-                <img src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
+                {selected.imageUrl ? (
+                  <img src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-300 flex items-center justify-center">
+                    <UserRound className="w-24 h-24 text-gray-400" strokeWidth={1.25} />
+                  </div>
+                )}
               </div>
               <div className="p-6 space-y-3">
                 <h4 className="text-lg font-bold font-heading text-gray-900">{selected.name}</h4>

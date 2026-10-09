@@ -22,8 +22,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Candidate, Env. Specialist',
     affiliation: 'UNOPS, Bangladesh',
     specialization: ['Environmental Science'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -33,8 +32,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Student',
     affiliation: 'Civil & Env. Engineering, (Canada)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -44,8 +42,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Student',
     affiliation: 'Civil & Env. Engineering, (Canada)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -55,8 +52,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Student',
     affiliation: 'Civil & Env. Engineering, (Australia)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -66,8 +62,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Candidate',
     affiliation: 'Env. & Social Science, (USA)',
     specialization: ['Environment & Social Science'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -90,8 +85,7 @@ export const teamData: TeamMember[] = [
     role: 'MS Student',
     affiliation: 'Civil & Env. Engineering (BUET)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
   },
@@ -101,8 +95,7 @@ export const teamData: TeamMember[] = [
     role: 'Graduate MS Student',
     affiliation: 'Env. Engineering (BUET)',
     specialization: ['Environmental Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
   },
@@ -112,8 +105,7 @@ export const teamData: TeamMember[] = [
     role: 'Graduate Student',
     affiliation: 'Chemical Engineering (RUET)',
     specialization: ['Chemical Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
   },
@@ -123,8 +115,7 @@ export const teamData: TeamMember[] = [
     role: 'Graduate Student & Lecturer',
     affiliation: 'Env. Science & Engineering (BUTEX)',
     specialization: ['Environmental Science & Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
   },
@@ -146,8 +137,7 @@ export const teamData: TeamMember[] = [
     role: 'Graduate Student',
     affiliation: 'Env. Science & Engineering (BUTEX)',
     specialization: ['Environmental Science & Engineering'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'practitioner',
   },
@@ -167,8 +157,7 @@ export const teamData: TeamMember[] = [
     role: 'Undergraduate Student',
     affiliation: '',
     specialization: [],
-    imageUrl:
-      'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '',
     scholarUrl: 'https://scholar.google.com/',
     category: 'practitioner',
   },
