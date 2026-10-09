@@ -1,5 +1,5 @@
 import { ResearchArea } from '../types/research';
-import activityImg1 from '../../assets/img/activity/a1.webp';
+import activityImg1 from '../../assets/img/activity/lab-practice.webp';
 import activityImg2 from '../../assets/img/activity/a2-centered.webp';
 import activityImg3 from '../../assets/img/activity/a3.webp';
 import educationImg from '../../assets/img/activity/a4-centered.webp';
@@ -11,6 +11,8 @@ export const researchAreasData: ResearchArea[] = [
     title: 'Engineering & Lab Practice',
     description: 'Env. chemistry, Water & Air analysis, Waste to bio-produce',
     imageUrl: activityImg1,
+    // keep the full head in view on wide phone cards
+    imagePosition: 'center 20%',
     leadResearcher: 'Dr. Arisya Rahman',
     publicationsCount: 14,
     tags: ['Civic Tech', 'Social Enterprise', 'Leadership Development'],
