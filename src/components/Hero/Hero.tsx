@@ -67,8 +67,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
                 : {}),
             }}
           />
-          {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/25 to-gray-900/20 backdrop-blur-[1px]" />
+          {/* Soft shade only at the top, behind the menu */}
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-950/35 to-transparent pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 
