@@ -27,6 +27,7 @@ export const projectsData: Project[] = [
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
     ],
+    imageLabels: ['Waste cigarette filter solvent recycling process', 'Extracted fiber'],
     teamLead: 'A. R. M. Baizid, Sabbir H Mitul',
     section: 'Polymer & Bio-materials',
   },
