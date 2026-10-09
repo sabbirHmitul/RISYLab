@@ -2,6 +2,7 @@ import { TeamMember } from '../types/team';
 import mitulImage from '../../assets/img/mitul.png';
 import sumanImage from '../../assets/img/team/suman.jpg';
 import mahjabinImage from '../../assets/img/team/mahjabin.jpg';
+import biazidImage from '../../assets/img/team/biazid.jpg';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -156,8 +157,7 @@ export const teamData: TeamMember[] = [
     role: 'Undergraduate Student',
     affiliation: 'Chemistry (Titumir College)',
     specialization: ['Chemistry'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80',
+    imageUrl: biazidImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'practitioner',
   },
