@@ -2,6 +2,7 @@ import { ResearchArea } from '../types/research';
 import activityImg1 from '../../assets/img/activity/lab-practice.webp';
 import activityImg2 from '../../assets/img/activity/a2-centered.webp';
 import activityImg3 from '../../assets/img/activity/a3.webp';
+import roboticsImg from '../../assets/img/activity/robotics.webp';
 import educationImg from '../../assets/img/activity/a4-centered.webp';
 
 export const researchAreasData: ResearchArea[] = [
@@ -47,6 +48,9 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 04',
     title: 'Robotics Practice',
     description: 'Rdno, IOT, Automation',
+    imageUrl: roboticsImg,
+    // phone cards show the robot car, laptop, multimeter and robot arm
+    imagePosition: 'center 35%',
     leadResearcher: 'Eng. David O’Connor',
     publicationsCount: 11,
     tags: ['Climate Resilience', 'Circular Economy', 'Ecology'],
