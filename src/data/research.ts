@@ -2,9 +2,7 @@ import { ResearchArea } from '../types/research';
 import activityImg1 from '../../assets/img/activity/a1.png';
 import activityImg2 from '../../assets/img/activity/a2-centered.jpeg';
 import activityImg3 from '../../assets/img/activity/a3.png';
-import activityImg4 from '../../assets/img/activity/a4.jpeg';
-// a5.heif may not be supported by the bundler; fall back to a1.png
-import activityImg5 from '../../assets/img/activity/a1.png';
+import educationImg from '../../assets/img/activity/a4-centered.jpeg';
 
 export const researchAreasData: ResearchArea[] = [
   {
@@ -47,7 +45,6 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 04',
     title: 'Robotics Practice',
     description: 'Rdno, IOT, Automation',
-    imageUrl: activityImg4,
     leadResearcher: 'Eng. David O’Connor',
     publicationsCount: 11,
     tags: ['Climate Resilience', 'Circular Economy', 'Ecology'],
@@ -58,7 +55,7 @@ export const researchAreasData: ResearchArea[] = [
     unitName: 'Unit 05',
     title: 'Education & Public health',
     description: 'Child green education, Climate disease, Waste to bio-produce',
-    imageUrl: activityImg5,
+    imageUrl: educationImg,
     leadResearcher: 'Nadia Thorne, M.Sc.',
     publicationsCount: 16,
     tags: ['Gig Economy', 'Entrepreneurship', 'Micro-credentials'],
