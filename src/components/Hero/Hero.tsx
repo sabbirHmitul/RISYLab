@@ -68,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             }}
           />
           {/* Soft shade only at the top, behind the menu */}
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-950/35 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-gray-950/65 via-gray-950/25 to-transparent pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 
