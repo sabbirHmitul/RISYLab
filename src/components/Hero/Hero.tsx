@@ -11,9 +11,11 @@ interface HeroProps {
   onOpenVolunteerModal: () => void;
 }
 
-const slides: { image: string; title: string; tagline: string; position?: string }[] = [
+const slides: { image: string; title: string; tagline: string; position?: string; shiftUp?: number }[] = [
   {
     image: heroImg,
+    // pixels to lift the photo upward inside the banner
+    shiftUp: 40,
     title: 'empowering youth research & action',
     tagline: 'Bridging empirical science with grassroots leadership to transform regional youth communities.',
   },
@@ -56,7 +58,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             src={slides[currentSlide].image}
             alt="RISY Team Banner"
             className="w-full h-full object-cover object-center"
-            style={slides[currentSlide].position ? { objectPosition: slides[currentSlide].position } : undefined}
+            style={{
+              ...(slides[currentSlide].position ? { objectPosition: slides[currentSlide].position } : {}),
+              ...(slides[currentSlide].shiftUp
+                ? { height: `calc(100% + ${slides[currentSlide].shiftUp}px)`, marginTop: `-${slides[currentSlide].shiftUp}px` }
+                : {}),
+            }}
           />
           {/* Dark Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-gray-950/80 via-gray-950/25 to-gray-900/20 backdrop-blur-[1px]" />
