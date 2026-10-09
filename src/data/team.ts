@@ -1,5 +1,5 @@
 import { TeamMember } from '../types/team';
-import mitulImage from '../../assets/img/mitul.png';
+import mitulImage from '../../assets/img/team/mitul.jpg';
 import sumanImage from '../../assets/img/team/suman.jpg';
 import mahjabinImage from '../../assets/img/team/mahjabin.jpg';
 import biazidImage from '../../assets/img/team/biazid.jpg';
