@@ -1,6 +1,7 @@
 import { TeamMember } from '../types/team';
 import mitulImage from '../../assets/img/mitul.png';
 import sumanImage from '../../assets/img/team/suman.jpg';
+import mahjabinImage from '../../assets/img/team/mahjabin.jpg';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -132,8 +133,7 @@ export const teamData: TeamMember[] = [
     role: 'Graduate Student',
     affiliation: 'Geology (DU)',
     specialization: ['Geology'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=600&q=80',
+    imageUrl: mahjabinImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
   },
