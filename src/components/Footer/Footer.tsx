@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = () => {
             {/* Direct Text Contact Info */}
             <div className="space-y-1 text-base font-medium">
               <p className="text-gray-200">
-                Mail:{" "}
+                <span className="text-[#e6007e]">Mail:</span>{" "}
                 <a
                   href="mailto:risylab.info@gmail.com"
                   className="hover:text-pink-400 transition-colors"
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 </a>
               </p>
               <p className="text-gray-200">
-                What's app:{" "}
+                <span className="text-[#e6007e]">What's app:</span>{" "}
                 <a
                   href="https://wa.me/8801742299472"
                   className="hover:text-pink-400 transition-colors"
