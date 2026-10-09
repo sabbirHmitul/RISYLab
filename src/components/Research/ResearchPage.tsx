@@ -7,8 +7,8 @@ export const ResearchPage: React.FC = () => {
     <div className="bg-white">
       <PageHero
         eyebrow="Research"
-        title="Our Research"
-        subtitle="Ongoing research and innovation at RISY Lab, from waste to energy and bio-materials to clean water and air solutions."
+        title="Build Own Capacity"
+        subtitle="We are developing our own capacity, talent, and innovations to solve our problems and go through advancements."
       />
 
       <div className="py-10 sm:py-14">
