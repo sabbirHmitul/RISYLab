@@ -12,6 +12,7 @@ export const projectsData: Project[] = [
       'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
     ],
+    imageLabels: ['Hydro Thermal Liquefaction Process'],
     teamLead: 'Farial Orion, Sabbir H Mitul',
     section: 'Waste to Energy',
   },
