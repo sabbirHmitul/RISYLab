@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 backdrop-blur-md border border-pink-500/30 text-pink-300 text-xs font-semibold tracking-wider uppercase">
               <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-              <span>Research & Youth Organization</span>
+              <span>Built own capacity</span>
             </div>
             <div className="flex items-center justify-between border-b border-white/15 pb-2">
               <h2 className="text-3xl sm:text-2xl font-black font-heading tracking-wider text-white">
