@@ -58,6 +58,20 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           </div>
         )}
 
+        {item.pendingPublications && item.pendingPublications.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[15px] font-semibold text-gray-800">Pending publication:</span>
+            {item.pendingPublications.map((name) => (
+              <span
+                key={name}
+                className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#e6007e] text-white text-xs sm:text-sm font-semibold shadow-sm"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        )}
+
         {item.collaborators && item.collaborators.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[15px] font-semibold text-gray-800">Collaboration:</span>

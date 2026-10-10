@@ -20,10 +20,13 @@ export const newsData: NewsItem[] = [
   },
   {
     id: 'news-2',
-    title: 'RISY Skills Workshop Trains 120 Students in GIS & Carbon Modeling',
-    excerpt: 'A three-day intensive workshop equipped young researchers with hands-on ASPEN and GIS modeling skills.',
+    title: 'Tannery Waste to Bio-crude Oil Synthesis',
+    excerpt:
+      'We have successfully synthesized bio-crude oil from raw tannery waste with a 53% yield. We are now extracting diesel from this bio-crude and using ASPEN simulation to assess its cost, production rate and environmental impact for commercialization.',
+    pendingPublications: ["ICChE BUET'26"],
+    collaborators: ['BCSIR', 'BUTEX', 'Monash University'],
     date: 'Jul 21, 2026',
-    category: 'Workshop',
+    category: 'Research',
     imageUrl:
       'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
     link: '#',

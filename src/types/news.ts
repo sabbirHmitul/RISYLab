@@ -11,4 +11,6 @@ export interface NewsItem {
   publications?: { label: string; url: string }[];
   /** Optional 'Collaboration' tags shown under the publications. */
   collaborators?: string[];
+  /** Optional 'Pending publication' labels (pink, not clickable until published). */
+  pendingPublications?: string[];
 }
