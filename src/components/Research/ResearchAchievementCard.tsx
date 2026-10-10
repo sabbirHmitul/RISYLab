@@ -17,7 +17,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className="grid grid-cols-1 sm:grid-cols-[45%_1fr] gap-5 sm:gap-6 items-center"
+      className="grid grid-cols-1 sm:grid-cols-[45%_1fr] gap-5 sm:gap-6 items-start"
     >
       {/* Photo */}
       <div className="h-60 sm:h-72 overflow-hidden rounded-[20px] bg-gray-100">
