@@ -7,4 +7,6 @@ export interface NewsItem {
   imageUrl: string;
   link: string;
   featured?: boolean;
+  /** Optional 'Read publications' buttons shown under the text. */
+  publications?: { label: string; url: string }[];
 }

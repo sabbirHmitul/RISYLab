@@ -40,6 +40,24 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
 
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.excerpt}</p>
 
+        {item.publications && item.publications.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm font-semibold text-gray-800">Read publications:</span>
+            {item.publications.map((pub) => (
+              <a
+                key={pub.url}
+                href={pub.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#e6007e] hover:bg-pink-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-colors"
+              >
+                {pub.label}
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            ))}
+          </div>
+        )}
+
         {item.link && item.link !== '#' && (
         <a
           href={item.link}
