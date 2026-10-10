@@ -38,7 +38,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
       </div>
 
       {/* 50% Content */}
-      <div className={`p-8 sm:p-10 ${item.imageHeight ? 'lg:px-12 lg:py-6' : 'lg:p-12'} flex flex-col justify-center gap-4 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+      <div className={`p-8 sm:p-10 ${item.imageHeight ? 'lg:px-12 lg:pt-10 lg:pb-6' : 'lg:p-12'} flex flex-col justify-start gap-4 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
         <div className="flex items-center gap-3">
           <span className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
             {item.category}
