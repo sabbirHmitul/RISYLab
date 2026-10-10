@@ -11,6 +11,7 @@ export const newsData: NewsItem[] = [
       { label: 'Egg shell', url: 'https://doi.org/10.1007/978-981-95-1630-8_16' },
     ],
     collaborators: ['CARS, DU', 'BCSIR', 'BUET'],
+    imageHeight: 450,
     date: 'Dec 02, 2025',
     category: 'Milestone',
     imageUrl:
@@ -25,6 +26,7 @@ export const newsData: NewsItem[] = [
       'We have successfully synthesized bio-crude oil from raw tannery waste with a 53% yield. We are now extracting diesel from this bio-crude and using ASPEN simulation to assess its cost, production rate and environmental impact for commercialization.',
     pendingPublications: ["ICChE BUET'26"],
     collaborators: ['BCSIR', 'BUTEX', 'Monash University'],
+    imageHeight: 425,
     date: 'Jul 21, 2026',
     category: 'Research',
     imageUrl:

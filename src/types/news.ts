@@ -13,4 +13,6 @@ export interface NewsItem {
   collaborators?: string[];
   /** Optional 'Pending publication' labels (pink, not clickable until published). */
   pendingPublications?: string[];
+  /** Optional fixed photo height (px) on computer screens. */
+  imageHeight?: number;
 }
