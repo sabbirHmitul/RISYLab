@@ -41,7 +41,7 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
         </h3>
         <p className="text-sm text-gray-500">
           <span className="font-semibold text-gray-700">Publication:</span>{' '}
-          <span className="text-pink-600 font-medium">{publication.journal}</span> · {publication.date ?? publication.year}
+          <span className="text-pink-600 font-medium">{publication.journal}</span> {(publication.date ?? publication.year) && <> · {publication.date ?? publication.year}</>}
         </p>
         {publication.thanks && publication.thanks.length > 0 ? (
           <p className="text-sm text-gray-400">
@@ -60,16 +60,18 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
         )}
 
         <a
-          href={`https://doi.org/${publication.doi}`}
+          href={publication.doi ? `https://doi.org/${publication.doi}` : publication.url}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 mt-2 w-fit px-4 py-2 rounded-xl border border-gray-200 text-xs font-semibold text-gray-700 hover:border-pink-500 hover:text-pink-600 hover:bg-pink-50 transition-colors duration-300"
         >
           Read more
           <ArrowUpRight className="w-3.5 h-3.5" />
-          <span className="hidden sm:inline text-gray-400 font-normal border-l border-gray-200 pl-2">
-            DOI: {publication.doi}
-          </span>
+          {publication.doi && (
+            <span className="hidden sm:inline text-gray-400 font-normal border-l border-gray-200 pl-2">
+              DOI: {publication.doi}
+            </span>
+          )}
         </a>
       </div>
     </motion.div>

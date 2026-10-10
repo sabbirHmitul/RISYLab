@@ -2,9 +2,9 @@ export interface Publication {
   id: string;
   title: string;
   journal: string;
-  year: number;
+  year?: number;
   authors: string[];
-  doi: string;
+  doi?: string;
   imageUrl: string;
   /** Optional link for the title (article page) */
   url?: string;
