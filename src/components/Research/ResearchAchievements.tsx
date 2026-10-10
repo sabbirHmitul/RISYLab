@@ -19,7 +19,7 @@ const researchAchievements: NewsItem[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
     link: '#',
-    collaborators: ['Dr. Latiful Bari', 'Suman Dewanjee', 'UNIDO, Bangladesh'],
+    collaborators: ['Dr. Latiful Bari (CARS, DU)', 'Suman Dewanjee (USA)', 'UNIDO, Bangladesh'],
   },
   {
     id: 'research-ach-hydrology',
@@ -31,7 +31,7 @@ const researchAchievements: NewsItem[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
     link: '#',
-    collaborators: ['Mehedi Hasan', 'IWA'],
+    collaborators: ['Mehedi Hasan (Canada)', 'IWA'],
   },
 ];
 
