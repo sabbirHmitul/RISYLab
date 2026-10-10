@@ -23,7 +23,7 @@ export const publicationsData: Publication[] = [
     year: 2025,
     date: '2025/12/1',
     authors: [],
-    thanks: ['Dr. Elias Uddin', 'CARS (DU)'],
+    thanks: ['Dr. Elias Uddin (KUET)', 'CARS (DU)'],
     doi: '10.1016/j.clce.2025.100157',
     imageUrl:
       'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80',
@@ -37,7 +37,7 @@ export const publicationsData: Publication[] = [
     year: 2025,
     date: '2025/3/15',
     authors: [],
-    thanks: ['Mehedi Hasan', 'IWA'],
+    thanks: ['Mehedi Hasan (Canada)', 'IWA'],
     doi: '10.1007/s10661-025-13818-9',
     imageUrl:
       'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
