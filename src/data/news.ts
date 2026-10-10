@@ -19,6 +19,7 @@ export const newsData: NewsItem[] = [
     id: 'news-3',
     title: 'Youth & Expert Discussion | Ministry of Health of Bangladesh',
     excerpt: 'We are discussing public health and climate-related diseases.',
+    imageHeight: 425,
     date: 'Aug 2026',
     category: 'National Seminar',
     imageUrl:
@@ -36,6 +37,7 @@ export const newsData: NewsItem[] = [
     title: 'RECP Expert & Industrial Application Award',
     excerpt: 'We are practicing Resource Efficient and Cleaner Production (RECP).',
     awardedBy: ['DoE Bangladesh', 'UNIDO Bangladesh'],
+    imageHeight: 425,
     date: 'Jul 2026',
     category: 'Expert Award',
     imageUrl: labPracticeImg,
