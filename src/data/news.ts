@@ -3,9 +3,9 @@ import { NewsItem } from '../types/news';
 export const newsData: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'RISY Lab Launches Bio-diesel Pilot Plant in Partnership with BUET',
+    title: 'Biomass to Bio-plastic Film for Various Applications',
     excerpt:
-      'Our flagship Waste-to-Energy initiative moves from lab bench to pilot scale, converting tannery waste into clean-burning bio-diesel with support from BUET’s process engineering faculty.',
+      'We have developed useful, anti-bacterial bio-plastic films from a variety of waste biomass, such as waste egg shell, shrimp shell and sugarcane bagasse. These films have been applied to wound healing, food packaging and shoe insoles. Their wound-healing activity has also been studied through animal trials, an important step toward safe medical use.',
     date: 'Aug 02, 2026',
     category: 'Milestone',
     imageUrl:
