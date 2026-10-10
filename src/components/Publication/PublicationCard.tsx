@@ -44,8 +44,8 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
           <span className="text-pink-600 font-medium">{publication.journal}</span> · {publication.date ?? publication.year}
         </p>
         {publication.thanks && publication.thanks.length > 0 ? (
-          <p className="text-xs text-gray-400">
-            <span className="font-semibold text-gray-500">Thanks to:</span>{' '}
+          <p className="text-sm text-gray-400">
+            <span className="font-bold text-gray-500">Thanks to:</span>{' '}
             {publication.thanks.map((name, i) => (
               <React.Fragment key={name}>
                 {i > 0 && ', '}

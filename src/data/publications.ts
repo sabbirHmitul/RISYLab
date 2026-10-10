@@ -4,7 +4,7 @@ export const publicationsData: Publication[] = [
   {
     id: 'pub-1',
     title:
-      'Heavy Metal Contamination & Risk Assessment in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
+      'Heavy Metal Contamination in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
     url: 'https://link.springer.com/article/10.1007/s10661-025-13818-9',
     journal: 'Journal of Environmental Monitoring and Assessment',
     year: 2025,
