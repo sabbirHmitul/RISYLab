@@ -101,7 +101,7 @@ export const publicationsData: Publication[] = [
     url: 'https://www.researchgate.net/publication/408757049_Recovery_of_polyvinyl_chloride_from_single-use_waste_banner_a_cleaner_recycling_strategy',
     journal: 'Bangladesh Journal of Scientific and Industrial Research',
     authors: [],
-    thanks: ['Dr. Asaduzzaman', 'Dr. Shwapan Kumar Dey (BCSIR)'],
+    thanks: ['Dr. Sujan (BCSIR)', 'Dr. Shwapan Kumar Dey (BCSIR)'],
     imageUrl:
       'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80',
   },
