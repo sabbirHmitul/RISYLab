@@ -11,7 +11,7 @@ export const newsData: NewsItem[] = [
     youtubeId: 'NXdZgvn117g',
     imageHeight: 425,
     date: 'Jun 2026',
-    category: 'Media',
+    category: 'NEWS Media',
     imageUrl: 'https://img.youtube.com/vi/NXdZgvn117g/hqdefault.jpg',
     link: '#',
   },
