@@ -31,13 +31,33 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
 
       <div className="flex-1 flex flex-col justify-center gap-2 py-1">
         <h3 className="text-lg sm:text-xl font-bold font-heading text-gray-900 leading-snug group-hover:text-pink-600 transition-colors">
-          {publication.title}
+          {publication.url ? (
+            <a href={publication.url} target="_blank" rel="noreferrer" className="hover:underline">
+              {publication.title}
+            </a>
+          ) : (
+            publication.title
+          )}
         </h3>
         <p className="text-sm text-gray-500">
           <span className="font-semibold text-gray-700">Publication:</span>{' '}
-          <span className="text-pink-600 font-medium">{publication.journal}</span> · {publication.year}
+          <span className="text-pink-600 font-medium">{publication.journal}</span> · {publication.date ?? publication.year}
         </p>
-        <p className="text-xs text-gray-400">{publication.authors.join(', ')}</p>
+        {publication.thanks && publication.thanks.length > 0 ? (
+          <p className="text-xs text-gray-400">
+            <span className="font-semibold text-gray-500">Thanks to:</span>{' '}
+            {publication.thanks.map((name, i) => (
+              <React.Fragment key={name}>
+                {i > 0 && ', '}
+                <span className="text-gray-600 font-medium">{name}</span>
+              </React.Fragment>
+            ))}
+          </p>
+        ) : (
+          publication.authors.length > 0 && (
+            <p className="text-xs text-gray-400">{publication.authors.join(', ')}</p>
+          )
+        )}
 
         <a
           href={`https://doi.org/${publication.doi}`}

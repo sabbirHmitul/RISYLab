@@ -3,11 +3,15 @@ import { Publication } from '../types/publication';
 export const publicationsData: Publication[] = [
   {
     id: 'pub-1',
-    title: 'Bio-diesel Production from Tannery Waste: A Sustainable Approach',
-    journal: 'Journal of Cleaner Production',
+    title:
+      'Heavy Metal Contamination & Risk Assessment in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
+    url: 'https://link.springer.com/article/10.1007/s10661-025-13818-9',
+    journal: 'Journal of Environmental Monitoring and Assessment',
     year: 2025,
-    authors: ['A. Rahman', 'S. H. Mitul', 'M. Chen'],
-    doi: '10.1016/j.jclepro.2025.045123',
+    date: '2025/3/15',
+    authors: [],
+    thanks: ['Mehedi Hasan', 'IWA'],
+    doi: '10.1007/s10661-025-13818-9',
     imageUrl:
       'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
   },
