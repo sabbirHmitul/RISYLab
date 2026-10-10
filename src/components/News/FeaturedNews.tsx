@@ -64,7 +64,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
             {item.collaborators.map((name) => (
               <span
                 key={name}
-                className="rounded-lg border border-gray-300 px-2.5 py-0.5 text-[13px] font-medium text-gray-500"
+                className="rounded-lg border border-gray-300 px-2.5 py-0.5 text-xs sm:text-sm font-medium text-gray-500"
               >
                 {name}
               </span>
