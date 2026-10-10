@@ -101,6 +101,20 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           </div>
         )}
 
+        {item.awardedBy && item.awardedBy.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[15px] font-semibold text-gray-800">Awarded by:</span>
+            {item.awardedBy.map((name) => (
+              <span
+                key={name}
+                className="rounded-lg border border-pink-200 bg-pink-50 px-2.5 py-0.5 text-xs sm:text-sm font-semibold text-pink-600"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        )}
+
         {item.thanks && item.thanks.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[15px] font-semibold text-gray-800">Thanks &amp; follow:</span>

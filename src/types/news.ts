@@ -15,6 +15,8 @@ export interface NewsItem {
   collaborators?: string[];
   /** Optional 'Pending publication' labels (pink, not clickable until published). */
   pendingPublications?: string[];
+  /** Optional 'Awarded by' tags shown under the text. */
+  awardedBy?: string[];
   /** Optional 'Thanks & follow' links shown under the text. */
   thanks?: { label: string; url: string }[];
   /** Optional YouTube video ID; on the News page the video is shown instead of the photo. */

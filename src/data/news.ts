@@ -1,4 +1,5 @@
 import { NewsItem } from '../types/news';
+import labPracticeImg from '../../assets/img/activity/lab-practice.webp';
 
 export const newsData: NewsItem[] = [
   {
@@ -24,6 +25,16 @@ export const newsData: NewsItem[] = [
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80',
     link: '#',
     linkLabel: 'Read more',
+  },
+  {
+    id: 'news-recp-award',
+    title: 'RECP Expert & Industrial Application Award',
+    excerpt: 'We are practicing Resource Efficient and Cleaner Production (RECP).',
+    awardedBy: ['DoE Bangladesh', 'UNIDO Bangladesh'],
+    date: 'Jul 2026',
+    category: 'Expert',
+    imageUrl: labPracticeImg,
+    link: '#',
   },
   {
     id: 'news-1',
