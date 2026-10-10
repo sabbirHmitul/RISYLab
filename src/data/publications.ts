@@ -4,16 +4,16 @@ export const publicationsData: Publication[] = [
   {
     id: 'pub-1',
     title:
-      'Heavy Metal Contamination in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
-    url: 'https://link.springer.com/article/10.1007/s10661-025-13818-9',
-    journal: 'Journal of Environmental Monitoring and Assessment',
+      'Adsorbent for Heavy Metal Remediation: Experimental and Machine Learning Approach',
+    url: 'https://www.sciencedirect.com/science/article/pii/S266601642500163X',
+    journal: 'Journal of Case Studies in Chemical and Environmental Engineering',
     year: 2025,
-    date: '2025/3/15',
+    date: '2025/7/1',
     authors: [],
-    thanks: ['Mehedi Hasan', 'IWA'],
-    doi: '10.1007/s10661-025-13818-9',
+    thanks: ['Dr. Mostafizur Rahman (JU)', 'BCSIR'],
+    doi: '10.1016/j.cscee.2025.101256',
     imageUrl:
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1581093458791-9d2b11e6e5cf?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'pub-2',
@@ -31,16 +31,16 @@ export const publicationsData: Publication[] = [
   {
     id: 'pub-3',
     title:
-      'Adsorbent for Heavy Metal Remediation: Experimental and Machine Learning Approach',
-    url: 'https://www.sciencedirect.com/science/article/pii/S266601642500163X',
-    journal: 'Journal of Case Studies in Chemical and Environmental Engineering',
+      'Heavy Metal Contamination in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
+    url: 'https://link.springer.com/article/10.1007/s10661-025-13818-9',
+    journal: 'Journal of Environmental Monitoring and Assessment',
     year: 2025,
-    date: '2025/7/1',
+    date: '2025/3/15',
     authors: [],
-    thanks: ['Dr. Mostafizur Rahman (JU)', 'BCSIR'],
-    doi: '10.1016/j.cscee.2025.101256',
+    thanks: ['Mehedi Hasan', 'IWA'],
+    doi: '10.1007/s10661-025-13818-9',
     imageUrl:
-      'https://images.unsplash.com/photo-1581093458791-9d2b11e6e5cf?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'pub-4',
