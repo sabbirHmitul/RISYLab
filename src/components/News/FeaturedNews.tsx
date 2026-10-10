@@ -18,7 +18,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
       className={`grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden border border-gray-100 shadow-xl bg-white`}
     >
       {/* 50% Image */}
-      <div className={`h-72 lg:h-full min-h-[320px] overflow-hidden bg-gray-100 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
+      <div className={`aspect-square w-full overflow-hidden bg-gray-100 ${reverse ? 'lg:order-2' : 'lg:order-1'}`}>
         <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
 
