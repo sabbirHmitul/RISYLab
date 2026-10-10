@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, CalendarDays } from 'lucide-react';
-import { NewsItem } from '../../types/news';
+import { AchievementItem } from '../../types/achievement';
 
-interface FeaturedNewsProps {
-  item: NewsItem;
+interface AchievementCardProps {
+  item: AchievementItem;
   reverse?: boolean;
 }
 
-export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false }) => {
+/** Home page Achievements card. A separate copy of the News card, so each can be styled on its own. */
+export const AchievementCard: React.FC<AchievementCardProps> = ({ item, reverse = false }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -22,19 +23,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
         className={`h-72 min-h-[320px] overflow-hidden bg-gray-100 ${item.imageHeight ? 'lg:h-[var(--img-h)] lg:min-h-0' : 'lg:h-full'} ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
         style={item.imageHeight ? ({ '--img-h': `${item.imageHeight}px` } as React.CSSProperties) : undefined}
       >
-        {item.youtubeId ? (
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
-            title={item.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="w-full h-full border-0"
-          />
-        ) : (
-          <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-        )}
+        <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
 
       {/* 50% Content */}
@@ -135,4 +124,4 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
   );
 };
 
-export default FeaturedNews;
+export default AchievementCard;
