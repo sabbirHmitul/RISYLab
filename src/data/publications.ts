@@ -13,7 +13,7 @@ export const publicationsData: Publication[] = [
     thanks: ['Dr. Mostafizur Rahman (JU)', 'BCSIR'],
     doi: '10.1016/j.cscee.2025.101256',
     imageUrl:
-      'https://images.unsplash.com/photo-1581093458791-9d2b11e6e5cf?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 'pub-2',
@@ -72,16 +72,6 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-6',
-    title: 'Circular Economy Models for Leather Industry Waste',
-    journal: 'Resources, Conservation & Recycling',
-    year: 2022,
-    authors: ['M. Chen', 'A. Rahman', 'K. Hossain'],
-    doi: '10.1016/j.resconrec.2022.106390',
-    imageUrl:
-      'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    id: 'pub-7',
     title: 'Biodegradable and Flexible Composite Sheet from Tannery Solid Wastes',
     url: 'https://4spepublications.onlinelibrary.wiley.com/doi/abs/10.1002/pc.27644',
     journal: 'Journal of Polymer Composites',
@@ -91,10 +81,10 @@ export const publicationsData: Publication[] = [
     thanks: ['Dr. Elias Uddin (KUET)'],
     doi: '10.1002/pc.27644',
     imageUrl:
-      'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80',
   },
   {
-    id: 'pub-8',
+    id: 'pub-7',
     title: 'Tannery Solid Waste Based Chitosan/Egg Shell Antibacterial Composite Sheets',
     url: 'https://www.researchgate.net/publication/415266227_Sustainable_and_Eco-Friendly_Development_of_Tannery_Solid_Waste_Based_ChitosanEgg_Shell_Antibacterial_Composite_Sheets',
     journal:
@@ -106,7 +96,7 @@ export const publicationsData: Publication[] = [
       'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
   },
   {
-    id: 'pub-9',
+    id: 'pub-8',
     title: 'Recycling of PVC from Single-Use Waste Banner',
     url: 'https://www.researchgate.net/publication/408757049_Recovery_of_polyvinyl_chloride_from_single-use_waste_banner_a_cleaner_recycling_strategy',
     journal: 'Bangladesh Journal of Scientific and Industrial Research',
