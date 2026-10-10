@@ -58,6 +58,20 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           </div>
         )}
 
+        {item.collaborators && item.collaborators.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[15px] font-semibold text-gray-800">Collaboration:</span>
+            {item.collaborators.map((name) => (
+              <span
+                key={name}
+                className="rounded-lg border border-gray-300 px-2.5 py-0.5 text-[13px] font-medium text-gray-500"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        )}
+
         {item.link && item.link !== '#' && (
         <a
           href={item.link}

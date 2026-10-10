@@ -10,6 +10,7 @@ export const newsData: NewsItem[] = [
       { label: 'Chitosan film', url: 'https://doi.org/10.1016/j.cscee.2025.101256' },
       { label: 'Egg shell', url: 'https://doi.org/10.1007/978-981-95-1630-8_16' },
     ],
+    collaborators: ['CARS, DU', 'BCSIR', 'BUET'],
     date: 'Dec 02, 2025',
     category: 'Milestone',
     imageUrl:

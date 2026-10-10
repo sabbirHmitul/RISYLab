@@ -9,4 +9,6 @@ export interface NewsItem {
   featured?: boolean;
   /** Optional 'Read publications' buttons shown under the text. */
   publications?: { label: string; url: string }[];
+  /** Optional 'Collaboration' tags shown under the publications. */
+  collaborators?: string[];
 }
