@@ -38,11 +38,11 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           {item.title}
         </h2>
 
-        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{item.excerpt}</p>
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify">{item.excerpt}</p>
 
         {item.publications && item.publications.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-semibold text-gray-800">Read publications:</span>
+            <span className="text-[15px] font-semibold text-gray-800">Read publications:</span>
             {item.publications.map((pub) => (
               <a
                 key={pub.url}
