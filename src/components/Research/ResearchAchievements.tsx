@@ -10,10 +10,16 @@ import { newsData } from '../../data/news';
  */
 const ACHIEVEMENT_IDS = ['news-1', 'news-2'];
 
+/** Titles used only on the Research page (home and News pages keep the original titles). */
+const TITLE_OVERRIDES: Record<string, string> = {
+  'news-1': 'Zero Waste Product',
+  'news-2': 'Hydrology & Risk Analysis & Machine Learning Prediction Algorithm',
+};
+
 export const ResearchAchievements: React.FC = () => {
-  const items = ACHIEVEMENT_IDS.map((id) => newsData.find((item) => item.id === id)).filter(
-    (item): item is NonNullable<typeof item> => Boolean(item),
-  );
+  const items = ACHIEVEMENT_IDS.map((id) => newsData.find((item) => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
+    .map((item) => ({ ...item, title: TITLE_OVERRIDES[item.id] ?? item.title }));
 
   return (
     <section id="achievements" className="py-10 bg-gray-50/70 border-t border-gray-100">
