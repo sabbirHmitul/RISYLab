@@ -22,7 +22,19 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
         className={`h-72 min-h-[320px] overflow-hidden bg-gray-100 ${item.imageHeight ? 'lg:h-[var(--img-h)] lg:min-h-0' : 'lg:h-full'} ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
         style={item.imageHeight ? ({ '--img-h': `${item.imageHeight}px` } as React.CSSProperties) : undefined}
       >
-        <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+        {item.youtubeId ? (
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
+            title={item.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="w-full h-full border-0"
+          />
+        ) : (
+          <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+        )}
       </div>
 
       {/* 50% Content */}

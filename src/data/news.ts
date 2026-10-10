@@ -11,6 +11,7 @@ export const newsData: NewsItem[] = [
       { label: 'Egg shell', url: 'https://doi.org/10.1007/978-981-95-1630-8_16' },
     ],
     collaborators: ['CARS, DU', 'BCSIR', 'BUET'],
+    youtubeId: 'NXdZgvn117g',
     imageHeight: 450,
     date: 'Dec 02, 2025',
     category: 'Milestone',
