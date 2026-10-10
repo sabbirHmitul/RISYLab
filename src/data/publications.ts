@@ -51,6 +51,7 @@ export const publicationsData: Publication[] = [
     year: 2025,
     date: '2025/12/1',
     authors: [],
+    thanks: ['Dr. Elias Uddin (KUET)', 'Dr. Sujan (BCSIR)'],
     doi: '10.1016/j.biteb.2025.102422',
     imageUrl:
       'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80',
