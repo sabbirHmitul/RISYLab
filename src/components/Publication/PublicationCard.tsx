@@ -45,11 +45,11 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
         </p>
         {publication.thanks && publication.thanks.length > 0 ? (
           <p className="text-sm text-gray-400">
-            <span className="font-bold text-gray-500">Thanks to:</span>{' '}
+            <span className="font-semibold text-gray-500">Thanks to:</span>{' '}
             {publication.thanks.map((name, i) => (
               <React.Fragment key={name}>
                 {i > 0 && ', '}
-                <span className="text-gray-600 font-medium">{name}</span>
+                <span className="text-gray-500 font-medium">{name}</span>
               </React.Fragment>
             ))}
           </p>
