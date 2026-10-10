@@ -79,4 +79,17 @@ export const publicationsData: Publication[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=900&q=80',
   },
+  {
+    id: 'pub-7',
+    title: 'Biodegradable and Flexible Composite Sheet from Tannery Solid Wastes',
+    url: 'https://4spepublications.onlinelibrary.wiley.com/doi/abs/10.1002/pc.27644',
+    journal: 'Journal of Polymer Composites',
+    year: 2023,
+    date: '2023/11',
+    authors: [],
+    thanks: ['Dr. Elias Uddin (KUET)'],
+    doi: '10.1002/pc.27644',
+    imageUrl:
+      'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=900&q=80',
+  },
 ];
