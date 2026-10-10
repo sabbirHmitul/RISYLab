@@ -13,7 +13,7 @@ interface CollaborationProps {
 
 export const Collaboration: React.FC<CollaborationProps> = ({ onOpenVolunteerModal }) => {
   return (
-    <section id="collaboration" className="py-5 bg-gray-50/70 border-t border-gray-100 relative overflow-hidden">
+    <section id="collaboration" className="scroll-mt-20 py-5 bg-gray-50/70 border-t border-gray-100 relative overflow-hidden">
       <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight text-center mb-5">
         Collaboration</h2>
       <Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronRight, HeartHandshake } from 'lucide-react';
+import { X, ChevronRight, Handshake } from 'lucide-react';
 import Button from '../Common/Button';
 import Logo from '../Common/Logo';
 
@@ -109,12 +109,13 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 size="md"
                 onClick={() => {
                   onClose();
-                  onOpenVolunteerModal();
+                  // same destination as the banner "Collaboration" button
+                  onNavigate('/#collaboration');
                 }}
                 className="w-full justify-center"
-                icon={<HeartHandshake className="w-4 h-4" />}
+                icon={<Handshake className="w-4 h-4" />}
               >
-                Become a Volunteer
+                Collaborate With Us
               </Button>
             </div>
           </motion.div>
