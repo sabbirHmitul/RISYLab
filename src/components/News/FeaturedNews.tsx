@@ -6,27 +6,39 @@ import { NewsItem } from '../../types/news';
 interface FeaturedNewsProps {
   item: NewsItem;
   reverse?: boolean;
+  /** Photo on top and text below at every screen size (used for side-by-side cards). */
+  stacked?: boolean;
 }
 
-export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false }) => {
+export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false, stacked = false }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className={`grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden border border-gray-100 shadow-xl bg-white`}
+      className={`grid grid-cols-1 ${stacked ? 'h-full content-start' : 'lg:grid-cols-2'} rounded-[32px] overflow-hidden border border-gray-100 shadow-xl bg-white`}
     >
       {/* 50% Image */}
       <div
-        className={`h-72 min-h-[320px] overflow-hidden bg-gray-100 ${item.imageHeight ? 'lg:h-[var(--img-h)] lg:min-h-0' : 'lg:h-full'} ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
-        style={item.imageHeight ? ({ '--img-h': `${item.imageHeight}px` } as React.CSSProperties) : undefined}
+        className={
+          stacked
+            ? 'h-64 sm:h-72 overflow-hidden bg-gray-100'
+            : `h-72 min-h-[320px] overflow-hidden bg-gray-100 ${item.imageHeight ? 'lg:h-[var(--img-h)] lg:min-h-0' : 'lg:h-full'} ${reverse ? 'lg:order-2' : 'lg:order-1'}`
+        }
+        style={!stacked && item.imageHeight ? ({ '--img-h': `${item.imageHeight}px` } as React.CSSProperties) : undefined}
       >
         <img src={item.imageUrl} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
       </div>
 
       {/* 50% Content */}
-      <div className={`p-8 sm:p-10 ${item.imageHeight ? 'lg:px-12 lg:py-6' : 'lg:p-12'} flex flex-col justify-center gap-4 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
+      <div
+        className={
+          stacked
+            ? 'p-7 sm:p-9 flex flex-col gap-4'
+            : `p-8 sm:p-10 ${item.imageHeight ? 'lg:px-12 lg:py-6' : 'lg:p-12'} flex flex-col justify-center gap-4 ${reverse ? 'lg:order-1' : 'lg:order-2'}`
+        }
+      >
         <div className="flex items-center gap-3">
           <span className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
             {item.category}

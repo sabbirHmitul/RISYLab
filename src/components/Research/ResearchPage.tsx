@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHero from '../Common/PageHero';
 import CurrentProjects from '../CurrentProjects/CurrentProjects';
+import ResearchAchievements from './ResearchAchievements';
 
 export const ResearchPage: React.FC = () => {
   return (
@@ -14,6 +15,8 @@ export const ResearchPage: React.FC = () => {
       <div className="py-10 sm:py-14">
         <CurrentProjects />
       </div>
+
+      <ResearchAchievements />
     </div>
   );
 };
