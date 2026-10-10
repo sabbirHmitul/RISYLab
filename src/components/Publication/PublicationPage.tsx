@@ -9,7 +9,7 @@ export const PublicationPage: React.FC = () => {
     <div className="bg-white">
       <PageHero
         eyebrow="Publication"
-        title="Research Publications"
+        title="Publications"
         subtitle="Peer-reviewed work from RISY Lab researchers spanning environmental science, engineering and youth policy."
       />
 
