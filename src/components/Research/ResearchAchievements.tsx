@@ -27,7 +27,7 @@ const researchAchievements: NewsItem[] = [
     excerpt:
       'We are analyzing hydrology and developing machine learning models for advanced hydrological prediction across Bangladesh.',
     date: 'Jun, 2025',
-    category: 'Patent & Implementation',
+    category: 'Ongoing Project',
     imageUrl:
       'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
     link: '#',
@@ -38,9 +38,6 @@ const researchAchievements: NewsItem[] = [
 export const ResearchAchievements: React.FC = () => {
   return (
     <section id="achievements" className="py-10 bg-gray-50/70 border-t border-gray-100">
-      <h2 className="text-3xl sm:text-4xl md:text-4xl font-black font-heading text-[#595959] tracking-tight text-center mb-8">
-        Achievements
-      </h2>
       <Container>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
           {researchAchievements.map((item) => (

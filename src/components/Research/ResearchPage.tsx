@@ -14,7 +14,7 @@ export const ResearchPage: React.FC = () => {
 
       <ResearchAchievements />
 
-      <div className="py-10 sm:py-14">
+      <div className="pt-2 pb-10 sm:pt-4 sm:pb-14">
         <CurrentProjects />
       </div>
     </div>

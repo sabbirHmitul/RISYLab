@@ -20,7 +20,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       className="grid grid-cols-1 sm:grid-cols-[45%_1fr] gap-5 sm:gap-6 items-center"
     >
       {/* Photo */}
-      <div className="h-60 sm:h-full sm:min-h-[260px] overflow-hidden rounded-[20px] bg-gray-100">
+      <div className="h-60 sm:h-72 overflow-hidden rounded-[20px] bg-gray-100">
         <img
           src={item.imageUrl}
           alt={item.title}
