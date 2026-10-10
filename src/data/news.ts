@@ -23,8 +23,13 @@ export const newsData: NewsItem[] = [
     category: 'Discussion',
     imageUrl:
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80',
+    readMore: [
+      {
+        label: 'The Climate Watch',
+        url: 'https://theclimatewatch.com/bangladesh-warns-of-2-8-billion-annual-climate-health-risk-by-2030/',
+      },
+    ],
     link: '#',
-    linkLabel: 'Read more',
   },
   {
     id: 'news-recp-award',
