@@ -5,10 +5,12 @@ import { NewsItem } from '../../types/news';
 
 interface ResearchAchievementCardProps {
   item: NewsItem;
+  /** Label before the outlined name tags (default: "Collaboration:"). */
+  collaboratorsLabel?: string;
 }
 
 /** Compact achievement card for the Research page: photo on the left, text on the right. */
-export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = ({ item }) => {
+export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = ({ item, collaboratorsLabel = 'Collaboration:' }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -78,7 +80,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
 
         {item.collaborators && item.collaborators.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-semibold text-gray-800">Collaboration:</span>
+            <span className="text-sm font-semibold text-gray-800">{collaboratorsLabel}</span>
             {item.collaborators.map((name) => (
               <span
                 key={name}
