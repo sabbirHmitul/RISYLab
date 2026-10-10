@@ -5,9 +5,8 @@ import FeaturedNews from './FeaturedNews';
 import { newsData } from '../../data/news';
 
 export const NewsPage: React.FC = () => {
-  const featured = newsData.find((item) => item.featured) ?? newsData[0];
-  const rest = newsData.filter((item) => item.id !== featured.id);
-  const ordered = [featured, ...rest];
+  // Cards appear in the same order as in src/data/news.ts
+  const ordered = newsData;
 
   return (
     <div className="bg-white">
