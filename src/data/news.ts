@@ -48,13 +48,14 @@ export const newsData: NewsItem[] = [
   },
   {
     id: 'news-3',
-    title: 'Two RISY Fellows Awarded Full IELTS & GRE Scholarships',
-    excerpt: 'Our free RISY Skills prep track continues to open doors for aspiring youth researchers heading abroad.',
-    date: 'Jul 10, 2026',
-    category: 'Announcement',
+    title: 'Youth & Expert Discussion | Ministry of Health of Bangladesh',
+    excerpt: 'We are discussing public health and climate-related diseases.',
+    date: 'Aug 2026',
+    category: 'Discussion',
     imageUrl:
       'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80',
     link: '#',
+    linkLabel: 'Read more',
   },
   {
     id: 'news-4',

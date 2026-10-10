@@ -6,6 +6,8 @@ export interface NewsItem {
   category: string;
   imageUrl: string;
   link: string;
+  /** Optional label for the link button (default 'Read Full Story'). */
+  linkLabel?: string;
   featured?: boolean;
   /** Optional 'Read publications' buttons shown under the text. */
   publications?: { label: string; url: string }[];

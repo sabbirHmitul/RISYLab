@@ -126,7 +126,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           rel="noreferrer"
           className="inline-flex items-center gap-2 mt-2 w-fit px-5 py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold shadow-[0_4px_14px_rgba(236,72,153,0.35)] transition-all duration-300"
         >
-          Read Full Story
+          {item.linkLabel ?? 'Read Full Story'}
           <ArrowUpRight className="w-4 h-4" />
         </a>
         )}
