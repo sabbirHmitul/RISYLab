@@ -37,7 +37,7 @@ export const newsData: NewsItem[] = [
     excerpt: 'We are practicing Resource Efficient and Cleaner Production (RECP).',
     awardedBy: ['DoE Bangladesh', 'UNIDO Bangladesh'],
     date: 'Jul 2026',
-    category: 'Expert',
+    category: 'Expert Award',
     imageUrl: labPracticeImg,
     link: '#',
   },
