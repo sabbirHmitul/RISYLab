@@ -11,7 +11,6 @@ export const newsData: NewsItem[] = [
       { label: 'Egg shell', url: 'https://doi.org/10.1007/978-981-95-1630-8_16' },
     ],
     collaborators: ['CARS, DU', 'BCSIR', 'BUET'],
-    youtubeId: 'NXdZgvn117g',
     imageHeight: 450,
     date: 'Dec 02, 2025',
     category: 'Milestone',
@@ -32,6 +31,19 @@ export const newsData: NewsItem[] = [
     category: 'Research',
     imageUrl:
       'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
+    link: '#',
+  },
+  {
+    id: 'news-media-jamuna',
+    title: 'তারুণ্যের বাংলাদেশ | Youth for Bangladesh | Jamuna TV',
+    excerpt:
+      'We are developing youth for a modern Bangladesh. In Dhaka city, we are conducting several awareness and environmental activities.',
+    thanks: [{ label: 'Filter BD', url: 'https://filterbangladesh.com' }],
+    youtubeId: 'NXdZgvn117g',
+    imageHeight: 425,
+    date: 'Jun 2026',
+    category: 'Media',
+    imageUrl: 'https://img.youtube.com/vi/NXdZgvn117g/hqdefault.jpg',
     link: '#',
   },
   {

@@ -6,9 +6,11 @@ import { NewsItem } from '../../types/news';
 interface FeaturedNewsProps {
   item: NewsItem;
   reverse?: boolean;
+  /** Show the YouTube video (News page). The home page keeps the photo. */
+  showVideo?: boolean;
 }
 
-export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false }) => {
+export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = false, showVideo = true }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -22,7 +24,7 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
         className={`h-72 min-h-[320px] overflow-hidden bg-gray-100 ${item.imageHeight ? 'lg:h-[var(--img-h)] lg:min-h-0' : 'lg:h-full'} ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
         style={item.imageHeight ? ({ '--img-h': `${item.imageHeight}px` } as React.CSSProperties) : undefined}
       >
-        {item.youtubeId ? (
+        {showVideo && item.youtubeId ? (
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
             title={item.title}
@@ -97,6 +99,24 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
               >
                 {name}
               </span>
+            ))}
+          </div>
+        )}
+
+        {item.thanks && item.thanks.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[15px] font-semibold text-gray-800">Thanks &amp; follow:</span>
+            {item.thanks.map((t) => (
+              <a
+                key={t.url}
+                href={t.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 rounded-lg border border-pink-200 px-2.5 py-0.5 text-xs sm:text-sm font-semibold text-pink-600 hover:bg-pink-50 transition-colors"
+              >
+                {t.label}
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             ))}
           </div>
         )}

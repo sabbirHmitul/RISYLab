@@ -16,7 +16,7 @@ export const HomeNews: React.FC = () => {
       <Container>
         <div className="flex flex-col gap-8">
           {items.map((item, idx) => (
-            <FeaturedNews key={item.id} item={item} reverse={idx % 2 === 1} />
+            <FeaturedNews key={item.id} item={item} reverse={idx % 2 === 1} showVideo={false} />
           ))}
         </div>
       </Container>
