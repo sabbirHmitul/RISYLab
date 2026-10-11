@@ -18,21 +18,18 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
       className="group relative flex flex-col sm:flex-row gap-6 bg-white rounded-[28px] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-4 sm:p-5"
     >
       {publication.badge && (
-        <div className="absolute -top-3 -left-3 z-10">
-          {/* Graduation cap sitting on the badge */}
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 44 22"
-            className="absolute -top-[15px] left-1/2 -translate-x-1/2 w-11 h-[22px] -rotate-12 drop-shadow"
-          >
-            <path d="M22 1 L43 8 L22 15 L1 8 Z" fill="#0ea5e9" />
-            <path d="M22 1 L43 8 L22 9.5 L1 8 Z" fill="#38bdf8" />
-            <path d="M22 8 L36 10.5 L36 18" stroke="#0369a1" strokeWidth="1.4" fill="none" strokeLinecap="round" />
-            <circle cx="36" cy="19" r="1.8" fill="#0369a1" />
-          </svg>
+        <div className="absolute -top-3 -left-1 z-10">
           <span className="relative min-w-10 h-10 px-2 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center shadow-lg font-heading group-hover:bg-pink-600 transition-colors duration-300">
             {publication.badge}
           </span>
+          {/* Graduation cap: slanted board resting on the badge's upper left */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 33 18"
+            className="absolute -top-[10px] -left-2 w-[33px] h-[18px] pointer-events-none"
+          >
+            <path d="M12.4 0 L33 0 L21.8 18 L0 18 Z" fill="#0ea5e9" />
+          </svg>
         </div>
       )}
 
