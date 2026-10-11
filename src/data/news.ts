@@ -1,4 +1,5 @@
 import { NewsItem } from '../types/news';
+import healthSeminarImg from '../../assets/img/news/health-seminar.webp';
 import labPracticeImg from '../../assets/img/activity/lab-practice.webp';
 
 export const newsData: NewsItem[] = [
@@ -22,8 +23,7 @@ export const newsData: NewsItem[] = [
     imageHeight: 425,
     date: 'Aug 2026',
     category: 'National Seminar',
-    imageUrl:
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80',
+    imageUrl: healthSeminarImg,
     readMore: [
       {
         label: 'The Climate Watch',
