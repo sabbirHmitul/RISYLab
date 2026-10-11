@@ -20,7 +20,7 @@ export const newsData: NewsItem[] = [
     id: 'news-3',
     title: 'Youth & Expert Discussion | Ministry of Health of Bangladesh',
     excerpt:
-      'We joined a high-level roundtable on "Nature and Health: Building Climate-Resilient Public Health Systems" at the Department of Environment, Dhaka. The State Minister for Health warned that climate-related health impacts could cost Bangladesh USD 2.8 billion every year by 2030. Experts discussed heat illness, dengue, waterborne diseases and salinity, and called for climate-smart health facilities, digital early warning and better care for remote communities.',
+      'We joined a high-level roundtable on "Nature and Health: Building Climate-Resilient Public Health Systems" at the Department of Environment, Dhaka. The State Minister for Health warned that climate-related health impacts could cost Bangladesh USD 2.8 billion every year by 2030.',
     imageHeight: 425,
     date: 'Aug 2026',
     category: 'National Seminar',
