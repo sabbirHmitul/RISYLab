@@ -133,7 +133,7 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
 
               <div className="h-64 w-full overflow-hidden bg-gray-100">
                 {selected.imageUrl ? (
-                  <img loading="lazy" decoding="async" src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={selected.imageUrl} alt={selected.name} className="w-full h-full object-cover object-[center_22%]" />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-b from-gray-200 to-gray-300 flex items-center justify-center">
                     <UserRound className="w-24 h-24 text-gray-400" strokeWidth={1.25} />
@@ -178,17 +178,15 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                     <GraduationCap className="w-4 h-4" />
                     Scholar
                   </a>
-                  {selected.linkedinUrl && (
-                    <a
-                      href={selected.linkedinUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                      LinkedIn
-                    </a>
-                  )}
+                  <a
+                    href={selected.linkedinUrl || 'https://www.linkedin.com/'}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </motion.div>
