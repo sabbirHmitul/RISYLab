@@ -1,6 +1,6 @@
 import { NewsItem } from '../types/news';
 import healthSeminarImg from '../../assets/img/news/health-seminar.webp';
-import labPracticeImg from '../../assets/img/activity/lab-practice.webp';
+import recpAwardImg from '../../assets/img/news/recp-award.webp';
 
 export const newsData: NewsItem[] = [
   {
@@ -40,7 +40,7 @@ export const newsData: NewsItem[] = [
     imageHeight: 425,
     date: 'Jul 2026',
     category: 'Expert Award',
-    imageUrl: labPracticeImg,
+    imageUrl: recpAwardImg,
     link: '#',
   },
 ];
