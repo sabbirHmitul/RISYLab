@@ -86,7 +86,7 @@ export const teamData: TeamMember[] = [
     name: 'Prottay Mazumder',
     role: 'MS Student',
     affiliation: 'Civil & Env. Engineering (BUET)',
-    specialization: ['Civil Engineering', 'Environmental Engineering', 'Air Quality', 'GIS Modeling', 'Machine Learning'],
+    specialization: ['Environmental Engineering', 'Air Quality', 'GIS Modeling', 'Machine Learning'],
     imageUrl: prottayImage,
     job: 'Consultant (EQMS Consulting Limited)',
     researchGateUrl: 'https://www.researchgate.net/profile/Prottay-Mazumder',
