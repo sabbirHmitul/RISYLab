@@ -160,12 +160,22 @@ export const Footer: React.FC<FooterProps> = () => {
           </p>
 
           <div className="flex items-center gap-6">
-            <span className="hover:text-white transition-colors cursor-pointer">
+            <a
+              href="https://docs.google.com/document/d/1O184v35Sc9clio9DYyHdWZ4RKjuetUmDTG8sTgblY-o/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#e6007e] hover:text-pink-400 transition-colors"
+            >
               Privacy Policy
-            </span>
-            <span className="hover:text-white transition-colors cursor-pointer">
-              Terms of Service
-            </span>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1MrQNXLMXZDzqQeNC_a8setQ7KOH8fTZu1ROdtvKQGb4/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#e6007e] hover:text-pink-400 transition-colors"
+            >
+              Terms &amp; Conditions
+            </a>
             <button
               onClick={scrollToTop}
               className="p-2.5 rounded-full bg-gray-900 hover:bg-pink-600 hover:text-white text-gray-400 transition-all border border-gray-800"
