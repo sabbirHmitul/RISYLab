@@ -4,6 +4,7 @@ import sumanImage from '../../assets/img/team/suman.webp';
 import mahjabinImage from '../../assets/img/team/mahjabin.webp';
 import biazidImage from '../../assets/img/team/biazid.webp';
 import chowneeImage from '../../assets/img/team/chownee.webp';
+import prottayImage from '../../assets/img/team/prottay.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -82,12 +83,14 @@ export const teamData: TeamMember[] = [
   },
   {
     id: 'lead-2',
-    name: 'Prottoy',
+    name: 'Prottay Mazumder',
     role: 'MS Student',
     affiliation: 'Civil & Env. Engineering (BUET)',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
+    imageUrl: prottayImage,
+    job: 'Consultant (EQMS Consulting Limited)',
+    researchGateUrl: 'https://www.researchgate.net/profile/Prottay-Mazumder',
+    linkedinUrl: 'https://www.linkedin.com/in/prottay-mazumder',
     category: 'lead',
   },
   {
@@ -150,6 +153,7 @@ export const teamData: TeamMember[] = [
     specialization: ['Chemistry'],
     imageUrl: biazidImage,
     scholarUrl: 'https://scholar.google.com/',
+    linkedinUrl: 'https://www.linkedin.com/in/a-r-m-biazid-679633259',
     category: 'practitioner',
   },
   {
@@ -160,6 +164,7 @@ export const teamData: TeamMember[] = [
     specialization: [],
     imageUrl: chowneeImage,
     scholarUrl: 'https://scholar.google.com/',
+    linkedinUrl: 'https://www.linkedin.com/in/chow-nee-sain-1b1297426',
     category: 'practitioner',
   },
 ];

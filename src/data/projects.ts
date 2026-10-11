@@ -41,7 +41,7 @@ export const projectsData: Project[] = [
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=1000&q=80',
     ],
-    teamLead: 'Prottoy',
+    teamLead: 'Prottay Mazumder',
     section: 'Water & Air Solution',
   },
   {

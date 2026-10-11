@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { GraduationCap, Building2, Linkedin, X, UserRound } from 'lucide-react';
+import { GraduationCap, Building2, Briefcase, Linkedin, X, UserRound, BookOpen } from 'lucide-react';
 import { TeamMember } from '../../types/team';
 import sectionIcon from '../../../assets/img/risy-icon.png';
 
@@ -149,6 +149,12 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                     {selected.affiliation}
                   </p>
                 )}
+                {selected.job && (
+                  <p className="flex items-center gap-1.5 text-sm text-gray-500">
+                    <Briefcase className="w-3.5 h-3.5 shrink-0" />
+                    {selected.job}
+                  </p>
+                )}
 
                 {selected.specialization.length > 0 && (
                   <div className="pt-1">
@@ -169,15 +175,17 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                 )}
 
                 <div className="flex flex-wrap items-center gap-2 pt-2">
-                  <a
-                    href={selected.scholarUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300"
-                  >
-                    <GraduationCap className="w-4 h-4" />
-                    Scholar
-                  </a>
+                  {selected.researchGateUrl ? (
+                    <a href={selected.researchGateUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300">
+                      <BookOpen className="w-4 h-4" />
+                      ResearchGate
+                    </a>
+                  ) : (
+                    <a href={selected.scholarUrl || 'https://scholar.google.com/'} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300">
+                      <GraduationCap className="w-4 h-4" />
+                      Scholar
+                    </a>
+                  )}
                   <a
                     href={selected.linkedinUrl || 'https://www.linkedin.com/'}
                     target="_blank"

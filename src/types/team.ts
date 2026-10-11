@@ -6,7 +6,9 @@ export interface TeamMember {
   institution?: string;
   specialization: string[];
   imageUrl: string;
-  scholarUrl: string;
+  scholarUrl?: string;
   linkedinUrl?: string;
+  researchGateUrl?: string;
+  job?: string;
   category: 'senior' | 'lead' | 'practitioner';
 }
