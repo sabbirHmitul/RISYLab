@@ -180,12 +180,12 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                       <BookOpen className="w-4 h-4" />
                       ResearchGate
                     </a>
-                  ) : (
-                    <a href={selected.scholarUrl || 'https://scholar.google.com/'} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300">
+                  ) : selected.scholarUrl ? (
+                    <a href={selected.scholarUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-semibold hover:bg-pink-600 transition-colors duration-300">
                       <GraduationCap className="w-4 h-4" />
                       Scholar
                     </a>
-                  )}
+                  ) : null}
                   <a
                     href={selected.linkedinUrl || 'https://www.linkedin.com/'}
                     target="_blank"
