@@ -18,9 +18,22 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
       className="group relative flex flex-col sm:flex-row gap-6 bg-white rounded-[28px] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-4 sm:p-5"
     >
       {publication.badge && (
-        <span className="absolute -top-3 -left-3 min-w-10 h-10 px-2 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center shadow-lg z-10 font-heading group-hover:bg-pink-600 transition-colors duration-300">
-          {publication.badge}
-        </span>
+        <div className="absolute -top-3 -left-3 z-10">
+          {/* Graduation cap sitting on the badge */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 44 22"
+            className="absolute -top-[15px] left-1/2 -translate-x-1/2 w-11 h-[22px] -rotate-12 drop-shadow"
+          >
+            <path d="M22 1 L43 8 L22 15 L1 8 Z" fill="#0ea5e9" />
+            <path d="M22 1 L43 8 L22 9.5 L1 8 Z" fill="#38bdf8" />
+            <path d="M22 8 L36 10.5 L36 18" stroke="#0369a1" strokeWidth="1.4" fill="none" strokeLinecap="round" />
+            <circle cx="36" cy="19" r="1.8" fill="#0369a1" />
+          </svg>
+          <span className="relative min-w-10 h-10 px-2 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center shadow-lg font-heading group-hover:bg-pink-600 transition-colors duration-300">
+            {publication.badge}
+          </span>
+        </div>
       )}
 
       <div className="sm:w-56 shrink-0 h-40 sm:h-auto rounded-2xl overflow-hidden bg-gray-100">
