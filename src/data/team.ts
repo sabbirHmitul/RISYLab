@@ -5,6 +5,7 @@ import mahjabinImage from '../../assets/img/team/mahjabin.webp';
 import biazidImage from '../../assets/img/team/biazid.webp';
 import chowneeImage from '../../assets/img/team/chownee.webp';
 import prottayImage from '../../assets/img/team/prottay.webp';
+import refatImage from '../../assets/img/team/refat.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -13,7 +14,7 @@ export const teamData: TeamMember[] = [
     name: 'Suman Dewanjee',
     role: 'PhD Student',
     affiliation: 'Mechanical Engineering (USA)',
-    specialization: ['Mechanical Engineering'],
+    specialization: ['Bio-sensor', 'Bio-film', 'Polymer', 'Data Analysis'],
     imageUrl: sumanImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
@@ -43,8 +44,8 @@ export const teamData: TeamMember[] = [
     name: 'Refat Hossain',
     role: 'PhD Student',
     affiliation: 'Civil & Env. Engineering, (Canada)',
-    specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl: '',
+    specialization: ['Environmental Engineering', 'Biomass', 'Bio-fuel'],
+    imageUrl: refatImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'senior',
   },
@@ -128,7 +129,7 @@ export const teamData: TeamMember[] = [
     name: 'Mahjabin Khan',
     role: 'Graduate Student',
     affiliation: 'Geology (DU)',
-    specialization: ['Geology'],
+    specialization: ['Geology', 'GIS'],
     imageUrl: mahjabinImage,
     scholarUrl: 'https://scholar.google.com/',
     category: 'lead',
