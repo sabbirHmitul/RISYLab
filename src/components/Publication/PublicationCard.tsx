@@ -17,9 +17,11 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="group relative flex flex-col sm:flex-row gap-6 bg-white rounded-[28px] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-4 sm:p-5"
     >
-      <span className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center shadow-lg z-10 font-heading group-hover:bg-pink-600 transition-colors duration-300">
-        {String(index + 1).padStart(2, '0')}
-      </span>
+      {publication.badge && (
+        <span className="absolute -top-3 -left-3 min-w-10 h-10 px-2 rounded-full bg-gray-900 text-white text-sm font-bold flex items-center justify-center shadow-lg z-10 font-heading group-hover:bg-pink-600 transition-colors duration-300">
+          {publication.badge}
+        </span>
+      )}
 
       <div className="sm:w-56 shrink-0 h-40 sm:h-auto rounded-2xl overflow-hidden bg-gray-100">
         <img loading="lazy" decoding="async"

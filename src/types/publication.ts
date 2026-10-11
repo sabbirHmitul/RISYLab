@@ -12,4 +12,6 @@ export interface Publication {
   date?: string;
   /** Optional acknowledgements shown instead of the author line */
   thanks?: string[];
+  /** Optional badge on the card corner, e.g. citation count "45+" or "Q1" */
+  badge?: string;
 }

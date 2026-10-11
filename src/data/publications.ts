@@ -3,8 +3,9 @@ import { Publication } from '../types/publication';
 export const publicationsData: Publication[] = [
   {
     id: 'pub-1',
+    badge: '04',
     title:
-      'Adsorbent for Heavy Metal Remediation: Experimental and Machine Learning Approach',
+      'Adsorbent for Heavy Metal Remediation: Machine Learning Approach',
     url: 'https://www.sciencedirect.com/science/article/pii/S266601642500163X',
     journal: 'Journal of Case Studies in Chemical and Environmental Engineering',
     year: 2025,
@@ -17,6 +18,7 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-2',
+    badge: '45+',
     title: 'Chitosan-Based Antimicrobial Films for Plastic Packaging',
     url: 'https://www.sciencedirect.com/science/article/pii/S2772782325000129',
     journal: 'Journal of Cleaner Chemical Engineering',
@@ -30,6 +32,7 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-3',
+    badge: '50+',
     title:
       'Heavy Metal Contamination in Soil, Plants, and Wastewater: Industrial Zone at Gazipur, Bangladesh',
     url: 'https://link.springer.com/article/10.1007/s10661-025-13818-9',
@@ -44,6 +47,7 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-4',
+    badge: 'Q1',
     title:
       'Fiber Reinforced Biocomposite Sheet: Antibacterial for Shoe Insoles',
     url: 'https://www.sciencedirect.com/science/article/pii/S2589014X25004050',
@@ -72,6 +76,7 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-6',
+    badge: '30+',
     title: 'Biodegradable and Flexible Composite Sheet from Tannery Solid Wastes',
     url: 'https://4spepublications.onlinelibrary.wiley.com/doi/abs/10.1002/pc.27644',
     journal: 'Journal of Polymer Composites',
