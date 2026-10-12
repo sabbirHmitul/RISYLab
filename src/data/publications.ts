@@ -5,6 +5,7 @@ import heavyMetalGazipurImg from '../../assets/img/publications/heavy-metal-gazi
 import adsorbentImg from '../../assets/img/publications/adsorbent-heavy-metal.webp';
 import hydrogelImg from '../../assets/img/publications/chitosan-hydrogel.webp';
 import eggShellImg from '../../assets/img/publications/chitosan-eggshell-composite.webp';
+import pvcBannerImg from '../../assets/img/publications/pvc-waste-banner.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -113,7 +114,7 @@ export const publicationsData: Publication[] = [
     journal: 'Bangladesh Journal of Scientific and Industrial Research',
     authors: [],
     thanks: ['Dr. Sujan (BCSIR)', 'Dr. Shwapan Kumar Dey (BCSIR)'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80',
+    imageUrl: pvcBannerImg,
+    imageFit: 'contain',
   },
 ];
