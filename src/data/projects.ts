@@ -1,6 +1,7 @@
 import { Project } from '../types/project';
 import tanneryBiodiesel2Img from '../../assets/img/projects/tannery-biodiesel-2.webp';
 import cigaretteFilter1Img from '../../assets/img/projects/cigarette-filter-1.webp';
+import cigaretteFilter2Img from '../../assets/img/projects/cigarette-filter-2.webp';
 
 export const projectsData: Project[] = [
   {
@@ -20,7 +21,7 @@ export const projectsData: Project[] = [
     description:
       'By green solvent extraction process we successfully recycling cigarette filte. Now we developing circular process & yarn systhesis.',
     keyNotes: ['Cellulose acetate', 'Solvent circulation', 'LCA', 'ASPEN simulation'],
-    imageUrls: [cigaretteFilter1Img, ''], // photos to be uploaded,
+    imageUrls: [cigaretteFilter1Img, cigaretteFilter2Img], // photos to be uploaded,
     imageLabels: ['Waste cigarette filter solvent recycling process', 'Extracted fiber'],
     teamLead: 'A. R. M. Baizid, Sabbir H Mitul',
     section: 'Polymer & Bio-materials',
