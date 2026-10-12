@@ -1,4 +1,5 @@
 import { AchievementItem } from '../types/achievement';
+import tanneryBiocrudeImg from '../../assets/img/achievements/tannery-biocrude.webp';
 
 /** Home page Achievements only. Editing this does NOT change the News page (src/data/news.ts). */
 export const achievementsData: AchievementItem[] = [
@@ -30,8 +31,7 @@ export const achievementsData: AchievementItem[] = [
     imageHeight: 425,
     date: 'Jul 21, 2026',
     category: 'Research',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
+    imageUrl: tanneryBiocrudeImg,
     link: '#',
   },
 ];
