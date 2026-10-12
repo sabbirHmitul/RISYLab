@@ -3,6 +3,7 @@ import chitosanFilmsImg from '../../assets/img/publications/chitosan-antimicrobi
 import biocompositeInsolesImg from '../../assets/img/publications/biocomposite-shoe-insoles.webp';
 import heavyMetalGazipurImg from '../../assets/img/publications/heavy-metal-gazipur.webp';
 import adsorbentImg from '../../assets/img/publications/adsorbent-heavy-metal.webp';
+import hydrogelImg from '../../assets/img/publications/chitosan-hydrogel.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -75,8 +76,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['Suman Dewanjee (USA)', 'CARS, DU'],
     doi: '10.3329/dujs.v73i1.81284',
-    imageUrl:
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80',
+    imageUrl: hydrogelImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-6',
