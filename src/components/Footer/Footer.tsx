@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import Container from "../Common/Container";
 import Logo from "../Common/Logo";
 import SocialIcons from "../Hero/SocialIcons";
@@ -164,17 +164,19 @@ export const Footer: React.FC<FooterProps> = () => {
               href="https://docs.google.com/document/d/1O184v35Sc9clio9DYyHdWZ4RKjuetUmDTG8sTgblY-o/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              className="text-[#e6007e] hover:text-pink-400 transition-colors"
+              className="inline-flex items-center gap-1 text-[#e6007e] hover:text-pink-400 transition-colors"
             >
               Privacy Policy
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
               href="https://docs.google.com/document/d/1MrQNXLMXZDzqQeNC_a8setQ7KOH8fTZu1ROdtvKQGb4/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              className="text-[#e6007e] hover:text-pink-400 transition-colors"
+              className="inline-flex items-center gap-1 text-[#e6007e] hover:text-pink-400 transition-colors"
             >
               Terms &amp; Conditions
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <button
               onClick={scrollToTop}
