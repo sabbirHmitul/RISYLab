@@ -4,7 +4,7 @@ import { ArrowUpRight, CalendarDays } from 'lucide-react';
 import { NewsItem } from '../../types/news';
 
 interface ResearchAchievementCardProps {
-  item: NewsItem;
+  item: NewsItem & { imageFit?: 'cover' | 'contain' };
   /** Label before the outlined name tags (default: "Collaboration:"). */
   collaboratorsLabel?: string;
 }
@@ -20,14 +20,14 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       className="grid grid-cols-1 sm:grid-cols-[45%_1fr] gap-5 sm:gap-6 items-start"
     >
       {/* Photo */}
-      <div className="h-52 sm:h-[272px] overflow-hidden rounded-[20px] bg-gray-100">
+      <div className={`h-52 sm:h-[272px] overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
         {item.imageUrl && (
         <img
           src={item.imageUrl}
           alt={item.title}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className={`w-full h-full ${item.imageFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 hover:scale-105`}
         />
         )}
       </div>

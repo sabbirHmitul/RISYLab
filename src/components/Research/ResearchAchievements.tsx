@@ -2,13 +2,14 @@ import React from 'react';
 import Container from '../Common/Container';
 import ResearchAchievementCard from './ResearchAchievementCard';
 import { NewsItem } from '../../types/news';
+import hydrologyMapImg from '../../../assets/img/research/hydrology-map.webp';
 
 /**
  * Achievements section for the Research page.
  * Compact cards (photo left, text right), two per row on wide screens.
  * Edit the cards here; they are separate from the home page and News page stories.
  */
-const researchAchievements: NewsItem[] = [
+const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = [
   {
     id: 'research-ach-zero-waste',
     title: 'Zero Waste Product',
@@ -27,7 +28,8 @@ const researchAchievements: NewsItem[] = [
       'We are analyzing hydrology and developing machine learning models for advanced hydrological prediction across Bangladesh.',
     date: 'Jun, 2025',
     category: 'Ongoing Project',
-    imageUrl: '', // photo to be uploaded
+    imageUrl: hydrologyMapImg,
+    imageFit: 'contain', // show the whole map, no cropping
     link: '#',
     collaborators: ['Mehedi Hasan (Canada)', 'IWA'],
   },
