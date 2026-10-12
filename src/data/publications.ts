@@ -6,6 +6,7 @@ import adsorbentImg from '../../assets/img/publications/adsorbent-heavy-metal.we
 import hydrogelImg from '../../assets/img/publications/chitosan-hydrogel.webp';
 import eggShellImg from '../../assets/img/publications/chitosan-eggshell-composite.webp';
 import pvcBannerImg from '../../assets/img/publications/pvc-waste-banner.webp';
+import tanneryComposite from '../../assets/img/publications/tannery-composite-sheet.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -92,8 +93,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['Dr. Elias Uddin (KUET)'],
     doi: '10.1002/pc.27644',
-    imageUrl:
-      'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80',
+    imageUrl: tanneryComposite,
+    imageFit: 'contain',
   },
   {
     id: 'pub-7',
