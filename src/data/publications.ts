@@ -2,6 +2,7 @@ import { Publication } from '../types/publication';
 import chitosanFilmsImg from '../../assets/img/publications/chitosan-antimicrobial-films.webp';
 import biocompositeInsolesImg from '../../assets/img/publications/biocomposite-shoe-insoles.webp';
 import heavyMetalGazipurImg from '../../assets/img/publications/heavy-metal-gazipur.webp';
+import adsorbentImg from '../../assets/img/publications/adsorbent-heavy-metal.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -16,8 +17,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['Dr. Mostafizur Rahman (JU)', 'BCSIR'],
     doi: '10.1016/j.cscee.2025.101256',
-    imageUrl:
-      'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80',
+    imageUrl: adsorbentImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-2',
