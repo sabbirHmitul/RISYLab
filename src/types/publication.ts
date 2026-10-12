@@ -14,4 +14,6 @@ export interface Publication {
   thanks?: string[];
   /** Optional badge on the card corner, e.g. citation count "45+" or "Q1" */
   badge?: string;
+  /** 'contain' shows the whole image (for wide figures / graphical abstracts) */
+  imageFit?: 'cover' | 'contain';
 }

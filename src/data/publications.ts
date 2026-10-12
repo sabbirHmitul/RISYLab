@@ -1,4 +1,5 @@
 import { Publication } from '../types/publication';
+import chitosanFilmsImg from '../../assets/img/publications/chitosan-antimicrobial-films.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -27,8 +28,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['Dr. Elias Uddin (KUET)', 'CARS (DU)'],
     doi: '10.1016/j.clce.2025.100157',
-    imageUrl:
-      'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80',
+    imageUrl: chitosanFilmsImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-3',

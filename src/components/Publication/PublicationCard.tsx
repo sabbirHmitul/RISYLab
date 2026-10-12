@@ -33,11 +33,17 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
         </div>
       )}
 
-      <div className="sm:w-56 shrink-0 h-40 sm:h-auto rounded-2xl overflow-hidden bg-gray-100">
+      <div
+        className={`sm:w-56 shrink-0 h-40 sm:h-auto rounded-2xl overflow-hidden ${
+          publication.imageFit === 'contain' ? 'bg-white border border-gray-100' : 'bg-gray-100'
+        }`}
+      >
         <img loading="lazy" decoding="async"
           src={publication.imageUrl}
           alt={publication.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`w-full h-full ${
+            publication.imageFit === 'contain' ? 'object-contain p-1' : 'object-cover'
+          } transition-transform duration-500 group-hover:scale-105`}
         />
       </div>
 
