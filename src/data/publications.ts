@@ -4,6 +4,7 @@ import biocompositeInsolesImg from '../../assets/img/publications/biocomposite-s
 import heavyMetalGazipurImg from '../../assets/img/publications/heavy-metal-gazipur.webp';
 import adsorbentImg from '../../assets/img/publications/adsorbent-heavy-metal.webp';
 import hydrogelImg from '../../assets/img/publications/chitosan-hydrogel.webp';
+import eggShellImg from '../../assets/img/publications/chitosan-eggshell-composite.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -102,8 +103,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['DU'],
     doi: '10.1007/978-981-95-1630-8_16',
-    imageUrl:
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
+    imageUrl: eggShellImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-8',
