@@ -1,6 +1,7 @@
 import { Publication } from '../types/publication';
 import chitosanFilmsImg from '../../assets/img/publications/chitosan-antimicrobial-films.webp';
 import biocompositeInsolesImg from '../../assets/img/publications/biocomposite-shoe-insoles.webp';
+import heavyMetalGazipurImg from '../../assets/img/publications/heavy-metal-gazipur.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -44,8 +45,8 @@ export const publicationsData: Publication[] = [
     authors: [],
     thanks: ['Mehedi Hasan (Canada)', 'IWA'],
     doi: '10.1007/s10661-025-13818-9',
-    imageUrl:
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
+    imageUrl: heavyMetalGazipurImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-4',
