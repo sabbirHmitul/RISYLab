@@ -43,10 +43,12 @@ export const FeaturedNews: React.FC<FeaturedNewsProps> = ({ item, reverse = fals
           <span className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
             {item.category}
           </span>
+          {item.date && (
           <span className="flex items-center gap-1.5 text-xs text-gray-400">
             <CalendarDays className="w-3.5 h-3.5" />
             {item.date}
           </span>
+          )}
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-bold font-heading text-gray-900 leading-tight">

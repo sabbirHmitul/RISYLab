@@ -34,6 +34,19 @@ export const newsData: NewsItem[] = [
     link: '#',
   },
   {
+    id: 'news-plastic-stakeholder',
+    title: 'Government Stakeholder Engagement of Plastic Pollution',
+    excerpt:
+      'We took part in a stakeholder engagement with government officials on plastic pollution in Bangladesh. The session brought together policymakers, experts and youth to discuss how plastic waste harms our environment and public health, and to share practical solutions for reducing it.',
+    thanks: [{ label: 'UNOPS', url: 'https://www.unops.org/bangladesh' }],
+    youtubeId: 'ClhzjGj2f9s',
+    imageHeight: 425,
+    date: '',
+    category: 'Policy Dialogue',
+    imageUrl: 'https://img.youtube.com/vi/ClhzjGj2f9s/hqdefault.jpg',
+    link: '#',
+  },
+  {
     id: 'news-recp-award',
     title: 'RECP Expert & Industrial Application Award',
     excerpt: 'We are practicing Resource Efficient and Cleaner Production (RECP).',
