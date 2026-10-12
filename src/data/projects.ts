@@ -1,4 +1,5 @@
 import { Project } from '../types/project';
+import tanneryBiodiesel2Img from '../../assets/img/projects/tannery-biodiesel-2.webp';
 
 export const projectsData: Project[] = [
   {
@@ -7,7 +8,7 @@ export const projectsData: Project[] = [
     description:
       'Transforming industrial hazardous waste to bio diesel by Hydro Thermal Liquifaction process.',
     keyNotes: ['Hydrothermal liquefaction', 'Peptide content', 'TA', 'LCA', 'ASPEN simulation'],
-    imageUrls: ['', ''], // photos to be uploaded,
+    imageUrls: ['', tanneryBiodiesel2Img], // photos to be uploaded,
     imageLabels: ['Hydro Thermal Liquefaction Process'],
     teamLead: 'Farial Orion, Sabbir H Mitul',
     section: 'Waste to Energy',
