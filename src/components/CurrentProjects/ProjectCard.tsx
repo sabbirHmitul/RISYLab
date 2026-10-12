@@ -57,11 +57,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, imageO
                 key={`${project.id}-${imageIndex}`}
                 className="relative h-full overflow-hidden rounded-[20px] border border-white/70"
               >
+                {image ? (
                 <img loading="lazy" decoding="async"
                   src={image}
                   alt={`${project.title} ${imageIndex + 1}`}
                   className="block h-40 sm:h-52 w-full rounded-[20px] object-cover transition-transform duration-500 hover:scale-105"
                 />
+                ) : (
+                  <div className="h-40 sm:h-52 w-full rounded-[20px] bg-gray-100" />
+                )}
                 <div className="absolute bottom-0 right-0 rounded-xl bg-pink-600 px-3 py-2 text-right text-sm font-semibold text-white shadow-sm">
                   {project.imageLabels?.[imageIndex] ?? project.title}
                 </div>

@@ -16,8 +16,7 @@ const researchAchievements: NewsItem[] = [
       'We are developing products from biomass sources. From the waste and used products, we will then develop new usable products for human applications.',
     date: 'Aug, 2026',
     category: 'Patent & Implementation',
-    imageUrl:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '', // photo to be uploaded
     link: '#',
     collaborators: ['Dr. Latiful Bari (CARS, DU)', 'Suman Dewanjee (USA)', 'UNIDO, Bangladesh'],
   },
@@ -28,8 +27,7 @@ const researchAchievements: NewsItem[] = [
       'We are analyzing hydrology and developing machine learning models for advanced hydrological prediction across Bangladesh.',
     date: 'Jun, 2025',
     category: 'Ongoing Project',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
+    imageUrl: '', // photo to be uploaded
     link: '#',
     collaborators: ['Mehedi Hasan (Canada)', 'IWA'],
   },

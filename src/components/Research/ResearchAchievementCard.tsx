@@ -21,6 +21,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
     >
       {/* Photo */}
       <div className="h-52 sm:h-[272px] overflow-hidden rounded-[20px] bg-gray-100">
+        {item.imageUrl && (
         <img
           src={item.imageUrl}
           alt={item.title}
@@ -28,6 +29,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
           decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
+        )}
       </div>
 
       {/* Text */}
