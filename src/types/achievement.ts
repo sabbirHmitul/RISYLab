@@ -17,4 +17,6 @@ export interface AchievementItem {
   thanks?: { label: string; url: string }[];
   /** Optional fixed photo height (px) on computer screens. */
   imageHeight?: number;
+  /** Optional YouTube video ID; shown in place of the photo. */
+  youtubeId?: string;
 }

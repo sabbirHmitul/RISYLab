@@ -13,6 +13,7 @@ export const achievementsData: AchievementItem[] = [
     ],
     collaborators: ['CARS, DU', 'BCSIR', 'BUET'],
     imageHeight: 450,
+    youtubeId: 'YbxtEDs144g',
     date: 'Dec 02, 2025',
     category: 'Milestone',
     imageUrl:
