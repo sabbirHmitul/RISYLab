@@ -5,7 +5,7 @@ import tanneryBiocrudeImg from '../../assets/img/achievements/tannery-biocrude.w
 export const achievementsData: AchievementItem[] = [
   {
     id: 'ach-1',
-    title: 'Biomass to Bio-plastic Film for Various Applications',
+    title: 'Innovate Bio-plastic as an Alternative for Various Applications',
     excerpt:
       'We have developed useful, anti-bacterial bio-plastic films from a variety of waste biomass, such as waste egg shell, shrimp shell and sugarcane bagasse. These films have been applied to wound healing, food packaging and shoe insoles. Their wound-healing activity has also been studied through animal trials, an important step toward safe medical use.',
     publications: [

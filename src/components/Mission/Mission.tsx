@@ -18,11 +18,12 @@ export const Mission: React.FC = () => {
               Mission
             </h2>
             <p className="mt-4 text-gray-600 text-sm sm:text-base font-sans leading-relaxed text-justify ">
-              RISY Lab works at the intersection of research and youth
-              development. We believe environmental problems can be solved through
-              knowledge, and youth are the ones best equipped to find those
-              solutions. By nurturing young researchers today, we are building the
-              minds that will create a greener world tomorrow.
+              RISY Lab builds its own capacity for environmental, health and
+              economic solutions. It is the intersection of research and youth
+              development. We believe our youth and their knowledge are the ones
+              best equipped to find those solutions. By nurturing young researchers
+              today, we are building the minds that will create a resilient world
+              tomorrow.
             </p>
           </div>
 
