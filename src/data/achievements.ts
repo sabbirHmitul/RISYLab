@@ -23,7 +23,7 @@ export const achievementsData: AchievementItem[] = [
   },
   {
     id: 'ach-2',
-    title: 'Tannery Waste to Bio-crude Oil Synthesis',
+    title: 'Tannery Waste to Bio-diesel Synthesis',
     excerpt:
       'We have successfully synthesized bio-crude oil from raw tannery waste with a 53% yield. We are now extracting diesel from this bio-crude and using ASPEN simulation to assess its cost, production rate and environmental impact for commercialization.',
     pendingPublications: ["ICChE BUET'26"],
