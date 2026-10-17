@@ -4,6 +4,7 @@ import Container from '../Common/Container';
 import ResearchAchievementCard from './ResearchAchievementCard';
 import { NewsItem } from '../../types/news';
 import hydrologyMapImg from '../../../assets/img/research/hydrology-map.webp';
+import fishCultureImg from '../../../assets/img/research/fish-culture-ai.webp';
 
 /**
  * Achievements section for the Research page.
@@ -44,7 +45,7 @@ const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = 
       'Software and hardware based equipment to analyze soil, water and nutrition, along with an AI chatbot for smart fish farming.',
     date: 'Jan, 2027',
     category: 'Upcoming Project',
-    imageUrl: '', // photo to be uploaded
+    imageUrl: fishCultureImg,
     link: '#',
     collaborators: [], // "Thanks to" names can be added later
   },
