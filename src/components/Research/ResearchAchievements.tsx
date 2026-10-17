@@ -38,14 +38,15 @@ const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = 
     collaborators: ['Mehedi Hasan (Canada)', 'IWA'],
   },
   {
-    id: 'research-ach-new-project',
-    title: 'New Project', // title to be added
-    excerpt: 'Details of this project will be added soon.', // text to be added
-    date: 'Oct, 2026',
-    category: 'Ongoing Project',
+    id: 'research-ach-fish-culture',
+    title: 'AI & Robotics in Fish Culture in Bangladesh',
+    excerpt:
+      'Software and hardware based equipment to analyze soil, water and nutrition, along with an AI chatbot for smart fish farming.',
+    date: 'Jan, 2027',
+    category: 'Upcoming Project',
     imageUrl: '', // photo to be uploaded
     link: '#',
-    collaborators: [],
+    collaborators: [], // "Thanks to" names can be added later
   },
 ];
 
