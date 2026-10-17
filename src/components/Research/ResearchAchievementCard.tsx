@@ -35,10 +35,10 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       {/* Text */}
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
-          <span className="px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
+          <span className="whitespace-nowrap px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
             {item.category}
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-gray-400">
+          <span className="flex items-center gap-1.5 whitespace-nowrap text-xs text-gray-400">
             <CalendarDays className="w-3.5 h-3.5" />
             {item.date}
           </span>
