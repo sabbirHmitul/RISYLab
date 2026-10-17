@@ -23,7 +23,7 @@ const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = 
   },
   {
     id: 'research-ach-hydrology',
-    title: 'Hydrology & Risk Analysis & Machine Learning Prediction Algorithm',
+    title: 'Prediction Algorithm for Climate & Hydrology in Bangladesh',
     excerpt:
       'We are analyzing hydrology and developing machine learning models for advanced hydrological prediction across Bangladesh.',
     date: 'Jun, 2025',
