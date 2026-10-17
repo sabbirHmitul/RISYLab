@@ -76,7 +76,7 @@ export const ResearchAchievements: React.FC = () => {
           >
             {researchAchievements.map((item) => (
               <div key={item.id} className="flex-none" style={{ width: 'calc((100% - 80px) * 3 / 7)' }}>
-                <ResearchAchievementCard item={item} collaboratorsLabel="Thanks to:" />
+                <ResearchAchievementCard item={item} collaboratorsLabel="Thanks to:" compact />
               </div>
             ))}
           </div>

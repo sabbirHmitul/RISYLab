@@ -7,20 +7,23 @@ interface ResearchAchievementCardProps {
   item: NewsItem & { imageFit?: 'cover' | 'contain' };
   /** Label before the outlined name tags (default: "Collaboration:"). */
   collaboratorsLabel?: string;
+  /** Smaller text and photo, used in the slider where three cards share one row. */
+  compact?: boolean;
 }
 
 /** Compact achievement card for the Research page: photo on the left, text on the right. */
-export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = ({ item, collaboratorsLabel = 'Collaboration:' }) => {
+export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = ({ item, collaboratorsLabel = 'Collaboration:', compact = false }) => {
+  const c = (normal: string, small: string) => (compact ? small : normal);
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className="grid grid-cols-1 sm:grid-cols-[45%_1fr] gap-5 sm:gap-6 items-start"
+      className={`grid grid-cols-1 items-start ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[42%_1fr] gap-4')}`}
     >
       {/* Photo */}
-      <div className={`h-52 sm:h-[272px] overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
+      <div className={`h-52 ${c('sm:h-[272px]', 'sm:h-[226px]')} overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
         {item.imageUrl && (
         <img
           src={item.imageUrl}
@@ -33,20 +36,20 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       </div>
 
       {/* Text */}
-      <div className="flex flex-col gap-3">
-        <div className="flex items-center gap-3">
-          <span className="whitespace-nowrap px-3 py-1 rounded-full bg-pink-50 text-pink-600 text-xs font-semibold border border-pink-100">
+      <div className={`flex flex-col ${c('gap-3', 'gap-2')}`}>
+        <div className={`flex items-center ${c('gap-3', 'gap-2')}`}>
+          <span className={`whitespace-nowrap rounded-full bg-pink-50 text-pink-600 font-semibold border border-pink-100 ${c('px-3 py-1 text-xs', 'px-2.5 py-0.5 text-[11px]')}`}>
             {item.category}
           </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap text-xs text-gray-400">
+          <span className={`flex items-center gap-1.5 whitespace-nowrap text-gray-400 ${c('text-xs', 'text-[11px]')}`}>
             <CalendarDays className="w-3.5 h-3.5" />
             {item.date}
           </span>
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-bold font-heading text-gray-900 leading-tight">{item.title}</h3>
+        <h3 className={`font-bold font-heading text-gray-900 leading-tight ${c('text-xl sm:text-2xl', 'text-lg')}`}>{item.title}</h3>
 
-        <p className="text-gray-600 text-sm leading-relaxed text-justify">{item.excerpt}</p>
+        <p className={`text-gray-600 leading-relaxed text-justify ${c('text-sm', 'text-[13px]')}`}>{item.excerpt}</p>
 
         {item.publications && item.publications.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
@@ -81,12 +84,12 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
         )}
 
         {item.collaborators && item.collaborators.length > 0 && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-semibold text-gray-800">{collaboratorsLabel}</span>
+          <div className={`flex flex-wrap items-center ${c('gap-2', 'gap-1.5')}`}>
+            <span className={`font-semibold text-gray-800 ${c('text-sm', 'text-[13px]')}`}>{collaboratorsLabel}</span>
             {item.collaborators.map((name) => (
               <span
                 key={name}
-                className="rounded-lg border border-gray-300 px-2.5 py-0.5 text-xs font-medium text-gray-500"
+                className={`rounded-lg border border-gray-300 py-0.5 font-medium text-gray-500 ${c('px-2.5 text-xs', 'px-2 text-[11px]')}`}
               >
                 {name}
               </span>
