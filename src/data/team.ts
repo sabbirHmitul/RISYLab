@@ -116,9 +116,11 @@ export const teamData: TeamMember[] = [
     name: 'Pranta Bhowmik',
     role: 'Graduate MS Student',
     affiliation: 'Env. Engineering (BUET)',
-    specialization: ['Environmental Engineering'],
+    education: 'BSc in Engineering, KUET',
+    specialization: ['LCA', 'TEA', 'Wastewater Treatment', 'Solid Waste Management', 'Circular Economy', 'PFAS'],
     imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
+    scholarUrl: 'https://scholar.google.com/citations?hl=en&user=8ylmPd0AAAAJ',
+    linkedinUrl: 'https://www.linkedin.com/in/pranta-bhowmik-437862218/',
     category: 'lead',
   },
   {
