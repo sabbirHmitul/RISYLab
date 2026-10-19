@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
       'By green solvent extraction process we successfully recycling cigarette filte. Now we developing circular process & yarn systhesis.',
     keyNotes: ['Cellulose acetate', 'Solvent circulation', 'LCA', 'ASPEN simulation'],
     imageUrls: [cigaretteFilter1Img, cigaretteFilter2Img], // photos to be uploaded,
-    imageLabels: ['Waste cigarette filter solvent recycling process', 'Extracted fiber'],
+    imageLabels: ['Solvent based recycling process', 'Extracted fiber'],
     teamLead: 'A. R. M. Baizid, Sabbir H Mitul',
     section: 'Polymer & Bio-materials',
   },
