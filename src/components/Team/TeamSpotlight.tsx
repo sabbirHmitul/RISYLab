@@ -143,24 +143,25 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
               <div className="p-6 space-y-3">
                 <h4 className="text-lg font-bold font-heading text-gray-900">{selected.name}</h4>
                 <p className="text-sm font-semibold text-pink-600">{selected.role}</p>
-                {selected.affiliation && (
-                  <p className="flex items-center gap-1.5 text-sm text-gray-500">
-                    <Building2 className="w-3.5 h-3.5 shrink-0" />
-                    {selected.affiliation}
-                  </p>
-                )}
-                {selected.education && (
-                  <p className="flex items-center gap-1.5 text-sm text-gray-500">
-                    <GraduationCap className="w-3.5 h-3.5 shrink-0" />
-                    {selected.education}
+                {(selected.popupAffiliation || selected.affiliation) && (
+                  <p className="flex items-start gap-1.5 text-sm text-gray-500">
+                    <Building2 className="w-3.5 h-3.5 shrink-0 mt-[3px]" />
+                    {selected.popupAffiliation || selected.affiliation}
                   </p>
                 )}
                 {selected.job && (
-                  <p className="flex items-center gap-1.5 text-sm text-gray-500">
-                    <Briefcase className="w-3.5 h-3.5 shrink-0" />
+                  <p className="flex items-start gap-1.5 text-sm text-gray-500">
+                    <Briefcase className="w-3.5 h-3.5 shrink-0 mt-[3px]" />
                     {selected.job}
                   </p>
                 )}
+                {selected.education &&
+                  (Array.isArray(selected.education) ? selected.education : [selected.education]).map((line) => (
+                    <p key={line} className="flex items-start gap-1.5 text-sm text-gray-500">
+                      <GraduationCap className="w-3.5 h-3.5 shrink-0 mt-[3px]" />
+                      {line}
+                    </p>
+                  ))}
 
                 {selected.specialization.length > 0 && (
                   <div className="pt-1">

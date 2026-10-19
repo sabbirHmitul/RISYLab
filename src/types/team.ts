@@ -10,6 +10,8 @@ export interface TeamMember {
   linkedinUrl?: string;
   researchGateUrl?: string;
   job?: string;
-  education?: string;
+  education?: string | string[];
+  /** Longer affiliation shown only in the popup (card keeps `affiliation`). */
+  popupAffiliation?: string;
   category: 'senior' | 'lead' | 'practitioner';
 }
