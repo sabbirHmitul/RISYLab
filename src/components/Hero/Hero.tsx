@@ -91,14 +91,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 md:ml-auto w-full max-w-sm bg-gray-900/50 backdrop-blur-md border border-white/20 p-5 rounded-2xl text-white space-y-3 shadow-xl"
+            className="md:col-span-7 md:ml-auto w-full max-w-sm text-white space-y-3"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 backdrop-blur-md border border-pink-500/30 text-pink-300 text-xs font-semibold tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-pink-400" />
+            <div className="inline-flex items-center gap-2 text-[#e6007e] text-base font-bold tracking-wider uppercase [text-shadow:0_1px_6px_rgba(255,255,255,0.6)]">
+              <Sparkles className="w-4 h-4 text-[#e6007e]" />
               <span>Built own capacity</span>
             </div>
             <div className="flex items-center justify-between border-b border-white/15 pb-2">
-              <h2 className="text-3xl sm:text-2xl font-black font-heading tracking-wider text-white">
+              <h2 className="text-[32px] sm:text-[26px] font-black font-heading tracking-wider text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.65)]">
                 Research & Innovation Society for Youth
               </h2>
 
