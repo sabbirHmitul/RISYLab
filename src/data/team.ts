@@ -7,6 +7,7 @@ import chowneeImage from '../../assets/img/team/chownee.webp';
 import prottayImage from '../../assets/img/team/prottay.webp';
 import refatImage from '../../assets/img/team/refat.webp';
 import mehediImage from '../../assets/img/team/mehedi.webp';
+import sadibImage from '../../assets/img/team/sadib.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -67,8 +68,8 @@ export const teamData: TeamMember[] = [
     affiliation: 'Civil & Env. Engr, (Australia)',
     popupAffiliation: 'Civil & Env. Engineering, Monash University, (Australia)',
     education: 'MSc & BSc in Civil Engineering, KUET',
-    specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl: '',
+    specialization: ['Geosynthetics', 'Geomembrane Performance Evaluation', 'Environmental Engineering'],
+    imageUrl: sadibImage,
     scholarUrl: 'https://scholar.google.com/citations?hl=en&user=_no31bkAAAAJ',
     linkedinUrl: 'https://www.linkedin.com/in/sadibbinkabir/',
     category: 'senior',
