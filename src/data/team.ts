@@ -64,7 +64,7 @@ export const teamData: TeamMember[] = [
     id: 'senior-5',
     name: 'Sadib Bin Kabir',
     role: 'PhD Student',
-    affiliation: 'Civil & Env. Engineering, (Australia)',
+    affiliation: 'Civil & Env. Engr, (Australia)',
     popupAffiliation: 'Civil & Env. Engineering, Monash University, (Australia)',
     education: 'MSc & BSc in Civil Engineering, KUET',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
