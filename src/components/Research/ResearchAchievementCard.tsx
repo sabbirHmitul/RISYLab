@@ -20,7 +20,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className={`grid h-full grid-cols-1 items-start rounded-[24px] border border-pink-400 bg-white ${c('p-4 sm:p-5', 'p-3')} ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[42%_1fr] gap-4')}`}
+      className={`grid h-full grid-cols-1 items-start rounded-[24px] border border-pink-400 bg-white ${c('p-4 sm:p-5', 'p-3')} ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[40%_1fr] gap-3.5')}`}
     >
       {/* Photo */}
       <div className={`h-52 ${c('sm:h-[272px]', 'sm:h-[226px]')} overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
@@ -84,12 +84,12 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
         )}
 
         {item.collaborators && item.collaborators.length > 0 && (
-          <div className={`flex flex-wrap items-center ${c('gap-2', 'gap-1.5')}`}>
+          <div className={`flex flex-wrap items-center ${c('gap-2', 'gap-1')}`}>
             <span className={`font-semibold text-gray-800 ${c('text-sm', 'text-[13px]')}`}>{collaboratorsLabel}</span>
             {item.collaborators.map((name) => (
               <span
                 key={name}
-                className={`rounded-lg border border-gray-300 py-0.5 font-medium text-gray-500 ${c('px-2.5 text-xs', 'px-2 text-[11px]')}`}
+                className={`whitespace-nowrap rounded-lg border border-gray-300 py-0.5 font-medium text-gray-500 ${c('px-2.5 text-xs', 'px-1.5 text-[11px]')}`}
               >
                 {name}
               </span>

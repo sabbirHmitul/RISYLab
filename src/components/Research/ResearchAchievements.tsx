@@ -54,7 +54,7 @@ const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = 
 ];
 
 const SLIDE_INTERVAL_MS = 5000;
-const GAP_PX = 40; // space between cards (gap-10)
+const GAP_PX = 24; // space between cards (gap-6)
 
 /**
  * Sliding position for step `i` of `n` cards.
@@ -101,7 +101,7 @@ export const ResearchAchievements: React.FC = () => {
         >
           <div className="overflow-hidden">
             <div
-              className="flex gap-10 transition-transform duration-700 ease-in-out motion-reduce:transition-none"
+              className="flex gap-6 transition-transform duration-700 ease-in-out motion-reduce:transition-none"
               style={{ transform: canSlide ? offsetFor(step, total) : 'none' }}
             >
               {researchAchievements.map((item) => (
