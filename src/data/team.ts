@@ -106,6 +106,7 @@ export const teamData: TeamMember[] = [
     specialization: ['Environmental Engineering', 'Air Quality', 'GIS Modeling', 'Machine Learning'],
     imageUrl: prottayImage,
     job: 'Consultant (EQMS Consulting Limited)',
+    education: 'BSc in Civil Engineering, KUET',
     researchGateUrl: 'https://www.researchgate.net/profile/Prottay-Mazumder',
     linkedinUrl: 'https://www.linkedin.com/in/prottay-mazumder',
     category: 'lead',
