@@ -148,6 +148,7 @@ export const teamData: TeamMember[] = [
     name: 'Mahjabin Khan',
     role: 'Graduate Student',
     affiliation: 'Geology (DU)',
+    education: 'BS in Geology, (DU)',
     specialization: ['Geology', 'GIS'],
     imageUrl: mahjabinImage,
     scholarUrl: 'https://scholar.google.com/',
