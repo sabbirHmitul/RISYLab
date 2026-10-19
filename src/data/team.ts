@@ -31,7 +31,8 @@ export const teamData: TeamMember[] = [
     education: ['MS in Soil, Water and Environment, DU', 'BSc in Engineering, KUET'],
     specialization: ['Bio-film', 'Plastics', 'Social Science', 'Microbiology'],
     imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
+    scholarUrl: 'https://scholar.google.com/citations?user=0DuQk4wAAAAJ&hl=en',
+    linkedinUrl: 'https://www.linkedin.com/in/hasanahmed27/',
     category: 'senior',
   },
   {
