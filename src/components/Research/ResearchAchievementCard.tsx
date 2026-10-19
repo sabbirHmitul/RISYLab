@@ -20,7 +20,7 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className={`grid grid-cols-1 items-start ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[42%_1fr] gap-4')}`}
+      className={`grid h-full grid-cols-1 items-start rounded-[24px] border border-pink-400 bg-white ${c('p-4 sm:p-5', 'p-3')} ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[42%_1fr] gap-4')}`}
     >
       {/* Photo */}
       <div className={`h-52 ${c('sm:h-[272px]', 'sm:h-[226px]')} overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
