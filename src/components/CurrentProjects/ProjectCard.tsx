@@ -66,7 +66,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, imageO
                 ) : (
                   <div className="h-40 sm:h-52 w-full rounded-[20px] bg-gray-100" />
                 )}
-                <div className="absolute bottom-0 right-0 rounded-xl bg-pink-600 px-3 py-2 text-right text-sm font-normal text-white shadow-sm">
+                <div className="absolute inset-x-0 bottom-0 rounded-xl bg-pink-600 px-3 py-1.5 text-center text-sm font-normal text-white shadow-sm">
                   {project.imageLabels?.[imageIndex] ?? project.title}
                 </div>
               </div>
