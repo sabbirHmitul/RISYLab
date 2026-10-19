@@ -72,13 +72,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Gradient blur on the right 33% of the banner: 85% strength at the right edge fading to 25% at its left edge */}
+      {/* Blackish gradient blur on the right 40% of the banner: 90% strength at the right edge fading to 45% at its left edge */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 right-0 w-1/3 z-[5] backdrop-blur-xl"
+        className="pointer-events-none absolute inset-y-0 right-0 w-2/5 z-[5] backdrop-blur-xl bg-gray-950/60"
         style={{
-          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.85))',
-          maskImage: 'linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.85))',
+          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 12%, rgba(0,0,0,0.9) 100%)',
+          maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 12%, rgba(0,0,0,0.9) 100%)',
         }}
       />
 
@@ -101,20 +101,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 md:ml-auto w-full max-w-sm text-white space-y-3"
+            className="md:col-span-7 md:ml-auto w-full max-w-sm text-white space-y-3 text-center flex flex-col items-center"
           >
-            <div className="inline-flex items-center gap-2 text-[#e6007e] text-base font-bold tracking-wider uppercase [text-shadow:0_1px_6px_rgba(255,255,255,0.6)]">
+            <div className="inline-flex items-center gap-2 text-[#e6007e] text-base font-bold tracking-wider uppercase [text-shadow:0_2px_8px_rgba(0,0,0,0.75)]">
               <Sparkles className="w-4 h-4 text-[#e6007e]" />
               <span>Built own capacity</span>
             </div>
-            <div className="flex items-center justify-between border-b border-white/15 pb-2">
-              <h2 className="text-[32px] sm:text-[26px] font-black font-heading tracking-wider text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.65)]">
+            <div className="flex items-center justify-center w-full border-b border-white/15 pb-2">
+              <h2 className="text-[32px] sm:text-[26px] font-black font-heading tracking-wider text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
                 Research & Innovation Society for Youth
               </h2>
 
             </div>
 
-            <div className="flex items-center  gap-3 pt-1">
+            <div className="flex items-center justify-center gap-3 pt-1 drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]">
               {/* <Button
                 variant="primary"
                 size="sm"
@@ -134,7 +134,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
 
 
             </div>
-            <SocialIcons variant="light" />
+            <SocialIcons variant="light" className="justify-center drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]" />
           </motion.div>
         </div>
       </Container>
