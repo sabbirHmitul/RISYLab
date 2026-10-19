@@ -23,14 +23,15 @@ export const ResearchAchievementCard: React.FC<ResearchAchievementCardProps> = (
       className={`grid h-full grid-cols-1 items-start rounded-[24px] border border-pink-400 bg-white ${c('p-4 sm:p-5', 'p-3')} ${c('sm:grid-cols-[45%_1fr] gap-5 sm:gap-6', 'sm:grid-cols-[40%_1fr] gap-3.5')}`}
     >
       {/* Photo */}
-      <div className={`h-52 ${c('sm:h-[272px]', 'sm:h-[226px]')} overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
+      {/* On wider screens the photo stretches to match the text height, so the space below the text equals the space above it. */}
+      <div className={`relative h-52 sm:h-auto sm:min-h-[180px] sm:self-stretch overflow-hidden rounded-[20px] ${item.imageFit === 'contain' && item.imageUrl ? 'bg-white border border-gray-100' : 'bg-gray-100'}`}>
         {item.imageUrl && (
         <img
           src={item.imageUrl}
           alt={item.title}
           loading="lazy"
           decoding="async"
-          className={`w-full h-full ${item.imageFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 hover:scale-105`}
+          className={`w-full h-full sm:absolute sm:inset-0 ${item.imageFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 hover:scale-105`}
         />
         )}
       </div>
