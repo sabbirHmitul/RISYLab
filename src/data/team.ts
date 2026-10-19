@@ -65,9 +65,12 @@ export const teamData: TeamMember[] = [
     name: 'Sadib Bin Kabir',
     role: 'PhD Student',
     affiliation: 'Civil & Env. Engineering, (Australia)',
+    popupAffiliation: 'Civil & Env. Engineering, Monash University, (Australia)',
+    education: 'MSc & BSc in Civil Engineering, KUET',
     specialization: ['Civil Engineering', 'Environmental Engineering'],
     imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
+    scholarUrl: 'https://scholar.google.com/citations?hl=en&user=_no31bkAAAAJ',
+    linkedinUrl: 'https://www.linkedin.com/in/sadibbinkabir/',
     category: 'senior',
   },
   {
