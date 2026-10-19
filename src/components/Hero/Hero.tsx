@@ -72,6 +72,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
         </motion.div>
       </AnimatePresence>
 
+      {/* Gradient blur on the right 33% of the banner: 85% strength at the right edge fading to 25% at its left edge */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/3 z-[5] backdrop-blur-xl"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.85))',
+          maskImage: 'linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.85))',
+        }}
+      />
+
       {/* Hero Content matching Sketch layout */}
       <Container className="relative z-10 h-full flex flex-col justify-center">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center h-full py-4">
