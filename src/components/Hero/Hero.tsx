@@ -72,13 +72,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Blackish gradient blur on the right 40% of the banner: 100% strength at the right edge fading to 45% at its left edge */}
+      {/* Blackish gradient blur on the right 50% of the banner: 100% strength at the right edge fading to 50% at its left edge */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 right-0 w-2/5 z-[5] backdrop-blur-xl bg-gray-950/60"
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/2 z-[5] backdrop-blur-xl bg-gray-950/60"
         style={{
-          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 12%, rgba(0,0,0,1) 100%)',
-          maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 12%, rgba(0,0,0,1) 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 12%, rgba(0,0,0,1) 100%)',
+          maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 12%, rgba(0,0,0,1) 100%)',
         }}
       />
 
@@ -103,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="md:col-span-7 md:ml-auto w-full max-w-sm text-white space-y-3 text-center flex flex-col items-center"
           >
-            <div className="inline-flex items-center text-[#e6007e] text-lg font-bold tracking-wider uppercase [text-shadow:0_1px_8px_rgba(255,255,255,0.85)]">
+            <div className="inline-flex items-center text-[#e6007e] text-xl font-bold tracking-wider uppercase">
               <span>Built own capacity</span>
             </div>
             <div className="flex items-center justify-center w-full border-b border-white/15 pb-2">
