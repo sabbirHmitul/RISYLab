@@ -5,6 +5,7 @@ import ResearchAchievementCard from './ResearchAchievementCard';
 import { NewsItem } from '../../types/news';
 import hydrologyMapImg from '../../../assets/img/research/hydrology-map.webp';
 import fishCultureImg from '../../../assets/img/research/fish-culture-ai.webp';
+import zeroWasteImg from '../../../assets/img/research/zero-waste-product.webp';
 
 /**
  * Achievements section for the Research page.
@@ -22,7 +23,8 @@ const researchAchievements: (NewsItem & { imageFit?: 'cover' | 'contain' })[] = 
       'We are developing products from biomass sources. From the waste and used products, we will then develop new usable products for human applications.',
     date: 'Aug, 2026',
     category: 'Patent & Implementation',
-    imageUrl: '', // photo to be uploaded
+    imageUrl: zeroWasteImg,
+    imageFit: 'contain', // diagram, shown whole
     link: '#',
     collaborators: ['Dr. Latiful Bari (CARS, DU)', 'Suman Dewanjee (USA)', 'UNIDO, Bangladesh'],
   },
