@@ -6,6 +6,7 @@ import biazidImage from '../../assets/img/team/biazid.webp';
 import chowneeImage from '../../assets/img/team/chownee.webp';
 import prottayImage from '../../assets/img/team/prottay.webp';
 import refatImage from '../../assets/img/team/refat.webp';
+import mehediImage from '../../assets/img/team/mehedi.webp';
 
 export const teamData: TeamMember[] = [
   // Senior Members
@@ -33,10 +34,12 @@ export const teamData: TeamMember[] = [
     id: 'senior-3',
     name: 'Mehedi Hasan',
     role: 'PhD Student',
-    affiliation: 'Civil & Env. Engineering, (Canada)',
-    specialization: ['Civil Engineering', 'Environmental Engineering'],
-    imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
+    affiliation: 'Civil & Env. Engineering, Lakehead University, (Canada)',
+    education: 'MSc in Civil Engineering, BUET',
+    specialization: ['Biomass Conversion', 'Wastewater Treatment', 'Waste Management', 'Waste to Energy'],
+    imageUrl: mehediImage,
+    scholarUrl: 'https://scholar.google.ca/citations?hl=en&user=p0a1aXwAAAAJ',
+    linkedinUrl: 'https://www.linkedin.com/in/mehedi-hasan-888247128/',
     category: 'senior',
   },
   {

@@ -149,6 +149,12 @@ export const TeamSpotlight: React.FC<TeamSpotlightProps> = ({
                     {selected.affiliation}
                   </p>
                 )}
+                {selected.education && (
+                  <p className="flex items-center gap-1.5 text-sm text-gray-500">
+                    <GraduationCap className="w-3.5 h-3.5 shrink-0" />
+                    {selected.education}
+                  </p>
+                )}
                 {selected.job && (
                   <p className="flex items-center gap-1.5 text-sm text-gray-500">
                     <Briefcase className="w-3.5 h-3.5 shrink-0" />

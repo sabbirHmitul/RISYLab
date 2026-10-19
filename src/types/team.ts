@@ -10,5 +10,6 @@ export interface TeamMember {
   linkedinUrl?: string;
   researchGateUrl?: string;
   job?: string;
+  education?: string;
   category: 'senior' | 'lead' | 'practitioner';
 }
