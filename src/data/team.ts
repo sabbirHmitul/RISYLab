@@ -136,16 +136,6 @@ export const teamData: TeamMember[] = [
     category: 'lead',
   },
   {
-    id: 'lead-5',
-    name: 'Rafi',
-    role: 'Graduate Student & Lecturer',
-    affiliation: 'Env. Science & Engineering (BUTEX)',
-    specialization: ['Environmental Science & Engineering'],
-    imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
-    category: 'lead',
-  },
-  {
     id: 'lead-6',
     name: 'Mahjabin Khan',
     role: 'Graduate Student',
@@ -158,16 +148,6 @@ export const teamData: TeamMember[] = [
   },
 
   // Research Practitioners
-  {
-    id: 'practitioner-1',
-    name: 'Jawad',
-    role: 'Graduate Student',
-    affiliation: 'Env. Science & Engineering (BUTEX)',
-    specialization: ['Environmental Science & Engineering'],
-    imageUrl: '',
-    scholarUrl: 'https://scholar.google.com/',
-    category: 'practitioner',
-  },
   {
     id: 'practitioner-2',
     name: 'A. R. M Biazid',

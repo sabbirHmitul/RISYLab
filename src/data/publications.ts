@@ -16,6 +16,7 @@ export const publicationsData: Publication[] = [
     url: 'https://www.sciencedirect.com/science/article/pii/S2213343726047524',
     journal: 'Journal of Environmental Chemical Engineering',
     year: 2026,
+    date: '2026/11/2',
     authors: [],
     doi: '10.1016/j.jece.2026.125777',
     imageUrl: '', // picture to be added
