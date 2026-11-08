@@ -38,6 +38,7 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
           publication.imageFit === 'contain' ? 'bg-white border border-gray-100' : 'bg-gray-100'
         }`}
       >
+        {publication.imageUrl && (
         <img loading="lazy" decoding="async"
           src={publication.imageUrl}
           alt={publication.title}
@@ -45,6 +46,7 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication, i
             publication.imageFit === 'contain' ? 'object-contain p-1' : 'object-cover'
           } transition-transform duration-500 group-hover:scale-105`}
         />
+        )}
       </div>
 
       <div className="flex-1 flex flex-col justify-center gap-2 py-1">

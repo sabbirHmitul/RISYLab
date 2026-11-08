@@ -10,6 +10,17 @@ import tanneryComposite from '../../assets/img/publications/tannery-composite-sh
 
 export const publicationsData: Publication[] = [
   {
+    id: 'pub-wqi-ml',
+    badge: 'New',
+    title: 'Machine Learning-Based Estimation for Water Quality Index, Risk Assessment of River',
+    url: 'https://www.sciencedirect.com/science/article/pii/S2213343726047524',
+    journal: 'Journal of Environmental Chemical Engineering',
+    year: 2026,
+    authors: [],
+    doi: '10.1016/j.jece.2026.125777',
+    imageUrl: '', // picture to be added
+  },
+  {
     id: 'pub-1',
     badge: '04',
     title:
@@ -26,7 +37,7 @@ export const publicationsData: Publication[] = [
   },
   {
     id: 'pub-2',
-    badge: '45+',
+    badge: '50+',
     title: 'Chitosan-Based Antimicrobial Films for Plastic Packaging',
     url: 'https://www.sciencedirect.com/science/article/pii/S2772782325000129',
     journal: 'Journal of Cleaner Chemical Engineering',
