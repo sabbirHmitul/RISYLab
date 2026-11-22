@@ -15,9 +15,9 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({ partner, i
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="bg-white rounded-2xl p-2 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-2 text-center group cursor-pointer"
+      className="shrink-0 w-36 md:w-auto snap-start bg-white rounded-2xl p-3 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-2 text-center group cursor-pointer"
     >
-      <div className=" h-20 shrink-0 flex items-center justify-center border border-gray-100">
+      <div className="w-full h-20 shrink-0 flex items-center justify-center">
         <img
           src={partner.logoUrl}
           alt={partner.name}
@@ -28,7 +28,7 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({ partner, i
         />
       </div>
 
-      <h3 className="text-sm sm:text-base font-heading text-gray-900 leading-snug">
+      <h3 className="text-sm sm:text-base font-heading text-gray-900 leading-snug min-h-[2.5rem] flex items-center">
         {partner.name}
       </h3>
     </motion.div>
