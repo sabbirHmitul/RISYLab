@@ -20,7 +20,7 @@ export const Collaboration: React.FC<CollaborationProps> = ({ onOpenVolunteerMod
 
 
         {/* Phones and small tablets: swipeable slider. Computers (md and up): 6-column grid. */}
-        <div className="flex md:grid md:grid-cols-6 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0 pb-3 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex md:grid md:grid-cols-6 gap-2 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-px-4 md:scroll-px-0 -mx-4 px-4 md:mx-0 md:px-0 pb-3 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {partnersData.map((partner, idx) => (
             <CollaborationCard key={partner.id} partner={partner} index={idx} />
           ))}
