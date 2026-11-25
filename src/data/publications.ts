@@ -7,6 +7,7 @@ import hydrogelImg from '../../assets/img/publications/chitosan-hydrogel.webp';
 import eggShellImg from '../../assets/img/publications/chitosan-eggshell-composite.webp';
 import pvcBannerImg from '../../assets/img/publications/pvc-waste-banner.webp';
 import tanneryComposite from '../../assets/img/publications/tannery-composite-sheet.webp';
+import wqiImg from '../../assets/img/publications/wqi-machine-learning.webp';
 
 export const publicationsData: Publication[] = [
   {
@@ -19,7 +20,8 @@ export const publicationsData: Publication[] = [
     date: '2026/11/2',
     authors: [],
     doi: '10.1016/j.jece.2026.125777',
-    imageUrl: '', // picture to be added
+    imageUrl: wqiImg,
+    imageFit: 'contain',
   },
   {
     id: 'pub-1',
