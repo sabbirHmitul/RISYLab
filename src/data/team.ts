@@ -4,6 +4,7 @@ import sumanImage from '../../assets/img/team/suman.webp';
 import mahjabinImage from '../../assets/img/team/mahjabin.webp';
 import biazidImage from '../../assets/img/team/biazid.webp';
 import chowneeImage from '../../assets/img/team/chownee.webp';
+import samsureImage from '../../assets/img/team/samsure.webp';
 import prottayImage from '../../assets/img/team/prottay.webp';
 import refatImage from '../../assets/img/team/refat.webp';
 import mehediImage from '../../assets/img/team/mehedi.webp';
@@ -167,6 +168,17 @@ export const teamData: TeamMember[] = [
     specialization: [],
     imageUrl: chowneeImage,
     linkedinUrl: 'https://www.linkedin.com/in/chow-nee-sain-1b1297426',
+    category: 'practitioner',
+  },
+  {
+    id: 'practitioner-4',
+    name: 'Samsure Rahman',
+    role: 'Undergraduate Student',
+    affiliation: 'Mechatronics Engr. (KUET)',
+    popupAffiliation: 'Mechatronics Engineering, KUET',
+    specialization: ['Mechatronics', 'Machine Learning'],
+    imageUrl: samsureImage,
+    linkedinUrl: 'https://www.linkedin.com/in/samsure-rahman-02a43a279',
     category: 'practitioner',
   },
 ];
