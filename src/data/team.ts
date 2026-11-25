@@ -5,6 +5,7 @@ import mahjabinImage from '../../assets/img/team/mahjabin.webp';
 import biazidImage from '../../assets/img/team/biazid.webp';
 import chowneeImage from '../../assets/img/team/chownee.webp';
 import samsureImage from '../../assets/img/team/samsure.webp';
+import prantaImage from '../../assets/img/team/pranta.webp';
 import prottayImage from '../../assets/img/team/prottay.webp';
 import refatImage from '../../assets/img/team/refat.webp';
 import mehediImage from '../../assets/img/team/mehedi.webp';
@@ -84,7 +85,7 @@ export const teamData: TeamMember[] = [
     popupAffiliation: 'Civil & Env. Engineering, Kansas State University, (USA)',
     education: ['MS in Env. Engineering, BUET', 'BSc in Engineering, KUET'],
     specialization: ['LCA', 'TEA', 'Wastewater Treatment', 'Solid Waste Management', 'Circular Economy', 'PFAS'],
-    imageUrl: '',
+    imageUrl: prantaImage,
     scholarUrl: 'https://scholar.google.com/citations?hl=en&user=8ylmPd0AAAAJ',
     linkedinUrl: 'https://www.linkedin.com/in/pranta-bhowmik-437862218/',
     category: 'senior',
