@@ -81,7 +81,7 @@ export const teamData: TeamMember[] = [
     role: 'PhD Candidate',
     affiliation: 'Civil & Env. Engr., (USA)',
     popupAffiliation: 'Civil & Env. Engineering, Kansas State University, (USA)',
-    education: ['MS in Env. Engineering, BUET (Completed)', 'BSc in Engineering, KUET'],
+    education: ['MS in Env. Engineering, BUET', 'BSc in Engineering, KUET'],
     specialization: ['LCA', 'TEA', 'Wastewater Treatment', 'Solid Waste Management', 'Circular Economy', 'PFAS'],
     imageUrl: '',
     scholarUrl: 'https://scholar.google.com/citations?hl=en&user=8ylmPd0AAAAJ',
