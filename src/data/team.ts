@@ -151,6 +151,17 @@ export const teamData: TeamMember[] = [
 
   // Research Practitioners
   {
+    id: 'practitioner-4',
+    name: 'Samsure Rahman',
+    role: 'Undergraduate Student',
+    affiliation: 'Mechatronics Engr. (KUET)',
+    popupAffiliation: 'Mechatronics Engineering, KUET',
+    specialization: ['Mechatronics', 'Machine Learning'],
+    imageUrl: samsureImage,
+    linkedinUrl: 'https://www.linkedin.com/in/samsure-rahman-02a43a279',
+    category: 'practitioner',
+  },
+  {
     id: 'practitioner-2',
     name: 'A. R. M Biazid',
     role: 'Undergraduate Student',
@@ -168,17 +179,6 @@ export const teamData: TeamMember[] = [
     specialization: [],
     imageUrl: chowneeImage,
     linkedinUrl: 'https://www.linkedin.com/in/chow-nee-sain-1b1297426',
-    category: 'practitioner',
-  },
-  {
-    id: 'practitioner-4',
-    name: 'Samsure Rahman',
-    role: 'Undergraduate Student',
-    affiliation: 'Mechatronics Engr. (KUET)',
-    popupAffiliation: 'Mechatronics Engineering, KUET',
-    specialization: ['Mechatronics', 'Machine Learning'],
-    imageUrl: samsureImage,
-    linkedinUrl: 'https://www.linkedin.com/in/samsure-rahman-02a43a279',
     category: 'practitioner',
   },
 ];
