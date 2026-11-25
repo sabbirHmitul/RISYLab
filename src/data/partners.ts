@@ -29,7 +29,7 @@ export const partnersData: Partner[] = [
     id: 'part-4',
     name: 'KUET',
     category: 'University Partner',
-    logoUrl: 'https://admission.kuet.ac.bd/static/logo.png',
+    logoUrl: '/logos/kuet.png',
     partnershipType: 'Academic Collaboration',
     description: 'Engineering education and innovation exchange.'
   },
