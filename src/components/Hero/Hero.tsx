@@ -91,19 +91,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 md:ml-auto w-full max-w-md bg-gray-900/50 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-xl text-white space-y-3 text-center flex flex-col items-center"
+            className="md:col-span-7 md:ml-auto w-full max-w-md bg-white/75 border border-white/60 p-5 rounded-2xl shadow-xl text-[#595959] space-y-3 text-center flex flex-col items-center"
           >
             <div className="inline-flex items-center text-[#e6007e] text-xl font-bold tracking-wider uppercase">
               <span>Built own capacity</span>
             </div>
-            <div className="flex items-center justify-center w-full border-b border-white/15 pb-2">
-              <h2 className="text-[34px] sm:text-[28px] font-black font-heading tracking-wider text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
+            <div className="flex items-center justify-center w-full border-b border-gray-300/70 pb-2">
+              <h2 className="text-[34px] sm:text-[28px] font-black font-heading tracking-wider text-[#595959]">
                 Research & Innovation Society for Youth
               </h2>
 
             </div>
 
-            <div className="flex items-center justify-center gap-3 pt-1 drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]">
+            <div className="flex items-center justify-center gap-3 pt-1">
               {/* <Button
                 variant="primary"
                 size="sm"
@@ -123,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
 
 
             </div>
-            <SocialIcons variant="light" className="justify-center drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]" />
+            <SocialIcons variant="dark" className="justify-center" />
           </motion.div>
         </div>
       </Container>
