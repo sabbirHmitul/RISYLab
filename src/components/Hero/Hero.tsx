@@ -88,10 +88,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVolunteerModal }) => {
 
           {/* Right Side Stacked (Sketch: "Youth" -> "Become V" -> Social Icons [f][insta][yt][in]) */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 md:ml-auto w-full max-w-md bg-white/75 border border-white/60 p-5 rounded-2xl shadow-xl text-[#595959] space-y-3 text-center flex flex-col items-center"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, ease: 'easeOut' }}
+            className="md:col-span-7 md:ml-auto w-full max-w-md bg-white/90 border border-white/60 p-5 rounded-2xl shadow-xl text-[#595959] space-y-3 text-center flex flex-col items-center"
           >
             <div className="inline-flex items-center text-[#e6007e] text-xl font-bold tracking-wider uppercase">
               <span>Built own capacity</span>
